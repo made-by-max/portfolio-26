@@ -1,0 +1,51 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+    const blogPosts = await getCollection("writing");
+    // const notes = await getCollection("notes");
+    // const playground = await getCollection("playground");
+    // const allPosts = [...blogPosts, ...notes, ...playground];
+
+    const uniqueTags = [
+        ...new Set(blogPosts.map((post) => post.data.tags).flat()),
+    ];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = blogPosts.filter((post) =>
+            post.data.tags.includes(tag),
+        );
+
+        filteredPosts.sort((a, b) => {
+            const dateA = new Date(a.data.date);
+            const dateB = new Date(b.data.date);
+            return dateB.getTime() - dateA.getTime();
+        });
+
+        return {
+            params: { tag },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout pageTitle={`Posts tagged with "${tag}"`}>
+    <h1>Posts tagged with "{tag}"</h1>
+    <ul>
+        {
+            posts.map((post) => (
+                <>
+                    <BlogCard post={post} />
+                    {/* {<h1 class="post-title">{post.data.title}</h1>} */}
+                </>
+            ))
+        }
+    </ul>
+</BaseLayout>
