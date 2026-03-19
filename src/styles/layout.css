@@ -1,0 +1,4 @@
+:where(html) {
+    --max-width: 80rem;
+    --max-text-length: 60ch;
+}

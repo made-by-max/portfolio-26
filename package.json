@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.2",
+    "@fontsource-variable/albert-sans": "^5.2.8",
+    "@fontsource-variable/instrument-sans": "^5.2.8",
     "astro": "^6.0.6"
   }
 }

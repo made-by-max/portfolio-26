@@ -3,8 +3,11 @@ import Navigation from "../components/Navigation.astro";
 import { ClientRouter } from "astro:transitions";
 
 import Footer from "../components/Footer.astro";
-// import "../styles/global.css";
-// import "@fontsource-variable/instrument-sans";
+import ThemeManager from "../components/ThemeManager.astro";
+
+import "../styles/global.css";
+// Supports weights 100-900
+
 const { pageTitle } = Astro.props;
 ---
 
@@ -17,14 +20,39 @@ const { pageTitle } = Astro.props;
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta name="generator" content={Astro.generator} />
+        <ThemeManager defaultTheme="auto" />
         <ClientRouter />
         <title>{pageTitle}</title>
     </head>
     <body>
         <Navigation />
+
         <main>
             <slot />
         </main>
         <Footer />
-    </body>
+    </body><style is:global>
+        :root[data-theme="light"] {
+            --brand-primary: var(--brand-primary-light);
+            --brand-secondary: var(--brand-secondary-light);
+            --accent-primary: var(--accent-primary-light);
+            --accent-secondary: var(--accent-secondary-light);
+            --background-primary: var(--background-primary-light);
+            --background-secondary: var(--background-secondary-light);
+            --text-primary: var(--text-primary-light);
+            --text-secondary: var(--text-secondary-light);
+            --border: var(--border-light);
+        }
+        :root[data-theme="dark"] {
+            --brand-primary: var(--brand-primary-dark);
+            --brand-secondary: var(--brand-secondary-dark);
+            --accent-primary: var(--accent-primary-dark);
+            --accent-secondary: var(--accent-secondary-dark);
+            --background-primary: var(--background-primary-dark);
+            --background-secondary: var(--background-secondary-dark);
+            --text-primary: var(--text-primary-dark);
+            --text-secondary: var(--text-secondary-dark);
+            --border: var(--border-dark);
+        }
+    </style>
 </html>

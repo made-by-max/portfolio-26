@@ -1,0 +1,134 @@
+@import "@fontsource-variable/instrument-sans";
+
+:where(html) {
+    --font-sans:
+        "Instrument Sans Variable", Avenir, Montserrat, Corbel, URW Gothic,
+        source-sans-pro, sans-serif;
+    --font-mono:
+        Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono,
+        Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo,
+        Consolas, DejaVu Sans Mono, monospace;
+
+    --font-weight-1: 100;
+    --font-weight-2: 200;
+    --font-weight-3: 300;
+    --font-weight-4: 400;
+    --font-weight-5: 500;
+    --font-weight-6: 600;
+    --font-weight-7: 700;
+    --font-weight-8: 800;
+    --font-weight-9: 900;
+
+    --font-lineheight-00: 0.95;
+    --font-lineheight-0: 1.1;
+    --font-lineheight-1: 1.25;
+    --font-lineheight-2: 1.375;
+    --font-lineheight-3: 1.5;
+    --font-lineheight-4: 1.75;
+    --font-lineheight-5: 2;
+
+    --font-letterspacing-0: -0.05em;
+    --font-letterspacing-1: 0.025em;
+    --font-letterspacing-2: 0.05em;
+    --font-letterspacing-3: 0.075em;
+    --font-letterspacing-4: 0.15em;
+    --font-letterspacing-5: 0.5em;
+    --font-letterspacing-6: 0.75em;
+    --font-letterspacing-7: 1em;
+
+    --font-size-00: 0.5rem;
+    --font-size-0: 0.75rem;
+    --font-size-1: 1rem;
+    --font-size-2: 1.1rem;
+    --font-size-3: 1.25rem;
+    --font-size-4: 1.5rem;
+    --font-size-5: 2rem;
+    --font-size-6: 2.5rem;
+    --font-size-7: 3rem;
+    --font-size-8: 3.5rem;
+
+    --font-size-fluid-0: clamp(0.75rem, 2vw, 1rem);
+    --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
+    --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
+    --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 /* FUTURE :heading */ {
+        text-wrap: balance;
+    }
+
+    h2 + h3 {
+        margin-block-start: 0;
+    }
+
+    h1 {
+        font-size: var(--font-size-6);
+        max-inline-size: 55rem;
+    }
+
+    h2 {
+        font-size: var(--font-size-5);
+        margin-block-start: var(--size-10);
+        margin-block-end: var(--size-8);
+        max-inline-size: var(--max-text-length);
+        font-weight: var(--font-weight-6);
+        letter-spacing: var(--font-letterspacing-0);
+    }
+
+    h3 {
+        font-weight: var(--font-weight-5);
+        font-size: var(--font-size-4);
+        margin-block-start: var(--size-8);
+        margin-block-end: var(--size-3);
+    }
+
+    p,
+    li,
+    dd {
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-4);
+        margin-block-end: var(--size-5);
+        text-wrap: pretty;
+        max-inline-size: var(--max-text-length);
+        line-height: var(--font-lineheight-5);
+    }
+
+    ul,
+    ol,
+    dl {
+        margin: 0;
+        padding: 0;
+        list-style: inside;
+        ul,
+        ol,
+        dl {
+            padding-inline-start: 2ch;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline 3px var(--brand-primary);
+        text-underline-offset: var(--size-1);
+        -webkit-text-decoration: underline var(--brand-primary);
+        -webkit-text-underline-offset: var(--size-1);
+    }
+
+    a:hover,
+    a:focus {
+        color: var(--brand-primary);
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font: inherit;
+        font-size: inherit;
+        /* FUTURE: appearance: base; */
+    }
+}

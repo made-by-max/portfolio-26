@@ -1,5 +1,5 @@
 ---
-import DevProjectLayout from "../../layouts/DevProjectLayout.astro";
+import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
@@ -14,4 +14,4 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<DevProjectLayout post={post} />
+<CaseStudyLayout post={post} />

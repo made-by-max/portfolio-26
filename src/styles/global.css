@@ -1,0 +1,40 @@
+@import "typography.css";
+@import "sizes.css";
+@import "layout.css";
+@import "colors.css";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: var(--background-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    max-width: var(--max-width);
+    padding-inline: var(--size-fluid-3);
+    margin-inline: auto;
+
+    @media (width < 500px) {
+        padding: 1rem;
+    }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}

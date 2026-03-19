@@ -1,3 +1,7 @@
+
+---
+import ThemeSelect from "../components/ThemeSelect.astro";
+---
 <nav>
     <div>
         <a href="/" class="HomeLink">
@@ -6,6 +10,9 @@
     <div class="pageLinks">
         <a href="/posts/">All Posts</a>
         <a href="/about/">About</a>
+    </div>
+    <div>
+<ThemeSelect />
     </div>
 
     <style>
@@ -16,4 +23,5 @@
             align-items: center;
 
     </style>
+
 </nav>
