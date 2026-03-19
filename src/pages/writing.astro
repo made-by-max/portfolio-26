@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+// import BlogCard from "../components/BlogCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+// import TagCloud from "../components/TagCloud.astro";
+// import PostSubNav from "../components/PostSubNav.astro";
+
+const posts = await getCollection("writing");
+posts.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
+});
+
+const heading = "Writing";
+const pageTitle = "Writing";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1>{heading}</h1>
+    <div class="container">
+        <!-- <PostSubNav /> -->
+        <!-- <div class="post-list">
+            {posts.map((post) => <BlogCard post={post} />)}
+        </div> -->
+
+        <ul>
+            {
+                posts.map((post) => (
+                    <li>
+                        <a href=`/${post.collection}/${post.id}`>{post.data.title}</a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <!-- <aside>
+            <TagCloud />
+        </aside> -->
+    </div>
+</BaseLayout>

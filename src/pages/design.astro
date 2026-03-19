@@ -3,15 +3,15 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 
-const posts = await getCollection("playground");
+const posts = await getCollection("design");
 posts.sort((a, b) => {
     const dateA = new Date(a.data.date);
     const dateB = new Date(b.data.date);
     return dateB.getTime() - dateA.getTime();
 });
 
-const heading = "Playground";
-const pageTitle = "Playground";
+const heading = "Product Design Case Studies";
+const pageTitle = "Product Design Case Studies";
 ---
 
 <BaseLayout pageTitle={pageTitle}>

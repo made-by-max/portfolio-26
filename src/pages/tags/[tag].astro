@@ -6,9 +6,6 @@ import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
     const blogPosts = await getCollection("writing");
-    // const notes = await getCollection("notes");
-    // const playground = await getCollection("playground");
-    // const allPosts = [...blogPosts, ...notes, ...playground];
 
     const uniqueTags = [
         ...new Set(blogPosts.map((post) => post.data.tags).flat()),
@@ -39,13 +36,6 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle={`Posts tagged with "${tag}"`}>
     <h1>Posts tagged with "{tag}"</h1>
     <ul>
-        {
-            posts.map((post) => (
-                <>
-                    <BlogCard post={post} />
-                    {/* {<h1 class="post-title">{post.data.title}</h1>} */}
-                </>
-            ))
-        }
+        {posts.map((post) => <a href={post.url}>{post.data.title}</a>)}
     </ul>
 </BaseLayout>
