@@ -1,10 +1,10 @@
 ---
-import CaseStudyLayout from "../../layouts/CaseStudyLayout.astro";
+import DevProjectLayout from "../../layouts/DevProjectLayout.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
-    const posts = await getCollection("playground");
+    const posts = await getCollection("work");
     return posts.map((post) => ({
         params: { slug: post.id },
         props: { post },
@@ -14,4 +14,4 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 ---
 
-<CaseStudyLayout post={post} />
+<DevProjectLayout post={post} />
