@@ -16,8 +16,8 @@ const writing = defineCollection({
   }),
 });
 
-const work = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/data/work" }),
+const design = defineCollection({
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "src/data/design" }),
   schema: z.object({
     title: z.string(),
     date: z.date(),
@@ -44,4 +44,4 @@ const playground = defineCollection({
   }),
 });
 
-export const collections = { writing, work, dev, playground };
+export const collections = { writing, design, dev, playground };
