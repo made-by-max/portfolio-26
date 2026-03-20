@@ -1,6 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { ClientRouter } from "astro:transitions";
+import ThemeSelect from "../components/ThemeSelect.astro";
 
 import Footer from "../components/Footer.astro";
 import ThemeManager from "../components/ThemeManager.astro";
@@ -30,6 +31,9 @@ const { pageTitle } = Astro.props;
         <main>
             <slot />
         </main>
+
+        <ThemeSelect />
+
         <Footer />
     </body><style is:global>
         :root[data-theme="light"] {
@@ -53,6 +57,24 @@ const { pageTitle } = Astro.props;
             --text-primary: var(--text-primary-dark);
             --text-secondary: var(--text-secondary-dark);
             --border: var(--border-dark);
+        }
+
+        select {
+          // A reset of styles, including removing the default dropdown arrow
+          appearance: none;
+          // Additional resets for further consistency
+          background-color: transparent;
+          border: none;
+
+
+          font-family: inherit;
+          font-size: inherit;
+          cursor: inherit;
+          line-height: inherit;
+          position: fixed;
+          bottom: 50px;
+          right: 50px;
+
         }
     </style>
 </html>

@@ -18,11 +18,11 @@ const pageTitle = "Writing";
 
 <BaseLayout pageTitle={pageTitle}>
     <h1>{heading}</h1>
-    <div class="sidebarLayout">
+    <div class="sidebarLayout layout">
         <div class="sidebarLayout mainContent">
-            <ul>
+            <div>
                 {posts.map((post) => <BlogCard post={post} />)}
-            </ul>
+            </div>
         </div>
 
         <div class="sidebarLayout sidebar">

@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
+import BlogCard from "../../components/BlogCard.astro";
 import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
@@ -35,12 +35,6 @@ const { posts } = Astro.props;
 
 <BaseLayout pageTitle={`Posts tagged with "${tag}"`}>
     <h1>Posts tagged with "{tag}"</h1>
-    <ul>
 
-        {posts.map((post) => <li>
-
-            <a href=`/${post.collection}/${post.id}`>{post.data.title}</a></li>)}
-
-
-    </ul>
+    {posts.map((post) => <BlogCard post={post} />)}
 </BaseLayout>

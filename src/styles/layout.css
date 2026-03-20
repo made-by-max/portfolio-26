@@ -1,23 +1,22 @@
 :where(html) {
-    --max-width: 80rem;
+    --max-width: 96rem;
     --max-text-length: 60ch;
 
     .sidebarLayout {
-        display: grid;
-        gap: var(--size-fluid-3);
-        grid-template-columns: 5fr 1fr;
-
-        &.mainContent {
+        &.layout {
+            display: grid;
+            gap: var(--size-fluid-3);
+            grid-template-columns: 4fr 1fr;
             @media (max-width: 50rem) {
-                grid-column: 1;
+                grid-template-columns: 1fr;
             }
-        }
 
-        &.sidebar {
-            grid-column: 2;
+            &.sidebar {
+                grid-column: 2;
 
-            @media (max-width: 50rem) {
-                display: none;
+                @media (max-width: 50rem) {
+                    display: none;
+                }
             }
         }
     }
