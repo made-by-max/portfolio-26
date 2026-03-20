@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+const { post } = Astro.props;
+---
+
+<div class="case-study-card">
+    <div class="img">
+        <Image src={post.data.img} alt={post.data.title} />
+    </div>
+    <div class="content">
+        <h3>
+            <a href=`/${post.collection}/${post.id}`> {post.data.title}</a>
+        </h3>
+        <p>{post.data.description}</p>
+    </div>
+</div>
+
+<style>
+    .case-study-card {
+        display: flex;
+        flex-direction: row;
+        margin-block: var(--size-12);
+        gap: var(--size-8);
+        align-items: end;
+    }
+
+    .content {
+        max-width: 500px;
+    }
+
+    img {
+        max-width: 500px;
+        height: auto;
+    }
+</style>

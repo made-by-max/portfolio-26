@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+import CaseStudyCard from "../components/CaseStudyCard.astro";
 
 const posts = await getCollection("design");
 posts.sort((a, b) => {
@@ -10,22 +10,15 @@ posts.sort((a, b) => {
     return dateB.getTime() - dateA.getTime();
 });
 
-const heading = "Design";
-const pageTitle = "Design";
+const heading = "Product Design Case Studies";
+const pageTitle = "Product Design Case Studies";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <h1>{heading}</h1>
     <div class="container">
-        <ul>
-            {
-                posts.map((post) => (
-                    <li>
-                        <a href=`/${post.collection}/${post.id}`>{post.data.title}</a>
-                    </li>
-                ))
-            }
-        </ul>
-
+        <div>
+            {posts.map((post) => <CaseStudyCard post={post} />)}
+        </div>
     </div>
 </BaseLayout>
