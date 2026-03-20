@@ -3,21 +3,37 @@
 
 import SocialLinks from "../components/SocialLinks.astro";
 ---
+<footer>
+
+
 <nav>
     <div>
-        <p class="footer-cta">Like what you see? Get in touch!</p>
-        <p class="email">madebymax.dev@gmail.com</p>
+        <p class="email"><a href="mailto:madebymax.dev@gmail.com">madebymax.dev@gmail.com</a></p>
     </div>
     <div class="socialLinks">
         <SocialLinks />
     </div>
+</nav>
+</footer>
 
     <style>
+        footer {
+
+            padding-block: var(--size-10);
+            width: 100%;
+            padding-inline: 0;
+            margin-inline: 0;        }
         nav {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
+
+            max-width: var(--max-width);
+            margin-inline: auto;
+
+
+
             a {
                 text-decoration: none;
                 color: inherit;
@@ -30,5 +46,3 @@ import SocialLinks from "../components/SocialLinks.astro";
             }
 
     </style>
-
-</nav>

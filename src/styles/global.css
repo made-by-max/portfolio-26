@@ -12,11 +12,11 @@
 body {
     font-family: var(--font-sans);
     background: var(--background-primary);
+
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
-    max-width: var(--max-width);
-    padding-inline: var(--size-fluid-3);
-    margin-inline: auto;
+
+    /*padding-inline: var(--size-fluid-3);*/
 
     @media (width < 500px) {
         padding: 1rem;
@@ -25,7 +25,10 @@ body {
 
 main {
     min-height: 90vh;
+    max-width: var(--max-width);
+    margin-inline: auto;
 }
+
 img,
 picture,
 video,

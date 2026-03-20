@@ -1,12 +1,21 @@
+---
+import ThemeToggleButton from "../components/ThemeToggleButton.astro";
+---
+
 <nav>
     <div>
         <a href="/"> Max Taylor</a>
     </div>
-    <div class="pageLinks">
-        <a href="/design/">Design</a>
-        <a href="/dev/">Dev</a>
-        <a href="/writing/">Writing</a>
-        <a href="/about/">About</a>
+    <div class="trailing">
+        <div class="pageLinks">
+            <a href="/design/">Design</a>
+            <a href="/dev/">Dev</a>
+            <a href="/writing/">Writing</a>
+            <a href="/about/">About</a>
+        </div>
+        <div class="themeToggle">
+            <ThemeToggleButton />
+        </div>
     </div>
 
     <style>
@@ -17,6 +26,8 @@
             align-items: center;
             margin-inline: auto;
             margin-block: var(--size-6);
+            max-width: var(--max-width);
+            margin-inline: auto;
         }
 
         nav a {
@@ -34,6 +45,14 @@
         .pageLinks {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
+            gap: var(--size-4);
+        }
+
+        .trailing {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             gap: var(--size-4);
         }
     </style>
