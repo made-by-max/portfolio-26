@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content";
+
+const writing = await getCollection("writing");
+
+// Assuming your posts are in 'src/content/posts/'
+const allTags = [...new Set(writing.map((post) => post.data.tags).flat())];
+---
+
+<ul>
+    {
+        allTags.map((tag) => (
+            <p class="post-tags">
+                <a href={`/tags/${tag}`}>#{tag}</a>
+            </p>
+        ))
+    }
+</ul>

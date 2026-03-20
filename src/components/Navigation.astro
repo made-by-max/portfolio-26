@@ -1,7 +1,6 @@
 <nav>
     <div>
-        <a href="/" class="HomeLink">
-           Max Taylor</a>
+        <a href="/"> Max Taylor</a>
     </div>
     <div class="pageLinks">
         <a href="/design/">Design</a>
@@ -16,6 +15,26 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            margin-inline: auto;
+            margin-block: var(--size-6);
+        }
 
+        nav a {
+            text-decoration: none;
+            color: inherit;
+            font-size: var(--font-size-3);
+            font-weight: var(--font-weight-5);
+        }
+
+        nav a:hover,
+        a:focus {
+            color: var(--brand-primary);
+        }
+
+        .pageLinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--size-4);
+        }
     </style>
 </nav>

@@ -50,7 +50,7 @@
     --background-primary-light: var(--neutral-50);
     --background-secondary-light: var(--neutral-300);
     --text-primary-light: var(--neutral-1100);
-    --text-secondary-light: var(--neutral-800);
+    --text-secondary-light: var(--neutral-600);
     --border-light: var(--neutral-700);
 
     /*dark*/
@@ -61,7 +61,7 @@
     --background-primary-dark: var(--neutral-1100);
     --background-secondary-dark: var(--neutral-900);
     --text-primary-dark: var(--neutral-100);
-    --text-secondary-dark: var(--neutral-300);
+    --text-secondary-dark: var(--neutral-600);
     --border-dark: var(--neutral-700);
 
     /* color schemes */

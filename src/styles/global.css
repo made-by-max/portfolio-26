@@ -23,11 +23,13 @@ body {
     }
 }
 
+main {
+    min-height: 90vh;
+}
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
     display: block;
     max-width: 100%;
 }

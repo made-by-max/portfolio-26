@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-// import BlogCard from "../components/BlogCard.astro";
+import BlogCard from "../components/BlogCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-// import TagCloud from "../components/TagCloud.astro";
+import TagCloud from "../components/TagCloud.astro";
 // import PostSubNav from "../components/PostSubNav.astro";
 
 const posts = await getCollection("writing");
@@ -18,24 +18,15 @@ const pageTitle = "Writing";
 
 <BaseLayout pageTitle={pageTitle}>
     <h1>{heading}</h1>
-    <div class="container">
-        <!-- <PostSubNav /> -->
-        <!-- <div class="post-list">
-            {posts.map((post) => <BlogCard post={post} />)}
-        </div> -->
+    <div class="sidebarLayout">
+        <div class="sidebarLayout mainContent">
+            <ul>
+                {posts.map((post) => <BlogCard post={post} />)}
+            </ul>
+        </div>
 
-        <ul>
-            {
-                posts.map((post) => (
-                    <li>
-                        <a href=`/${post.collection}/${post.id}`>{post.data.title}</a>
-                    </li>
-                ))
-            }
-        </ul>
-
-        <!-- <aside>
+        <div class="sidebarLayout sidebar">
             <TagCloud />
-        </aside> -->
+        </div>
     </div>
 </BaseLayout>

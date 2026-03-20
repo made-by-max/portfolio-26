@@ -1,15 +1,15 @@
 
 ---
 import ThemeSelect from "../components/ThemeSelect.astro";
+import SocialLinks from "../components/SocialLinks.astro";
 ---
 <nav>
     <div>
-        <a href="/" class="HomeLink">
-           Max Taylor</a>
+        <p class="footer-cta">Like what you see? Get in touch!</p>
+        <p class="email">madebymax.dev@gmail.com</p>
     </div>
-    <div class="pageLinks">
-        <a href="/posts/">All Posts</a>
-        <a href="/about/">About</a>
+    <div class="socialLinks">
+        <SocialLinks />
     </div>
     <div>
 <ThemeSelect />
@@ -21,6 +21,16 @@ import ThemeSelect from "../components/ThemeSelect.astro";
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            a {
+                text-decoration: none;
+                color: inherit;
+                font-size: var(--font-size-3);
+                font-weight: var(--font-weight-5);
+            }
+            a:hover,
+            a:focus {
+                color: var(--brand-primary);
+            }
 
     </style>
 

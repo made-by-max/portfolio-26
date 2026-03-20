@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { fade } from "astro:transitions";
+import "../styles/blogpost.css";
+import PostDate from "../components/PostDate.astro";
+import TagGroup from "../components/TagGroup.astro";
+const { post } = Astro.props;
+---
+
+<div class="post-card">
+    <h3 class="post-heading">
+        <a href=`/${post.collection}/${post.id}`> {post.data.title}</a>
+    </h3>
+
+    <div class="post-metadata">
+        <PostDate post={post} />
+        <TagGroup post={post} />
+    </div>
+</div>

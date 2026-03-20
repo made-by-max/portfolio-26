@@ -1,4 +1,24 @@
 :where(html) {
     --max-width: 80rem;
     --max-text-length: 60ch;
+
+    .sidebarLayout {
+        display: grid;
+        gap: var(--size-fluid-3);
+        grid-template-columns: 5fr 1fr;
+
+        &.mainContent {
+            @media (max-width: 50rem) {
+                grid-column: 1;
+            }
+        }
+
+        &.sidebar {
+            grid-column: 2;
+
+            @media (max-width: 50rem) {
+                display: none;
+            }
+        }
+    }
 }

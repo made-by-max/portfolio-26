@@ -18,11 +18,14 @@ const writing = defineCollection({
 
 const design = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/data/design" }),
-  schema: z.object({
-    title: z.string(),
-    date: z.date(),
-    tags: z.array(z.string()),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      intro: z.string(),
+      img: image(),
+      tags: z.array(z.string()),
+    }),
 });
 
 const dev = defineCollection({
