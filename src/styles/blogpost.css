@@ -53,7 +53,3 @@ a:focus {
 .post-header {
     margin-block: var(--size-10);
 }
-
-.i {
-    color: var(--text-secondary);
-}

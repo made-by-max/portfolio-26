@@ -8,7 +8,7 @@ const pageTitle = "Max Taylor";
     <div class="head">
         <img
             class="profile"
-            src="../assets/profilepic.jpg"
+            src="../profilepic.jpg"
             alt="A headshot of Max, a white person with short brown hair and glasses."
         />
 
@@ -50,3 +50,33 @@ const pageTitle = "Max Taylor";
         with my faithful canine companion, Rufus.
     </p>
 </BaseLayout>
+<style>
+    .head {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: start;
+    }
+
+    img.profile {
+        max-width: 300px;
+        border-radius: 100%;
+    }
+
+    .headline {
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        font-size: var(--font-size-3);
+        font-weight: 500;
+        margin-block-start: var(--size-12);
+        margin-block-end: var(--size-2);
+    }
+    .subhead {
+        font-size: var(--font-size-6);
+        margin-block-end: var(--size-12);
+        max-width: 50rem;
+        text-wrap: balance;
+        line-height: 1.1;
+    }
+</style>

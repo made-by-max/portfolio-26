@@ -52,6 +52,7 @@
     --text-primary-light: var(--neutral-1100);
     --text-secondary-light: var(--neutral-600);
     --border-light: var(--neutral-700);
+    --shadow-color: hsl(220 3% 15%);
 
     /*dark*/
     --brand-primary-dark: var(--indigo-400);
@@ -63,6 +64,7 @@
     --text-primary-dark: var(--neutral-100);
     --text-secondary-dark: var(--neutral-600);
     --border-dark: var(--neutral-700);
+    --shadow-color: hsl(220 40% 2%);
 
     /* color schemes */
     color-scheme: light;
