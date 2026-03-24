@@ -80,8 +80,6 @@
         font-size: var(--text-lg);
         line-height: var(--text-lg-line-height);
         font-weight: var(--font-weight-normal);
-        /*margin-block-start: var(--size-8);
-        margin-block-end: var(--size-3);*/
         margin-block-start: var(--size-12);
     }
 
@@ -91,7 +89,7 @@
         font-size: var(--text-base);
         line-height: var(--text-base-line-height);
         font-weight: var(--font-weight-normal);
-
+        margin-block-end: var(--size-8);
         text-wrap: pretty;
         max-inline-size: var(--max-text-length);
     }
@@ -168,10 +166,12 @@
         margin-block-start: var(--size-12);
     }
     .text-base {
-        font-size: var(--text-xl);
-        line-height: var(--text-xl-line-height);
+        font-size: var(--text-base);
+        line-height: var(--text-base-line-height);
         font-weight: var(--font-weight-normal);
-        margin-block-end: var(--size-8);
+
+        text-wrap: pretty;
+        max-inline-size: var(--max-text-length);
     }
     .text-sm {
         font-size: var(--text-sm);

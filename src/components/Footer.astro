@@ -5,8 +5,9 @@ import SocialLinks from "../components/SocialLinks.astro";
 ---
 <footer>
 
+    <div class="wrapper-wide">
 
-<nav>
+    <nav class="wrapper-wide">
     <div>
         <p class="email"><a href="mailto:madebymax.dev@gmail.com">madebymax.dev@gmail.com</a></p>
     </div>
@@ -14,6 +15,7 @@ import SocialLinks from "../components/SocialLinks.astro";
         <SocialLinks />
     </div>
 </nav>
+    </div>
 </footer>
 
     <style>
@@ -22,7 +24,11 @@ import SocialLinks from "../components/SocialLinks.astro";
             padding-block: var(--size-10);
             width: 100%;
             padding-inline: 0;
-            margin-inline: 0;        }
+            margin-inline: 0;
+
+
+        }
+
         nav {
             display: flex;
             flex-wrap: wrap;
