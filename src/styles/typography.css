@@ -1,31 +1,42 @@
 @import "@fontsource-variable/instrument-sans";
 
+@import "@fontsource-variable/albert-sans/wght.css";
+
 :where(html) {
     --font-sans:
-        "Instrument Sans Variable", Avenir, Montserrat, Corbel, URW Gothic,
+        "Albert Sans Variable", Avenir, Montserrat, Corbel, URW Gothic,
         source-sans-pro, sans-serif;
     --font-mono:
         Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono,
         Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo,
         Consolas, DejaVu Sans Mono, monospace;
 
-    --font-weight-1: 100;
-    --font-weight-2: 200;
-    --font-weight-3: 300;
-    --font-weight-4: 400;
-    --font-weight-5: 500;
-    --font-weight-6: 600;
-    --font-weight-7: 700;
-    --font-weight-8: 800;
-    --font-weight-9: 900;
+    --text-xs: 0.875rem;
+    --text-xs-line-height: 1.25rem;
+    --text-s: 1rem;
+    --text-s-line-height: 1.5rem;
+    --text-base: 1.125rem;
+    --text-base-line-height: 1.75rem;
+    --text-lg: 1.5rem;
+    --text-lg-line-height: 2rem;
+    --text-xl: 1.875rem;
+    --text-x1-line-height: 2.375rem;
+    --text-2xl: 2.5rem;
+    --text-2xl-line-height: 3rem;
+    --text-3xl: 3rem;
+    --text-3xl-line-height: 3.25rem;
+    --text-4xl: 3.5rem;
+    --text-4xl-line-height: 3.75rem;
+    --text-5xl: 4rem;
+    --text-5xl-line-height: 4.25rem;
 
-    --font-lineheight-00: 0.95;
-    --font-lineheight-0: 1.1;
-    --font-lineheight-1: 1.25;
-    --font-lineheight-2: 1.375;
-    --font-lineheight-3: 1.5;
-    --font-lineheight-4: 1.75;
-    --font-lineheight-5: 2;
+    --font-weight-light: 270;
+    --font-weight-semilight: 360;
+    --font-weight-normal: 400;
+    --font-weight-caption: 430;
+    --font-weight-medium: 480;
+    --font-weight-semibold: 550;
+    --font-weight-bold: 600;
 
     --font-letterspacing-0: -0.05em;
     --font-letterspacing-1: 0.025em;
@@ -35,22 +46,6 @@
     --font-letterspacing-5: 0.25em;
     --font-letterspacing-6: 0.5em;
     --font-letterspacing-7: 1em;
-
-    --font-size-00: 0.5rem;
-    --font-size-0: 0.75rem;
-    --font-size-1: 1rem;
-    --font-size-2: 1.1rem;
-    --font-size-3: 1.25rem;
-    --font-size-4: 1.5rem;
-    --font-size-5: 2rem;
-    --font-size-6: 2.5rem;
-    --font-size-7: 3rem;
-    --font-size-8: 3.5rem;
-
-    --font-size-fluid-0: clamp(0.75rem, 2vw, 1rem);
-    --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
-    --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
-    --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
 
     h1,
     h2,
@@ -66,35 +61,39 @@
     }
 
     h1 {
-        font-size: var(--font-size-8);
-        max-inline-size: 55rem;
+        font-size: var(--text-5xl);
+        line-height: var(--text-5xl-line-height);
+        font-weight: var(--font-weight-light);
     }
 
     h2 {
-        font-size: var(--font-size-5);
-        margin-block-start: var(--size-10);
-        margin-block-end: var(--size-8);
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl-line-height);
+        /*margin-block-start: var(--size-10);
+        margin-block-end: var(--size-8);*/
         max-inline-size: var(--max-text-length);
-        font-weight: var(--font-weight-6);
-        letter-spacing: var(--font-letterspacing-0);
+        font-weight: var(--font-weight-semilight);
+        margin-block-start: var(--size-13);
     }
 
     h3 {
-        font-size: var(--font-size-4);
-        font-weight: var(--font-weight-5);
-        margin-block-start: var(--size-8);
-        margin-block-end: var(--size-3);
+        font-size: var(--text-lg);
+        line-height: var(--text-lg-line-height);
+        font-weight: var(--font-weight-normal);
+        /*margin-block-start: var(--size-8);
+        margin-block-end: var(--size-3);*/
+        margin-block-start: var(--size-12);
     }
 
     p,
     li,
     dd {
-        font-size: var(--font-size-3);
-        font-weight: var(--font-weight-4);
-        margin-block-end: var(--size-5);
+        font-size: var(--text-base);
+        line-height: var(--text-base-line-height);
+        font-weight: var(--font-weight-normal);
+
         text-wrap: pretty;
         max-inline-size: var(--max-text-length);
-        line-height: var(--font-lineheight-5);
     }
 
     ul,
@@ -131,5 +130,69 @@
         font: inherit;
         font-size: inherit;
         /* FUTURE: appearance: base; */
+    }
+
+    .text-5xl {
+        font-size: var(--text-5xl);
+        line-height: var(--text-5xl-line-height);
+        font-weight: var(--font-weight-light);
+    }
+
+    .text-4xl {
+        font-size: var(--text-4xl);
+        line-height: var(--text-4xl-line-height);
+        font-weight: var(--font-weight-light);
+    }
+
+    .text-3xl {
+        font-size: var(--text-3xl);
+        line-height: var(--text-3xl-line-height);
+        font-weight: var(--font-weight-light);
+    }
+
+    .text-2xl {
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl-line-height);
+        font-weight: var(--font-weight-light);
+    }
+
+    .text-xl {
+        font-size: var(--text-xl);
+        line-height: var(--text-xl-line-height);
+        font-weight: var(--font-weight-light);
+    }
+    .text-lg {
+        font-size: var(--text-lg);
+        line-height: var(--text-lg-line-height);
+        font-weight: var(--font-weight-normal);
+        margin-block-start: var(--size-12);
+    }
+    .text-base {
+        font-size: var(--text-xl);
+        line-height: var(--text-xl-line-height);
+        font-weight: var(--font-weight-normal);
+        margin-block-end: var(--size-8);
+    }
+    .text-sm {
+        font-size: var(--text-sm);
+        line-height: var(--text-sm-line-height);
+        font-weight: var(--font-weight-caption);
+    }
+    .text-xs {
+        font-size: var(--text-xs);
+        line-height: var(--text-xs-line-height);
+        font-weight: var(--font-weight-normal);
+    }
+
+    .text-overline {
+        font-size: var(--text-xl);
+        line-height: var(--text-xl-line-height);
+        font-weight: var(--font-weight-normal);
+    }
+
+    .text-nav {
+        font-size: var(--text-lg);
+        line-height: var(--text-lg-line-height);
+        font-weight: var(--font-weight-light);
     }
 }

@@ -2,6 +2,12 @@
     --max-width: 96rem;
     --max-text-length: 60ch;
 
+    .theme-toggle {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+    }
+
     .sidebarLayout {
         &.layout {
             display: grid;

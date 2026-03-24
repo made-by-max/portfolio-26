@@ -1,21 +1,20 @@
 ---
 import ThemeToggleButton from "../components/ThemeToggleButton.astro";
+import "../styles/typography.css";
 ---
 
 <nav>
     <div>
-        <a href="/"> Max Taylor</a>
+        <a class="text-nav" href="/"> Max Taylor</a>
     </div>
     <div class="trailing">
         <div class="pageLinks">
-            <a href="/design/">Design</a>
-            <a href="/dev/">Dev</a>
-            <a href="/writing/">Writing</a>
-            <a href="/about/">About</a>
+            <a class="text-nav" href="/design/">Design</a>
+            <a class="text-nav" href="/dev/">Dev</a>
+            <a class="text-nav" href="/writing/">Writing</a>
+            <a class="text-nav" href="/about/">About</a>
         </div>
-        <div class="themeToggle">
-            <ThemeToggleButton />
-        </div>
+        <div class="themeToggle"></div>
     </div>
 
     <style>
@@ -33,8 +32,6 @@ import ThemeToggleButton from "../components/ThemeToggleButton.astro";
         nav a {
             text-decoration: none;
             color: inherit;
-            font-size: var(--font-size-3);
-            font-weight: var(--font-weight-5);
         }
 
         nav a:hover,
