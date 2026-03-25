@@ -6,8 +6,12 @@ img: ../../assets/quickstarts/featuredimage.png
 tags:
   - developer-experience
   - user-research
-  
+
 ---
+import StandardSection from '../../components/StandardSection.astro'
+
+<StandardSection>
+
 
 ## Problem
 ### Identifying pain points
@@ -15,7 +19,7 @@ In order to get a better understanding of what developers liked about our quicks
 
 
 #### Incomplete code samples
-The code samples provided in the quickstart were incomplete snippets and failed to call out a specific file name for where to put the code. 
+The code samples provided in the quickstart were incomplete snippets and failed to call out a specific file name for where to put the code.
 
 While more experienced React developers generally figured this step out without assistance, we noticed that it was something novice developers really struggled with.
 
@@ -23,7 +27,7 @@ While more experienced React developers generally figured this step out without 
 
 
 #### Too much context switching
-In order to follow along with the quickstart, users would have to navigate to the Auth0 dashboard to enter their callback, logout, and web origins URLs, then copy the information from the quickstart into their code editor. 
+In order to follow along with the quickstart, users would have to navigate to the Auth0 dashboard to enter their callback, logout, and web origins URLs, then copy the information from the quickstart into their code editor.
 
 This context switching slowed down the integration process, and created a less focused experience. It was also prone to error, as users frequently forgot to save their URLs in the dashboard.
 
@@ -56,9 +60,10 @@ The reactions to the new version of the quickstart were overwhelmingly positive,
 ## Results
 ### Final Design and Impact
 With the design mostly finalized, I worked with our engineering team on implementation. I had weekly syncs with the engineers and product manager to get status updates and work out the remaining details.
-The new quickstart design launched as a beta test in late February 2022. 
+The new quickstart design launched as a beta test in late February 2022.
 
 We then conducted an additional round of unmoderated usability testing once the quickstarts were live in order to validate the new design.
 The feedback on the new design was very positive, with just a few minor UI fixes needed.
 
 The overall time it took for developers to implement a login button on their application dropped from roughly 30 minutes using the original quickstart to approximately 10-15 minutes using the redesigned quickstart.
+</StandardSection>

@@ -12,11 +12,13 @@
     .wrapper-wide {
         max-width: var(--wrapper-wide);
         margin: 0 auto;
+        padding-inline: 16px;
     }
 
     .wrapper-medium {
         max-width: var(--wrapper-medium);
         margin: 0 auto;
+        padding-inline: 16px;
     }
 
     .sidebarLayout {
