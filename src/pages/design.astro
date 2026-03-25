@@ -10,10 +10,10 @@ const pageTitle = "Product Design Case Studies";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="wrapper-medium">
+    <div class="wrapper-wide">
         <h1>{heading}</h1>
         <div class="container">
-            <div>
+            <div class="cardLayout">
                 {posts.map((post) => <CaseStudyCard post={post} />)}
             </div>
         </div>

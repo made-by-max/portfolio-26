@@ -6,31 +6,63 @@ const { post } = Astro.props;
 
 <div class="case-study-card">
     <div class="img">
-        <Image src={post.data.img} alt={post.data.title} />
+        <a href=`/${post.collection}/${post.id}`
+            ><Image src={post.data.img} alt={post.data.title} /></a
+        >
     </div>
     <div class="content">
-        <h3>
-            <a href=`/${post.collection}/${post.id}`> {post.data.title}</a>
-        </h3>
+        <h2 class="text-lg">
+            {post.data.title}
+        </h2>
         <p>{post.data.description}</p>
+        <a href=`/${post.collection}/${post.id}`>
+            View Case Study <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                ><path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1"
+                    d="M5 12h14m-7-7l7 7l-7 7"></path></svg
+            >
+        </a>
     </div>
+
+    <style>
+
+            grid-row: span 4;
+            display: grid;
+            grid-template-rows: subgrid;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content {
+
+            grid-row: span 3;
+            display: grid;
+            grid-template-rows: subgrid;
+        }
+
+        p {
+            margin-block-end: var(--size-3);
+        }
+
+        a {
+            font-size: var(--font-size-1);
+            color: var(--brand-primary);
+            text-decoration: none;
+            /* margin-inline: var(--size-1); */
+            display: flex;
+            align-items: center;
+            gap: var(--size-1);
+        }
+    </style>
 </div>
-
-<style>
-    .case-study-card {
-        display: flex;
-        flex-direction: column;
-        margin-block: var(--size-12);
-        gap: var(--size-8);
-        align-items: start;
-    }
-
-    .content {
-        max-width: 500px;
-    }
-
-    img {
-        max-width: 500px;
-        height: auto;
-    }
-</style>

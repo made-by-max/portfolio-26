@@ -73,14 +73,14 @@
         margin-block-end: var(--size-8);*/
         max-inline-size: var(--max-text-length);
         font-weight: var(--font-weight-semilight);
-        margin-block-start: var(--size-13);
+        /*margin-block-start: var(--size-13);*/
     }
 
     h3 {
         font-size: var(--text-lg);
         line-height: var(--text-lg-line-height);
         font-weight: var(--font-weight-normal);
-        margin-block-start: var(--size-12);
+        /*margin-block-start: var(--size-12);*/
     }
 
     p,
@@ -109,7 +109,7 @@
 
     a {
         color: inherit;
-        text-decoration: underline 3px var(--brand-primary);
+        text-decoration: underline 1px var(--text-soft);
         text-underline-offset: var(--size-1);
         -webkit-text-decoration: underline var(--brand-primary);
         -webkit-text-underline-offset: var(--size-1);
@@ -117,8 +117,8 @@
 
     a:hover,
     a:focus {
-        color: var(--brand-primary);
-        text-decoration: none;
+        /*color: var(--brand-primary);*/
+        text-decoration: underline 2px;
     }
 
     input,
@@ -163,7 +163,7 @@
         font-size: var(--text-lg);
         line-height: var(--text-lg-line-height);
         font-weight: var(--font-weight-normal);
-        margin-block-start: var(--size-12);
+        /*margin-block-start: var(--size-12);*/
     }
     .text-base {
         font-size: var(--text-base);
