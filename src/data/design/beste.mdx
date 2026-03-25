@@ -1,6 +1,6 @@
 ---
 title: Creating an AI Digital Assistant
-description: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem. 
+description: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem.
 intro: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem. Best’e is backed by a Retrievel Augmented Generation architecture accessible via a natural language prompt.
 img: ../../assets/beste/featuredimage.png
 tags:
@@ -10,17 +10,31 @@ tags:
 
 ---
 
- 
+import BlogImage from '../../components/BlogImage.astro'
+import fdbkimg from '../../assets/beste/positivefeedback.png'
+import PurpleSection from '../../components/PurpleSection.astro'
+import StandardSection from '../../components/StandardSection.astro'
+
+<BlogImage src={fdbkimg} alt="Beste feedback"/>
+
+<PurpleSection>
 
 ## Problem
 ### Discoverability is a major issue for Best Buy engineers
 It’s not easy to discover information within Best Buy. There’s too many teams, services, and tools for anybody to keep track of and information is spread across Confluence, Slack, GitHub, and other tools. Finding accurate and up-to-date information frequently comes down to knowing who to ask, which presents barriers to new team members and doesn’t work at scale. Engineers waste an estimated 80,000 hours a year searching for information.
 
 Best’e can reduce the amount of time spent searching for information by answering basic questions about common problems, tools, services, policies, and acronyms at Best Buy.
+</PurpleSection>
+
+
+<StandardSection>
+
+
 
 ## Design
 ### Crafting the Best'e UI
 Best’e is located in the Best Buy Internal Developer Portal. It’s accessed via a floating action button on every page, which opens up a side panel, so that users can ask questions within the context of whatever they’re working on.
+
 
 
 ![screenshot of the beste ui](../../assets/beste/besteui.png)
@@ -68,3 +82,4 @@ We found that users were asking a lot of the same questions over and over, so we
 
 ## Results
 The initial response to Best'e has been quite positive, and engineers have been eager to test it out. It's still in the early stages of development and is relying on a fairly small number of data sources, which limits the types of questions that can be answered. However, given its early success, we are confident that as we add more data sources Best'e will deliver tremendous value towards improving developer efficiency.
+</StandardSection>

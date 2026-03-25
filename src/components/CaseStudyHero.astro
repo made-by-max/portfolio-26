@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+const { post } = Astro.props;
+---
+
+<div class="wrapper-wide">
+    <div class="heroImage">
+        <Image src={post.data.img} alt={post.data.title} />
+    </div>
+
+    <div>
+        <h1 class="post-heading">
+            {post.data.title}
+        </h1>
+        <p class="intro">
+            {post.data.intro}
+        </p>
+    </div>
+</div>
