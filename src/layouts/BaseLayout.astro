@@ -1,7 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { ClientRouter } from "astro:transitions";
-
+import ThemeToggleButton from "../components/ThemeToggleButton.astro";
 import Footer from "../components/Footer.astro";
 import ThemeManager from "../components/ThemeManager.astro";
 
@@ -30,7 +30,9 @@ const { pageTitle } = Astro.props;
         <main>
             <slot />
         </main>
-
+        <div class="theme-toggle">
+            <ThemeToggleButton />
+        </div>
         <Footer />
     </body><style is:global>
         :root[data-theme="light"] {

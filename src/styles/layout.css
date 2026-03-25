@@ -1,6 +1,23 @@
 :where(html) {
-    --max-width: 96rem;
+    --wrapper-wide: 84rem;
+    --wrapper-medium: 67.5rem;
     --max-text-length: 60ch;
+
+    .theme-toggle {
+        position: fixed;
+        top: 24px;
+        right: 24px;
+    }
+
+    .wrapper-wide {
+        max-width: var(--wrapper-wide);
+        margin: 0 auto;
+    }
+
+    .wrapper-medium {
+        max-width: var(--wrapper-medium);
+        margin: 0 auto;
+    }
 
     .sidebarLayout {
         &.layout {

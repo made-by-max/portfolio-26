@@ -34,7 +34,9 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={`Posts tagged with "${tag}"`}>
-    <h1>Posts tagged with "{tag}"</h1>
+    <div class="wrapper-medium">
+        <h1>Posts tagged with "{tag}"</h1>
 
-    {posts.map((post) => <BlogCard post={post} />)}
+        {posts.map((post) => <BlogCard post={post} />)}
+    </div>
 </BaseLayout>

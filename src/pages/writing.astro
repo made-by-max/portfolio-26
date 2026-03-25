@@ -17,16 +17,18 @@ const pageTitle = "Writing";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <h1>{heading}</h1>
-    <div class="sidebarLayout layout">
-        <div class="sidebarLayout mainContent">
-            <div>
-                {posts.map((post) => <BlogCard post={post} />)}
+    <div class="wrapper-medium">
+        <h1>{heading}</h1>
+        <div class="sidebarLayout layout">
+            <div class="sidebarLayout mainContent">
+                <div>
+                    {posts.map((post) => <BlogCard post={post} />)}
+                </div>
             </div>
-        </div>
 
-        <div class="sidebarLayout sidebar">
-            <TagCloud />
+            <div class="sidebarLayout sidebar">
+                <TagCloud />
+            </div>
         </div>
     </div>
 </BaseLayout>
