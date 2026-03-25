@@ -73,19 +73,23 @@ p {
     max-inline-size: var(--max-text-length);
 }
 
-img {
+/*img {
     max-width: min(
         67.5rem,
         94vw
-    ); /* 900px or viewport width, whichever is smaller */
+    );
     width: min(67.5rem, 94vw);
 
     height: auto;
     margin-block: var(--size-12);
     border-radius: var(--size-px-2);
     box-shadow: var(--shadow-1);
-}
+}*/
 
-.hero img {
+/*.hero img {
     width: 100%;
+}*/
+
+img {
+    height: auto;
 }

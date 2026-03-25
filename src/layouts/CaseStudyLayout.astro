@@ -6,29 +6,16 @@ import { Image } from "astro:assets";
 const { post } = Astro.props;
 const { Content } = await render(post);
 const pageTitle = post.data.title;
+import CaseStudyHero from "../components/CaseStudyHero.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="wrapper-medium">
-        <div class="hero">
-            <div class="heroImage">
-                <Image src={post.data.img} alt={post.data.title} />
-            </div>
-
-            <div>
-                <h1 class="post-heading">
-                    {post.data.title}
-                </h1>
-                <p class="intro">
-                    {post.data.intro}
-                </p>
-            </div>
-        </div>
-
-        <div class="post-container">
-            <article>
-                <Content />
-            </article>
-        </div>
+    <!-- <div class="wrapper-medium"> -->
+    <CaseStudyHero post={post} />
+    <div class="post-container">
+        <article>
+            <Content />
+        </article>
     </div>
+    <!-- </div> -->
 </BaseLayout>
