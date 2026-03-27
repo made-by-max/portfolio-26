@@ -1,0 +1,30 @@
+h1 {
+    margin-block-end: var(--size-7);
+}
+
+h2 {
+    margin-block-start: var(--size-11);
+    margin-block-end: var(--size-2);
+}
+
+h3 {
+    margin-block-start: var(--size-9);
+    margin-block-end: var(--size-2);
+}
+
+p {
+    margin-block-end: var(--size-4);
+}
+
+img {
+    height: auto;
+}
+
+li {
+    margin-block-end: var(--size-3);
+}
+
+ul {
+    margin-block-start: -16px;
+    margin-block-end: 40px;
+}

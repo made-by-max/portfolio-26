@@ -33,42 +33,34 @@ h4 {
 }*/
 
 h1 {
-    font-size: var(--text-5xl);
-    line-height: var(--text-5xl-line-height);
-    font-weight: var(--font-weight-light);
+    font-size: 56px;
+    font-weight: 500;
+    text-wrap: pretty;
 }
 
 h2 {
-    font-size: var(--text-base);
-    line-height: var(--text-base-line-height);
-    font-weight: var(--font-weight-normal);
-
+    font-size: 24px;
     text-wrap: pretty;
     max-inline-size: var(--max-text-length);
+    margin-block-start: 72px;
+    margin-block-end: 16px;
+    font-weight: 500;
 }
 
 h3 {
-    font-size: var(--text-2xl);
-    line-height: var(--text-2xl-line-height);
-    /*margin-block-start: var(--size-10);
-    margin-block-end: var(--size-8);*/
-    max-inline-size: var(--max-text-length);
-    font-weight: var(--font-weight-semilight);
-    margin-block-start: var(--size-13);
-}
+    font-size: 20px;
 
-h4 {
-    font-size: var(--text-lg);
-    line-height: var(--text-lg-line-height);
-    font-weight: var(--font-weight-normal);
-    margin-block-start: var(--size-12);
+    max-inline-size: var(--max-text-length);
+    font-weight: 600;
+    margin-block-start: 72px;
+    margin-block-end: 16px;
 }
 
 p {
     font-size: var(--text-base);
-    line-height: var(--text-base-line-height);
+    line-height: 1.6;
     font-weight: var(--font-weight-normal);
-
+    margin-block-end: 32px;
     text-wrap: pretty;
     max-inline-size: var(--max-text-length);
 }
@@ -95,5 +87,10 @@ img {
 }
 
 li {
-    margin-block: var(--size-3);
+    margin-block-end: var(--size-3);
+}
+
+ul {
+    margin-block-start: -16px;
+    margin-block-end: 40px;
 }

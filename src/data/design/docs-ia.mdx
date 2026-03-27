@@ -13,36 +13,30 @@ tags:
 
 import StandardSection from '../../components/StandardSection.astro'
 
+
 <StandardSection>
 
 
-## Problem
-### Auth0 Docs - love ‘em or hate ‘em
-We got a lot of feedback that our docs were amazing. They were frequently cited as a competitive differentiator.
 
-We also got a lot of feedback that our docs were terrible and impossible to navigate.
+## Auth0 Docs - love ‘em or hate ‘em
+We got a lot of feedback that our docs were amazing. They were frequently cited as a competitive differentiator. We also got a lot of feedback that our docs were terrible and impossible to navigate.
 
 I set out to find out why.
 
-
-
-#### Experience level was a key factor
+### Experience level was a key factor
 Developers who liked our docs:
 
-Had more pre-existing Identity and Access management (IAM) knowledge
+- Had more pre-existing Identity and Access management (IAM) knowledge
+- Relied more on Google searches to find docs or community forum posts
 
-Relied more on Google searches to find docs or community forum posts
 
 Developers who struggled with our docs:
+- Had less Identity and Access management (IAM) knowledge
+- Relied more on our sidebar navigation because they didn’t know the concepts well enough to choose good search terms
+- Ended up jumping back and forth between lots of open of tabs
 
-Had less Identity and Access management (IAM) knowledge
 
-Relied more on our sidebar navigation because they didn’t know the concepts well enough to choose good search terms
-
-Ended up jumping back and forth between lots of open of tabs
-
-## Research
-### Making sense of the mess
+## Making sense of the mess
 I performed a content audit of all 1000+ pages of docs, putting together a massive spreadsheet highlighting the problems in the IA. (I am precisely the kind of nerd 🤓 who loves this stuff).
 
 Our sidebar navigation was manually generated, but our breadcrumbs were automatically generated based on the file structure of our CMS.
@@ -90,10 +84,10 @@ To validate the results of the card sorting, I followed up with wayfinding tests
 Once again, different people had different mental models about how the topics should be grouped. Overall, however, more people were successful with the feature-based navigation and reported preferring that option.
 
 
->"I preferred the [Feature-based] experience because the top bar navigation was segmented more and the headlines were much less ambiguous."
+"I preferred the [Feature-based] experience because the top bar navigation was segmented more and the headlines were much less ambiguous."
 
-## Design
-### Breaking up the monolith
+
+## Breaking up the monolith
 Based on my findings from the card sorting and wayfinding tests, I split the docs content into 7 main categories, each with their own sub-menu:
 
 Get started
@@ -130,7 +124,7 @@ The final design used a simplified diagram that provided users with a big pictur
 ![a screenshot of the auth0 docs landing page with a simple diagram](../../assets/docs-ia/landingpagesimplediagram.png)
 
 
-### Finalizing the Design
+## Finalizing the Design
 I made some small tweaks based on some of the feedback from our usability testing and then designed the new sidebar sections.
 
 I paired with our frontend engineering team to iterate on the behavior of the new sidebar, how users would move from one section to another, and the mobile version of the navigation menu.

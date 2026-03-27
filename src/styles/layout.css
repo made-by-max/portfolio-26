@@ -1,12 +1,12 @@
 :where(html) {
-    --wrapper-wide: 84rem;
+    --wrapper-wide: 85rem;
     --wrapper-medium: 67.5rem;
     --max-text-length: 60ch;
 
     .theme-toggle {
         position: fixed;
-        top: var(--size-6);
-        right: var(--size-4);
+        bottom: var(--size-3);
+        right: var(--size-3);
     }
 
     .wrapper-wide {
