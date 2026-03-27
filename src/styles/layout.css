@@ -44,7 +44,7 @@
 
     .cardLayout {
         display: grid;
-        gap: 48px;
+        gap: 8px;
         grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     }
 }

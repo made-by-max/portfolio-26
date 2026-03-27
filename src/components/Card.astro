@@ -1,7 +1,9 @@
 ---
-import type { CollectionEntry } from "astro:content";
+// import type { CollectionEntry } from "astro:content";
 import { Image } from "astro:assets";
-const { post } = Astro.props;
+// const { post } = Astro.props;
+
+const { cardLink, cardTitle, cardContent, cardImage, cardBG } = Astro.props;
 ---
 
 <div class="case-study-card">
@@ -26,10 +28,10 @@ const { post } = Astro.props;
         grid-template-rows: subgrid;
         gap: 120px;
         position: relative;
-        background-color: var(--surface);
+        background-color: #212529;
         /*background:
-            linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
-            linear-gradient(rgb(180, 220, 255) 0%, rgb(207, 162, 251) 100%);*/
+                    linear-gradient(#000, #000) padding-box,
+                    linear-gradient(45deg, var(--blue-500), var(--blue-600)) border-box;*/
         border-radius: 8px;
         border: 1px solid transparent;
     }
@@ -41,7 +43,6 @@ const { post } = Astro.props;
     }
 
     .img-container {
-        margin-top: 80px;
         padding-inline: 16px;
     }
 
