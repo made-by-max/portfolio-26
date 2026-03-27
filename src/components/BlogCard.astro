@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { fade } from "astro:transitions";
-import "../styles/blogpost.css";
+// import "../styles/blogpost.css";
 import PostDate from "../components/PostDate.astro";
 import TagGroup from "../components/TagGroup.astro";
 const { post } = Astro.props;
@@ -17,3 +17,18 @@ const { post } = Astro.props;
         <TagGroup post={post} />
     </div>
 </div>
+
+<style>
+    h3 {
+        color: var(--brand-primary);
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+    }
+</style>

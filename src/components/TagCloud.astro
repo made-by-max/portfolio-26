@@ -7,13 +7,18 @@ const writing = await getCollection("writing");
 const allTags = [...new Set(writing.map((post) => post.data.tags).flat())];
 ---
 
-<!-- <h3>Tags</h3> -->
-<ul>
-    {
-        allTags.map((tag) => (
-            <p class="post-tags">
-                <a href={`/tags/${tag}`}>#{tag}</a>
-            </p>
-        ))
+{
+    allTags.map((tag) => (
+        <p class="post-tags">
+            <a class="tag" href={`/tags/${tag}`}>
+                {tag}
+            </a>
+        </p>
+    ))
+}
+
+<style>
+    p {
+        margin-block: var(--size-1);
     }
-</ul>
+</style>

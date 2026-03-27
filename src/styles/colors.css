@@ -81,6 +81,7 @@
         --accent-secondary: var(--accent-secondary-light);
         --background-primary: var(--background-primary-light);
         --background-secondary: var(--background-secondary-light);
+        --surface: var(--surface-light);
         --text-primary: var(--text-primary-light);
         --text-secondary: var(--text-secondary-light);
         --border: var(--border-light);
@@ -95,6 +96,7 @@
         --accent-secondary: var(--accent-secondary-dark);
         --background-primary: var(--background-primary-dark);
         --background-secondary: var(--background-secondary-dark);
+        --surface: var(--surface-dark);
         --text-primary: var(--text-primary-dark);
         --text-secondary: var(--text-secondary-dark);
         --border: var(--border-dark);

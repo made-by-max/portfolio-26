@@ -11,26 +11,25 @@ const pageTitle = post.data.title;
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-medium">
-        <div>
-            <div class="post-header">
-                <h1 class="post-heading">
-                    {post.data.title}
-                </h1>
+        <div class="post-header">
+            <h1 class="post-heading">
+                {post.data.title}
+            </h1>
 
-                <div class="post-metadata">
-                    <PostDate post={post} />
-                    <TagGroup post={post} />
-                </div>
+            <div class="post-metadata">
+                <PostDate post={post} />
+                <TagGroup post={post} />
             </div>
-            <div class="post-container">
-                <article>
-                    <Content />
-                </article>
+        </div>
 
-                <!-- <aside>
+        <div>
+            <article>
+                <Content />
+            </article>
+
+            <!-- <aside>
         <h4>Table of Contents</h4>
       </aside> -->
-            </div>
         </div>
     </div>
 </BaseLayout>

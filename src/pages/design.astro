@@ -6,8 +6,8 @@ import CaseStudyCard from "../components/CaseStudyCard.astro";
 import "../styles/cards.css";
 const posts = await getCollection("design");
 
-const heading = "Product Design Case Studies";
-const pageTitle = "Product Design Case Studies";
+const heading = "Selected Work";
+const pageTitle = "Selected Work";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -18,3 +18,10 @@ const pageTitle = "Product Design Case Studies";
         </div>
     </div>
 </BaseLayout>
+
+<style>
+    h1 {
+        margin-block-start: 180px;
+        margin-block-end: var(--size-10);
+    }
+</style>
