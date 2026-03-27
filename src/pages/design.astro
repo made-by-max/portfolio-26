@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CaseStudyCard from "../components/CaseStudyCard.astro";
 
+import "../styles/cards.css";
 const posts = await getCollection("design");
 
 const heading = "Product Design Case Studies";
@@ -12,10 +13,8 @@ const pageTitle = "Product Design Case Studies";
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-wide">
         <h1>{heading}</h1>
-        <div class="container">
-            <div class="cardLayout">
-                {posts.map((post) => <CaseStudyCard post={post} />)}
-            </div>
+        <div class="cardLayout">
+            {posts.map((post) => <CaseStudyCard post={post} />)}
         </div>
     </div>
 </BaseLayout>
