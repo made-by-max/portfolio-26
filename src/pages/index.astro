@@ -2,10 +2,50 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Max Taylor";
+
+import BlogSection from "../components/BlogSection.astro";
+import CaseStudySection from "../components/CaseStudySection.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="wrapper-wide">
-        <h1>Hi I'm Max</h1>
-    </div>
+    <section>
+        <div class="wrapper-wide">
+            <h1>Max Taylor</h1>
+            <p class="subhead">Product Designer and Frontend Developer</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper-wide">
+            <h2 class="section-header">Selected Work</h2>
+            <CaseStudySection />
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper-wide">
+            <h2 class="section-header">Latest Posts</h2>
+            <BlogSection />
+        </div>
+    </section>
 </BaseLayout>
+
+<style>
+    h1 {
+        margin-block-start: 180px;
+    }
+    .subhead {
+        font-size: var(--text-4xl);
+        line-height: var(--text-4xl-line-height);
+        font-weight: var(--font-weight-medium);
+        color: var(--text-secondary);
+    }
+
+    .section-header {
+        margin-block-end: var(--size-4);
+    }
+
+    section {
+        margin: 160px;
+    }
+</style>

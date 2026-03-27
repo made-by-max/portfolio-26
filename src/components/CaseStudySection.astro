@@ -1,0 +1,10 @@
+---
+import { getCollection } from "astro:content";
+import CaseStudyCard from "../components/CaseStudyCard.astro";
+import "../styles/cards.css";
+const posts = await getCollection("design");
+---
+
+<div class="cardLayout">
+    {posts.map((post) => <CaseStudyCard post={post} />)}
+</div>

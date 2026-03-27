@@ -1,84 +1,78 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "Max Taylor";
+const pageTitle = "About Max";
+const heading = "About Max";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-wide">
-        <div class="head">
-            <img
-                class="profile"
-                src="../profilepic.jpg"
-                alt="A headshot of Max, a white person with short brown hair and glasses."
-            />
+        <div class="sidebarLayout layout">
+            <div class="sidebarLayout mainContent">
+                <h1>👋 Hey there, I'm Max!</h1>
+                <p class="subhead">
+                    I work hard so my dog can have a better life.
+                </p>
+                <p>
+                    I'm a product designer, former librarian, and (hopefully)
+                    future design engineer.
+                </p>
 
-            <div class="intro-content">
-                <h1 class="headline">👋 Hey there, I'm Max!</h1>
-                <div class="content">
-                    <p class="subhead">
-                        I work hard so my dog can have a better life.
-                    </p>
-                </div>
+                <p>
+                    I started my career as a librarian (which means I'm awesome
+                    at information architecture) before making a career pivot
+                    and getting into UX about 9 years ago. Lately I've been
+                    thinking about making another (smaller) career change and
+                    getting into design engineering. I'm currently teaching
+                    myself React and a couple of animation libraries, while also
+                    brushing up on my CSS and JavaScript. I'll probably throw a
+                    little express.js and node.js in the mix to cover a bit of
+                    the backend as well.
+                </p>
+
+                <p>
+                    As a product designer, my specialties are informatin
+                    architecture, systems thinking, accessibility and inclusive
+                    design. I spent 7 years working on developer tools and I'm
+                    currently working in the healthcare space.
+                </p>
+
+                <p>
+                    Outside of work I enjoy powerlifting, reading, hiking, and
+                    hanging out with my faithful canine companion, Rufus.
+                </p>
+            </div>
+
+            <div class="sidebarLayout sidebar">
+                <img
+                    class="profile"
+                    src="../profilepic.jpg"
+                    alt="A headshot of Max, a white person with short brown hair and glasses."
+                />
             </div>
         </div>
-
-        <p>
-            I'm a product designer, former librarian, and (hopefully) future
-            design engineer.
-        </p>
-
-        <p>
-            I started my career as a librarian (which means I'm awesome at
-            information architecture) before making a career pivot and getting
-            into UX about 9 years ago. Lately I've been thinking about making
-            another (smaller) career change and getting into design engineering.
-            I'm currently teaching myself React and a couple of animation
-            libraries, while also brushing up on my CSS and JavaScript. I'll
-            probably throw a little express.js and node.js in the mix to cover a
-            bit of the backend as well.
-        </p>
-
-        <p>
-            As a product designer, my specialties are informatin architecture,
-            systems thinking, accessibility and inclusive design. I spent 7
-            years working on developer tools and I'm currently working in the
-            healthcare space.
-        </p>
-
-        <p>
-            Outside of work I enjoy powerlifting, reading, hiking, and hanging
-            out with my faithful canine companion, Rufus.
-        </p>
     </div>
 </BaseLayout>
+
 <style>
-    .head {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: start;
+    h1 {
+        margin-block-start: 180px;
+    }
+
+    .subhead {
+        font-size: var(--text-2xl);
+        line-height: var(--text-4xl-line-height);
+        font-weight: var(--font-weight-medium);
+        color: var(--text-secondary);
     }
 
     img.profile {
         max-width: 300px;
         border-radius: 100%;
+        margin-block-start: 180px;
     }
 
-    .headline {
-        text-transform: uppercase;
-        letter-spacing: 1.4px;
-        font-size: var(--font-size-3);
-        font-weight: 500;
-        margin-block-start: var(--size-12);
-        margin-block-end: var(--size-2);
-    }
-    .subhead {
-        font-size: var(--font-size-6);
-        margin-block-end: var(--size-12);
-        max-width: 50rem;
-        text-wrap: balance;
-        line-height: 1.1;
+    p {
+        margin-block-end: var(--size-4);
     }
 </style>

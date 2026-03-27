@@ -114,6 +114,7 @@
 
     a {
         color: inherit;
+        font-size: var(--text-base);
         text-decoration: underline 1px var(--text-soft);
         text-underline-offset: var(--size-1);
         -webkit-text-decoration: underline var(--brand-primary);

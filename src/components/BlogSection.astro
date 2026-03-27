@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import BlogCard from "./BlogCard.astro";
+
+const posts = await getCollection("writing");
+
+posts.sort((a, b) => {
+    const dateA = new Date(a.data.date);
+    const dateB = new Date(b.data.date);
+    return dateB.getTime() - dateA.getTime();
+});
+
+const suggestedEntries = posts.slice(0, 3);
+---
+
+{suggestedEntries.map((post) => <BlogCard post={post} />)}
+<div class="link">
+    <a href="/writing"> All Posts</a>
+    <a href="/writing">
+        <svg
+            class="i i-arrow-right"
+            viewBox=" 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M5 12h14m-7-7 7 7-7 7"></path>
+        </svg>
+    </a>
+</div>
+
+<style>
+    h2 {
+        margin-block-end: 0;
+    }
+    .i {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: var(--size-1);
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: var(--font-weight-medium);
+            line-height: 24px;
+        }
+    }
+</style>
