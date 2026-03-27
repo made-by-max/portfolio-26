@@ -1,0 +1,74 @@
+---
+title: Breaking Down Silos at Olympus
+description: Users don’t care about your org chart
+intro: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem. Best’e is backed by a Retrievel Augmented Generation architecture accessible via a natural language prompt.
+img: ../../assets/intra/pre-new.png
+tags:
+  - UI-Design
+  - Cross-Team-Collaboration
+
+---
+
+import BlogImageWide from '../../components/BlogImageWide.astro'
+import BlogImageNarrow from '../../components/BlogImageNarrow.astro'
+import BlogImageScroll from '../../components/BlogImageScroll.astro'
+import FullBleedSection from '../../components/FullBleedSection.astro'
+import StandardSection from '../../components/StandardSection.astro'
+
+import appSwitcher from '../../assets/intra/app-switcher.png'
+import endoNew from '../../assets/intra/endomodule-new.png'
+import endoOld from '../../assets/intra/endomodule-old.png'
+import hub from '../../assets/intra/hub.png'
+import intraOld from '../../assets/intra/intra-old.png'
+import intraNew from '../../assets/intra/intra-new.png'
+import preNew from '../../assets/intra/pre-new.png'
+import workflowVision from '../../assets/intra/workflow-no-touchscreen 1.png'
+
+
+<StandardSection>
+
+
+## Problem
+Like a lot of large organizations, the product teams at Olympus have a tendency to develop features in siloes, without necessarily considering the overall user flow.
+
+This was particularly apparent in the design for the digital hub, a specialized computer that integrates into the equipment tower in the endoscopy suite and runs the software that doctors use during their procedures.
+
+<BlogImageNarrow src={hub} alt="A close-up of the digital hub shown against the image of an equipment tower"/>
+
+The digital hub was initially intended to run our computer aided detection software, which uses AI to help identify potential anomalies.
+<BlogImageWide src={endoOld} alt="A screenshot of the endomodule homescreen, with cards to select which module to run"/>
+Then our automated imaging solutions team added a separate application to manage capturing images and videos during a procedure.
+<BlogImageWide src={intraOld} alt="A screenshot view an image from the endoscope and buttons to capture video, capture an image, or end the exam"/>
+Later the voice team needed to integrate with the digital hub to run the software that would allow endoscopists to to capture findings verbally.
+
+Each of these teams were developing these features in isolation, as well as partnering with separate outside vendors.
+
+There were also other teams that would potentially be adding additional apps.
+
+Each was added as a separate application, with its own login flow and settings, rather than as a unified product suite. These interactions would all take place on a touch screen panel attached to the tower.
+<BlogImageWide src={appSwitcher} alt="A screenshot with cards for 3 different applications"/>
+This resulted in a very poor user flow where the users had to log in to each app individually and exit all the way out of their current application anytime they needed to access the features of a different application. This was a particularly bad experience because they were using a touch screen with no keyboard.
+
+To address these issues, I began working on an updated user flow, taking into consideration the needs of all the different applications, to remove redundancy and improve the interoperability of the different applications.
+
+I started by mapping the existing experience, to highlight the user pain points.
+
+<BlogImageScroll src={workflowVision} alt="A close-up of the digital hub shown against the image of an equipment tower"/>
+
+
+Next I created a flow demonstrating how the user experience could be drastically improved simply by rethinking the authentication experience and improving the navigation between applications.
+
+Finally, I put together a long term vision in which authentication is further simplified by allowing doctors to log in by scanning their ID badge and the system defaults to the appropriate settings based on the procedure type so the staff just needs to confirm it’s correct, rather than configuring it manually.
+
+Along with rethinking the workflows, I also proposed new designs for the touch panel, which included improved navigation and presented default selections for confirmation, rather than requiring everything to be configured manually.
+
+<BlogImageWide src={preNew} alt="A close-up of the digital hub shown against the image of an equipment tower"/>
+<BlogImageWide src={intraNew} alt="A close-up of the digital hub shown against the image of an equipment tower"/>
+<BlogImageWide src={endoNew} alt="A close-up of the digital hub shown against the image of an equipment tower"/>
+
+Because there was no centralized owner of the digital hub experience, we had to appeal to senior leadership to get buy-in for any changes to the user flow. I worked with my design manager to put together a deck for him to present to them.
+
+Due to our tight delivery deadlines we knew these changes would be out of scope for our current release. However, these user flows really helped to illustrate to key stakeholders just how bad the current experience is and we were able to get sign off to pursue a more coordinated and unified experience for subsequent software releases.
+
+
+</StandardSection>

@@ -1,0 +1,95 @@
+---
+title: Voice Medical Scribe
+description: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem.
+intro: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem. Best’e is backed by a Retrievel Augmented Generation architecture accessible via a natural language prompt.
+img: ../../assets/voice/data-review-cropped.png
+tags:
+  - UI-Design
+  - AI
+  - Voice
+
+---
+
+import BlogImageWide from '../../components/BlogImageWide.astro'
+import BlogImageNarrow from '../../components/BlogImageNarrow.astro'
+import FullBleedSection from '../../components/FullBleedSection.astro'
+import StandardSection from '../../components/StandardSection.astro'
+
+import dataReview from '../../assets/voice/data-review-cropped.png'
+import intraActive from '../../assets/voice/intra-active.png'
+import transcript from '../../assets/voice/report-transcript.png'
+import paper from '../../assets/voice/scratch-paper.png'
+
+
+<StandardSection>
+
+
+    ## The Problem
+    ### Increasing documentation requirements are leading to burnout
+
+    Gastroenterologists spend an average of 13 hours a week on documentation and more than half report feeling some level of burnout.
+
+    The growing complexity of healthcare procedures and regulatory requirements has led to an increase in the amount and the complexity of documentation for each patient encounter.
+
+    At Olympus we explored a number of different avenues to simplify the documentation process, including the use of an ambient AI scribe to capture findings during endoscopic procedures.
+
+    Traditionally, endoscopists have had to rely on their memory to recall the details of a procedure in order to document it after the fact.
+
+    In more complicated procedures with multiple findings, they typically ask the procedure nurse to write down the details of their findings and therapies performed. For example, they might record the size, location, and characteristics of a polyp, along with what type of resection they performed and what container the biopsy is in.
+
+    These details are frequently captured on post-it notes, napkins, and other scraps of paper, which introduces the potential for that information to get lost or damaged. It also distracts the nurse from their primary tasks.
+
+    <BlogImageNarrow src={paper} alt="Resection details written on a piece of scrap paper"/>
+
+    With an AI scribe, endoscopists are able to speak these details aloud and can be confident that the AI scribe is capturing the details and adding them to their documentation.
+
+    >“[Because of ability to use voice] I won’t forget things that I’ve seen. If I see something on the way in and then on the way out, I completely forget that I’m looking for something like that. Then at least I’ve got a recording of me seeing something on the way in and then it’s already written down."
+
+    ## Discovery Research
+
+    Our UX Researcher conducted interviews with 12 endoscopists to gauge their interest in a voice solution and identify any concerns they had.
+
+    Some of the key takeaways from this research were:
+    - Doctors were very excited about using voice during a procedure and believed it would save them a significant amount of time.
+    - Most regularly used technologies like Siri or Alexa ane were comfortable with voice interfaces.
+    - Doctors wanted to be able to control when the scribe was recording
+    - They wanted to be sure that the scribe would be able to capture the nuances of an endoscopic procedure and filter out side conversations.
+
+    ## Design
+
+    To kick things off, I led a user story mapping session with my product manager, UX researcher, and engineering team, where we identified the high level user flow and our key product requirements. Following that session I worked on more detailed user flows and lo-fidelity wireframes.
+
+    ## User Testing
+### Using video to prototype the voice experience
+    User testing presented a unique challenge. I wanted to test the user flow with endoscopists early on to make sure we were on the right track, but because the primary interface was the doctor’s voice it wasn’t exactly something I could test with a Figma prototype!
+
+    I worked with our in-house subject matter experts to create a realistic transcript of a colonoscopy procedure and used ElevenLabs to turn it into an audio recording. Then I put together a 5 minute video using the audio track, images from a procedure room, and a Figma prototype to show what the doctors and nurses would see on the monitor during the procedure.
+
+    The video demonstrated how doctors could use vocal commands to start and stop the recording and showed real time feedback on the monitor so they could be confident it was recording when they wanted and only when they wanted. It also included a handful of off topic conversations.
+
+    I also created a prototype of the post procedure report so that the endoscopists could see that the relevant information had been captured and mapped to the report in a structured format. This also reassured them that their side conversations would not accidentally end up in the report.
+
+    The feedback was generally quite positive, and endoscopists were able to understand how a procedure would flow using this solution. They anticipated that it would significantly reduce the amount of time they had to spend on documentation after a procedure.
+
+    “If this works it is a dream. If we can add all this information while we are doing the procedure and it works well and goes to the report and we just basically have to validate that’s amazing. I mean it’s really a good thing.”
+
+    ## Implementation
+
+    ### The biggest design challenge wasn’t the UI - it was coordinating across teams.
+
+    We had one team at Olympus that handled the intra-procedure experience, which used a touch screen on the tower in the procedure room, and another team that was designing the post-procedure reporting experience, which generally takes place on a desktop PC that may or may not be in the procedure room. I partnered closely with the designers, engineers, and product managers from both teams to craft an end-to-end voice experience that spanned multiple touchpoints and integrated into their existing designs without risking their delivery timelines.
+
+    For the intra-procedure experience, we needed to show the microphone status and the status of the voice note on the touch screen. We also needed to add a button for doctors to start and stop the voice capture if the vocal commands were unavailable for some reason.
+    <BlogImageWide src={intraActive} alt="Voice controls for touch screen"/>
+    On the post-procedure report, I partnered with the designers on the report team to define how the data would flow from the backend to the report, ensuring that it mapped to the correct fields and formatted the findings with the correct structure.
+<BlogImageWide src={transcript} alt="Voice transcript in medial report"/>
+We also collaborated closely with our internal regulatory team to ensure we were meeting the guidelines for AI use in the medical field for all the jurisdictions where we planned to sell our voice solution. In order to meet these requirements, our designs had to clearly indicate which fields were populated by AI and include a disclaimer that all AI content be carefully reviewed by a physician.
+<BlogImageWide src={dataReview} alt="AI data review screen"/>
+## Results
+### Report writing time decreased by 60%
+The overall feedback for the voice scribe was very positive, with doctors reporting that it made the reporting process much easier and saved them a lot of time. Between the ambient scribe and other improvements to the report writing process we were able to decrease the amount of time endoscopists spent on documentation by about 60%.
+
+## Next steps
+One thing that consistently came up during our user testing was the desire for the voice solution to be something the endoscopists could interact with, rather than just a passive recording. Doctors wanted to see some kind of popup on the monitor to verify that the information was captured correctly and be able to fix it on the fly if it was incorrect.This was out of scope for the first release, but it’s something we are actively investigating for future releases.
+
+    </StandardSection>

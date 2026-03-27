@@ -93,3 +93,7 @@ p {
 img {
     height: auto;
 }
+
+li {
+    margin-block: var(--size-3);
+}

@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+
+const { src } = Astro.props;
+const { alt } = Astro.props;
+---
+
+<div class="image-scroll-container">
+    <div class="box"><Image src={src} alt={alt} /></div>
+</div>
+
+<style>
+    .image-scroll-container {
+        overflow: auto;
+        margin-block: var(--size-12);
+    }
+    .box {
+        width: 5000px;
+        height: auto;
+    }
+    img {
+        height: 100%;
+        width: 100%;
+    }
+</style>

@@ -7,7 +7,7 @@
     --neutral-600: hsl(0, 0%, 56.47%);
     --neutral-700: hsl(0, 0%, 40%);
     --neutral-800: hsl(0, 0%, 13.33%);
-    --neutral-900: hsl(0, 0%, 0%);
+    --neutral-900: hsl(210, 11.11%, 3.53%);
 
     --blue-200: hsl(194.81, 55.1%, 71.18%);
     --blue-400: hsl(195.11, 54.22%, 51.18%);
@@ -22,8 +22,8 @@
     --background-primary-light: var(--neutral-200);
     --background-secondary-light: var(--neutral-300);
     --surface-light: var(--neutral-400);
-    --text-primary-light: var(--neutral-800);
-    --text-secondary-light: var(--neutral-700);
+    --text-primary-light: var(--neutral-900);
+    --text-secondary-light: var(--neutral-800);
     --text-soft-light: var(--neutral-600);
     --border-light: var(--neutral-700);
     --shadow-color: var(--neutral-500);
@@ -32,8 +32,8 @@
     --brand-primary-dark: var(--blue-400);
     --brand-secondary-dark: var(--blue-200);
 
-    --background-primary-dark: var(--neutral-800);
-    --background-secondary-dark: var(--neutral-700);
+    --background-primary-dark: var(--neutral-900);
+    --background-secondary-dark: var(--neutral-800);
     --surface-dark: var(--neutral-500);
     --text-primary-dark: var(--neutral-200);
     --text-secondary-dark: var(--neutral-300);

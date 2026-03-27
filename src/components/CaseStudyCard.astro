@@ -33,26 +33,28 @@ const { post } = Astro.props;
     </div>
 
     <style>
-
+        .case-study-card {
             grid-row: span 4;
             display: grid;
             grid-template-rows: subgrid;
+            gap: 16px;
         }
 
         img {
             max-width: 100%;
             height: auto;
+            border-radius: 8px;
         }
 
         .content {
-
             grid-row: span 3;
             display: grid;
             grid-template-rows: subgrid;
+            gap: 4px;
         }
 
         p {
-            margin-block-end: var(--size-3);
+            margin-block-end: var(--size-4);
         }
 
         a {
