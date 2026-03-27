@@ -2,7 +2,6 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import "../styles/prose.css";
-import { Image } from "astro:assets";
 const { post } = Astro.props;
 const { Content } = await render(post);
 const pageTitle = post.data.title;
@@ -12,7 +11,7 @@ import CaseStudyHero from "../components/CaseStudyHero.astro";
 <BaseLayout pageTitle={pageTitle}>
     <!-- <div class="wrapper-medium"> -->
     <CaseStudyHero post={post} />
-    <div class="post-container">
+    <div>
         <article>
             <Content />
         </article>

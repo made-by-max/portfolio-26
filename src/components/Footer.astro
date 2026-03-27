@@ -1,54 +1,25 @@
-
 ---
-
 import SocialLinks from "../components/SocialLinks.astro";
+import "../styles/global.css";
+import "../styles/nav.css";
 ---
+
 <footer>
-
     <div class="wrapper-wide">
+        <nav>
+            <div class="leading">
+                <div>
+                    <a href="mailto:madebymax.dev@gmail.com"
+                        >madebymax.dev@gmail.com</a
+                    >
+                </div>
+            </div>
 
-    <nav class="wrapper-wide">
-    <div>
-        <p class="email"><a href="mailto:madebymax.dev@gmail.com">madebymax.dev@gmail.com</a></p>
-    </div>
-    <div class="socialLinks">
-        <SocialLinks />
-    </div>
-</nav>
+            <div class="trailing">
+                <div class="socialLinks">
+                    <SocialLinks />
+                </div>
+            </div>
+        </nav>
     </div>
 </footer>
-
-    <style>
-        footer {
-
-            padding-block: var(--size-10);
-            width: 100%;
-            padding-inline: 0;
-            margin-inline: 0;
-
-
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-
-            max-width: var(--max-width);
-            margin-inline: auto;
-
-
-
-            a {
-                text-decoration: none;
-                color: inherit;
-                font-size: var(--font-size-3);
-                font-weight: var(--font-weight-5);
-            }
-            a:hover,
-            a:focus {
-                color: var(--brand-primary);
-            }
-
-    </style>

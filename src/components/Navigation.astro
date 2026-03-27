@@ -1,62 +1,26 @@
 ---
 import ThemeToggleButton from "../components/ThemeToggleButton.astro";
-import "../styles/typography.css";
+import "../styles/global.css";
+import "../styles/nav.css";
 ---
 
 <header>
     <div class="wrapper-wide">
         <nav>
-            <div>
-                <a class="text-nav" href="/"> Max Taylor</a>
+            <div class="leading">
+                <div>
+                    <a class="text-nav" href="/"> Max Taylor</a>
+                </div>
             </div>
+
             <div class="trailing">
                 <div class="pageLinks">
-                    <a class="text-nav" href="/design/">Design</a>
-                    <a class="text-nav" href="/dev/">Dev</a>
-                    <a class="text-nav" href="/writing/">Writing</a>
-                    <a class="text-nav" href="/about/">About</a>
+                    <a href="/design/">Design</a>
+                    <a href="/dev/">Dev</a>
+                    <a href="/writing/">Writing</a>
+                    <a href="/about/">About</a>
                 </div>
-                <div class="themeToggle"></div>
             </div>
         </nav>
     </div>
 </header>
-
-<style>
-    header {
-    }
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-inline: auto;
-        padding-block: var(--size-6);
-        max-width: var(--max-width);
-        margin-inline: auto;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    nav a:hover,
-    a:focus {
-        color: var(--brand-primary);
-    }
-
-    .pageLinks {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: var(--size-4);
-    }
-
-    .trailing {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: var(--size-4);
-    }
-</style>
