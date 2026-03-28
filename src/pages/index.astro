@@ -12,6 +12,13 @@ import CaseStudySection from "../components/CaseStudySection.astro";
         <div class="wrapper-wide">
             <h1>Max Taylor</h1>
             <p class="subhead">Product Designer and Frontend Developer</p>
+            <p class="intro">
+                With more than a decade of experience in product design and
+                coding skills to boot, I excel at systems thinking, rapid
+                prototyping, and pattern recognition. I believe that iterative
+                improvement and cross-team collaboration are key to developing
+                user-centric products.
+            </p>
         </div>
     </section>
 
@@ -37,8 +44,16 @@ import CaseStudySection from "../components/CaseStudySection.astro";
     .subhead {
         font-size: var(--text-4xl);
         line-height: var(--text-4xl-line-height);
-        font-weight: var(--font-weight-medium);
-        color: var(--text-secondary);
+        font-weight: var(--font-weight-normal);
+        color: var(--text-soft);
+        margin-block-end: var(--size-5);
+    }
+
+    .intro {
+        font-size: var(--text-medium);
+        margin-block-end: var(--size-1);
+        text-wrap: balance;
+        max-width: 65ch;
     }
 
     .section-header {
@@ -46,6 +61,6 @@ import CaseStudySection from "../components/CaseStudySection.astro";
     }
 
     section {
-        margin: 160px;
+        margin-block: var(--size-13);
     }
 </style>

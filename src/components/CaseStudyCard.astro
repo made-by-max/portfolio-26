@@ -1,13 +1,17 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
+
 const { post } = Astro.props;
+import { CldImage } from "astro-cloudinary";
 ---
 
 <div class="case-study-card">
     <div class="img-container">
         <div class="img">
-            <Image src={post.data.img} alt={post.data.title} />
+            <CldImage
+                src={post.data.img}
+                alt={`Cover image for ${post.data.title}`}
+            />
         </div>
     </div>
 
@@ -24,14 +28,14 @@ const { post } = Astro.props;
         grid-row: span 3;
         display: grid;
         grid-template-rows: subgrid;
-        gap: 80px;
+        gap: var(--size-5);
         position: relative;
         background-color: var(--background-secondary);
         /*background:
             linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
             linear-gradient(rgb(180, 220, 255) 0%, rgb(207, 162, 251) 100%);*/
         border-radius: 8px;
-        border: 1px solid transparent;
+        /*border: 1px solid transparent;*/
     }
 
     img {
@@ -81,6 +85,6 @@ const { post } = Astro.props;
     }
 
     .card-primary-action:focus {
-        border: 1px solid var(--blue-600);
+        outline: 1px solid;
     }
 </style>
