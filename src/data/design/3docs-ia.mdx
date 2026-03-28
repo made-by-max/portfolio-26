@@ -2,8 +2,8 @@
 title: Untangling the Auth0 Docs
 description: A research-informed approach to
 intro: A strong developer experience has always been a core part of Auth0’s DNA. Since our founding we have deliberately built a developer-first product and it continues to be a key part of our success to this day. Naturally, maintaining excellent developer documentation is an essential part of that strategy.
-img: ../../assets/docs-ia/featuredimage.png
-logo: ../../assets/docs-ia/auth0.webp
+img: featuredimage_zholgl
+
 tags:
   - information-architecture
   - user-research
@@ -13,7 +13,10 @@ tags:
 ---
 
 import StandardSection from '../../components/StandardSection.astro'
-
+import FullBleedSection from '../../components/FullBleedSection.astro'
+import BlogImageFullBleed from '../../components/BlogImageFullBleed.astro'
+import { CldImage } from 'astro-cloudinary';
+import { CldVideoPlayer } from 'astro-cloudinary';
 
 <StandardSection>
 
@@ -46,38 +49,64 @@ Over time the two had diverged, leading to a number of mismatches.
 
 Many of the pages had inconsistent hierarchies. Content might be multiple levels deep in the sidebar navigation, but appear to be at the top level in the breadcrumb navigation.
 
-![a screenshot of the auth0 docs](../../assets/docs-ia/inconsistentHierarchy.png)
+<CldImage
+              src="inconsistentHierarchy_tgbdun"
+          alt="a screenshot of the auth0 docs"
+
+  class="case-study-image-lg"
+/>
+
+
 
 Other pages had mismatches where the content resided in completely different categories in the sidebar versus the breadcrumbs.
 
-![a screenshot of the auth0 docs](../../assets/docs-ia/mismatchedNav.png)
+<CldImage
+              src="mismatchedNav_jja7yu"
+          alt="a screenshot of the auth0 docs"
+
+  class="case-study-image-lg"
+/>
+
 
 Worst of all, a whopping 54% of pages were orphans that didn't show up in the sidebar navigation at all.
 
-![a screenshot of the auth0 docs](../../assets/docs-ia/orphan.png)
+<CldImage
+              src="orphan_sejwxt"
+          alt="a screenshot of the auth0 docs"
 
-75%
+  class="case-study-image-lg"
+/>
 
-of pages had a mismatch between the sidebar and breadcrumbs
 
-21%
+75% of pages had a mismatch between the sidebar and breadcrumbs
 
-of pages had either mismatched parent categories or inconsistent hierarchies
+21% of pages had either mismatched parent categories or inconsistent hierarchies
 
-54%
-
-of pages that were orphaned and didn’t show up in the sidebar navigation
+54% of pages that were orphaned and didn’t show up in the sidebar navigation
 
 ### Card sorting to understand mental models
 Users typically took one of two approaches:
 
 Topics grouped by task, creating groups based on a user’s journey through setting up and configuring Auth0
 
-![a screenshot of the card sorting results](../../assets/docs-ia/taskCardSort.png)
+<CldImage
+              src="taskCardSort_gntuxi"
+          alt="a screenshot of the card sorting results"
+
+  class="case-study-image-lg"
+/>
+
+
 
 Topics grouped by feature, creating groups around authentication users, securing their applications, or configuring different integrations
 
-![a screenshot of the card sorting results](../../assets/docs-ia/featureCardSort.png)
+<CldImage
+              src="featureCardSort_i1rba8"
+          alt="a screenshot of the card sorting results"
+
+  class="case-study-image-lg"
+/>
+
 
 ### Wayfinding to validate
 To validate the results of the card sorting, I followed up with wayfinding tests for both a task-based IA and a feature-based IA.
@@ -91,38 +120,56 @@ Once again, different people had different mental models about how the topics sh
 ## Breaking up the monolith
 Based on my findings from the card sorting and wayfinding tests, I split the docs content into 7 main categories, each with their own sub-menu:
 
-Get started
+- Get started
+- Authentication
+- Manage Users
+- Customize
+- Secure
+- Deploy and Monitor
+- Troubleshoot
+</StandardSection>
 
-Authentication
+<FullBleedSection backgroundColor={"#EBEFFF"}>
+    <BlogImageFullBleed>
 
-Manage Users
+<CldImage
+              src="sidebars_knqe3u"
+          alt="an image of the new sidebars"
+          width="100%"
 
-Customize
-
-Secure
-
-Deploy and Monitor
-
-Troubleshoot
-
-![an image of the new sidebars](../../assets/docs-ia/sidebars.png)
-
-an image of the new sidebars
-Landing pages provide a high-level overview
+/>
+    </BlogImageFullBleed>
+</FullBleedSection>
+<StandardSection>
+## Landing pages provide a high-level overview
 We wanted to introduce developers to each of these sections, while also helping them get a better high level understanding of the Auth0 product.
 
 Our technical writing staff developed new content for each landing page and the homepage and I tested three different design ideas with users.
 
-![a screenshot of the auth0 docs landing page with a simple illustration](../../assets/docs-ia/landingpageillustration.png)
+<CldImage
+              src="landingpageillustration_xaxp4w"
+          alt="a screenshot of the auth0 docs landing page with a simple illustration"
+
+  class="case-study-image-lg"
+/>
 
 The second design featured a detailed architectural diagram of the Auth0 ecosystem. The software architect I interviewed liked this view, but acknowledged it would probably be better deeper in the documentation. The other developers found it to be too complex for a landing page.
+<CldImage
+              src="landingpagearch_slq2yg"
+          alt="a screenshot of the auth0 docs landing page with an architecture diagram"
 
-![a screenshot of the auth0 docs landing page with an architecture diagram](../../assets/docs-ia/landingpagearch.png)
+  class="case-study-image-lg"
+/>
+
 
 
 The final design used a simplified diagram that provided users with a big picture overview of the Auth0 pipeline. Testers unanimously preferred this option, and thought that it provided just the right level of detail.
+<CldImage
+              src="landingpagesimplediagram_l4xskp"
+          alt="a screenshot of the auth0 docs landing page with a simple diagram"
 
-![a screenshot of the auth0 docs landing page with a simple diagram](../../assets/docs-ia/landingpagesimplediagram.png)
+  class="case-study-image-lg"
+/>
 
 
 ## Finalizing the Design
@@ -130,6 +177,12 @@ I made some small tweaks based on some of the feedback from our usability testin
 
 I paired with our frontend engineering team to iterate on the behavior of the new sidebar, how users would move from one section to another, and the mobile version of the navigation menu.
 
+<CldVideoPlayer
+              src="nav-demo_z4orvn"
+          alt="a demo of the auth0 navigation in action"
+
+  class="video"
+/>
 
 ## Results
 With no set path through our documentation, it is difficult to quantitatively measure the impact of information architecture. Metrics can tell us if a user is staying on a certain page for more or less time than before, but they can't tell us if that's because they found the information they needed more quickly or because they were in the wrong place.

@@ -1,12 +1,16 @@
+---
+const { backgroundColor = "lightblue" } = Astro.props;
+---
+
 <section>
-    <div class="wrapper-medium">
+    <div>
         <slot />
     </div>
 </section>
 
-<style>
+<style define:vars={{ backgroundColor }}>
     section {
-        background-color: purple;
+        background-color: var(--backgroundColor);
         width: 100%;
     }
 </style>
