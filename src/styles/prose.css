@@ -29,3 +29,8 @@ ul {
     margin-block-start: -16px;
     margin-block-end: 40px;
 }
+
+.cloud-image {
+    border-radius: 8px;
+    margin-block: var(--size-10);
+}

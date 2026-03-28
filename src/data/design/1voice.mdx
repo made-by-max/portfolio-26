@@ -19,8 +19,9 @@ import StandardSection from '../../components/StandardSection.astro'
 import dataReview from '../../assets/voice/data-review-cropped.png'
 import intraActive from '../../assets/voice/intra-active.png'
 import transcript from '../../assets/voice/report-transcript.png'
-import paper from '../../assets/voice/scratch-paper.png'
 
+
+import { CldImage } from 'astro-cloudinary';
 
 <StandardSection>
 
@@ -40,7 +41,6 @@ import paper from '../../assets/voice/scratch-paper.png'
 
     These details are frequently captured on post-it notes, napkins, and other scraps of paper, which introduces the potential for that information to get lost or damaged. It also distracts the nurse from their primary tasks.
 
-    <BlogImageNarrow src={paper} alt="Resection details written on a piece of scrap paper"/>
 
     With an AI scribe, endoscopists are able to speak these details aloud and can be confident that the AI scribe is capturing the details and adding them to their documentation.
 
@@ -83,7 +83,16 @@ import paper from '../../assets/voice/scratch-paper.png'
     For the intra-procedure experience, we needed to show the microphone status and the status of the voice note on the touch screen. We also needed to add a button for doctors to start and stop the voice capture if the vocal commands were unavailable for some reason.
     <BlogImageWide src={intraActive} alt="Voice controls for touch screen"/>
     On the post-procedure report, I partnered with the designers on the report team to define how the data would flow from the backend to the report, ensuring that it mapped to the correct fields and formatted the findings with the correct structure.
-<BlogImageWide src={transcript} alt="Voice transcript in medial report"/>
+
+
+<CldImage
+  src="report-transcript_fnid3t"
+  width="var(--wrapper-medium)"
+  height="auto"
+
+  class="cloud-image"
+
+/>
 We also collaborated closely with our internal regulatory team to ensure we were meeting the guidelines for AI use in the medical field for all the jurisdictions where we planned to sell our voice solution. In order to meet these requirements, our designs had to clearly indicate which fields were populated by AI and include a disclaimer that all AI content be carefully reviewed by a physician.
 <BlogImageWide src={dataReview} alt="AI data review screen"/>
 ## Results
