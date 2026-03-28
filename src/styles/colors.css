@@ -16,7 +16,7 @@
 
     /* Light and dark modes */
     /* light */
-    --brand-primary-light: #bd3900;
+    --brand-primary-light: #6226f2;
     --brand-secondary-light: var(--blue-600);
 
     --background-primary-light: var(--neutral-200);
@@ -29,7 +29,7 @@
     --shadow-color: var(--neutral-500);
 
     /*dark*/
-    --brand-primary-dark: #ff5109;
+    --brand-primary-dark: #e4f223;
     --brand-secondary-dark: var(--blue-200);
 
     --background-primary-dark: var(--neutral-900);
