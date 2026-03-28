@@ -1,12 +1,5 @@
----
-import { Image } from "astro:assets";
-
-const { src } = Astro.props;
-const { alt } = Astro.props;
----
-
 <div class="image-scroll-container">
-    <div class="box"><Image src={src} alt={alt} /></div>
+    <div class="box"><slot /></div>
 </div>
 
 <style>
@@ -19,7 +12,7 @@ const { alt } = Astro.props;
         height: auto;
     }
     img {
-        height: 100%;
+        /*height: 600px;*/
         width: 100%;
     }
 </style>
