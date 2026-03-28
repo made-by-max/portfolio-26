@@ -30,7 +30,22 @@ ul {
     margin-block-end: 40px;
 }
 
-.cloud-image {
+.case-study-image-lg {
     border-radius: 8px;
     margin-block: var(--size-10);
+    width: var(--wrapper-medium);
+    height: auto;
+}
+
+.case-study-image-md {
+    border-radius: 8px;
+    margin-block: var(--size-10);
+    width: var(--max-text-length);
+    height: auto;
+}
+
+.video {
+    margin-block: var(--size-10);
+    width: var(--max-text-length);
+    height: auto;
 }

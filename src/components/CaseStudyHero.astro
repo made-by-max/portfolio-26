@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 const { post } = Astro.props;
+import { CldImage } from "astro-cloudinary";
 ---
 
 <div class="wrapper-wide">
@@ -15,7 +16,10 @@ const { post } = Astro.props;
         </div>
 
         <div class="heroImage">
-            <Image src={post.data.img} alt={post.data.title} />
+            <CldImage
+                src={post.data.img}
+                alt={`Cover image for ${post.data.title}`}
+            />
         </div>
     </div>
 </div>
