@@ -16,7 +16,7 @@ const suggestedEntries = posts.slice(0, 3);
 {suggestedEntries.map((post) => <BlogCard post={post} />)}
 <div class="link">
     <a href="/writing"> All Posts</a>
-    <a href="/writing">
+    <a aria-label="All Posts" href="/writing">
         <svg
             class="i i-arrow-right"
             viewBox=" 0 24 24"
