@@ -15,6 +15,8 @@
     --size-13: 7rem;
     --size-14: 7.5rem;
     --size-15: 8rem;
+    --size-10-fluid: clamp(1.5rem, 0.0682rem + 6.3636vw, 5rem);
+    --size-11-fluid: clamp(2rem, 0.5682rem + 6.3636vw, 5.5rem);
 
     --size-px-000: -8px;
     --size-px-00: -4px;

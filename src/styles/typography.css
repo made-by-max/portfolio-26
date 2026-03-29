@@ -23,12 +23,12 @@
     --text-lg-line-height: 2rem;
     --text-xl: 1.875rem;
     --text-x1-line-height: 2.375rem;
-    --text-2xl: 2.5rem;
-    --text-2xl-line-height: 3rem;
-    --text-3xl: 3rem;
+    --text-2xl: clamp(1.8rem, 3.6vw + 0.75rem, 2.5rem);
+    --text-2xl-line-height: clamp(2rem, 7.6vw - 0.5rem, 3rem);
+    --text-3xl: clamp(2rem, 7.6vw - 0.5rem, 3rem);
     --text-3xl-line-height: 3.25rem;
-    --text-4xl: 3.5rem;
-    --text-4xl-line-height: 3.75rem;
+    --text-4xl: clamp(2rem, 6.9vw - 0.25rem, 3.5rem);
+    --text-4xl-line-height: clamp(2.7rem, 6.9vw - 0.25rem, 3.7rem);
     --text-5xl: 4rem;
     --text-5xl-line-height: 4.25rem;
 
@@ -66,6 +66,7 @@
         font-size: var(--text-4xl);
         line-height: var(--text-4xl-line-height);
         font-weight: var(--font-weight-medium);
+        margin-block-start: clamp(1.5rem, -2.4886rem + 17.7273vw, 11.25rem);
     }
 
     h2 {
@@ -114,7 +115,7 @@
 
     a {
         color: inherit;
-        font-size: var(--text-base);
+        /*font-size: var(--text-base);*/
         text-decoration: underline 1px var(--text-soft);
         text-underline-offset: var(--size-1);
         -webkit-text-decoration: underline var(--brand-primary);

@@ -17,24 +17,16 @@ const pageTitle = "Writing";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="wrapper-medium">
+    <div class="wrapper-medium sidebarLayout">
         <h1>{heading}</h1>
-        <div class="sidebarLayout layout">
-            <div class="sidebarLayout mainContent">
-                <div>
-                    {posts.map((post) => <BlogCard post={post} />)}
-                </div>
-            </div>
+        <main>
+            <article>
+                {posts.map((post) => <BlogCard post={post} />)}
+            </article>
 
-            <div class="sidebarLayout sidebar">
+            <aside>
                 <TagCloud />
-            </div>
-        </div>
+            </aside>
+        </main>
     </div>
 </BaseLayout>
-
-<style>
-    h1 {
-        margin-block-start: 180px;
-    }
-</style>

@@ -1,10 +1,9 @@
 h1 {
-    margin-block-start: 180px;
     margin-block-end: var(--size-7);
 }
 
 h2 {
-    margin-block-start: var(--size-11);
+    margin-block-start: var(--size-11-fluid);
     margin-block-end: var(--size-2);
 }
 
@@ -32,20 +31,20 @@ ul {
 
 .case-study-image-lg {
     border-radius: 8px;
-    margin-block: var(--size-10);
+    margin-block: var(--size-10-fluid);
     width: var(--wrapper-medium);
     height: auto;
 }
 
 .case-study-image-md {
     border-radius: 8px;
-    margin-block: var(--size-10);
+    margin-block: var(--size-10-fluid);
     width: var(--max-text-length);
     height: auto;
 }
 
 .video {
-    margin-block: var(--size-10);
+    margin-block: var(--size-10-fluid);
     width: var(--max-text-length);
     height: auto;
 }

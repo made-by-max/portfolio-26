@@ -20,7 +20,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-
+    gap: var(--size-3);
     max-width: var(--max-width);
     margin-inline: auto;
 
