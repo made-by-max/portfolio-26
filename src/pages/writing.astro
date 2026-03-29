@@ -19,7 +19,7 @@ const pageTitle = "Writing";
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-medium sidebarLayout">
         <h1>{heading}</h1>
-        <main>
+        <div class="main-content">
             <article>
                 {posts.map((post) => <BlogCard post={post} />)}
             </article>
@@ -27,6 +27,6 @@ const pageTitle = "Writing";
             <aside>
                 <TagCloud />
             </aside>
-        </main>
+        </div>
     </div>
 </BaseLayout>
