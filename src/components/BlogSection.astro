@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BlogCard from "./BlogCard.astro";
+import SectionHeader from "./SectionHeader.astro";
 
 const posts = await getCollection("writing");
 
@@ -15,8 +16,8 @@ const suggestedEntries = posts.slice(0, 3);
 
 {suggestedEntries.map((post) => <BlogCard post={post} />)}
 <div class="link">
-    <a href="/writing"> All Posts</a>
-    <a aria-label="All Posts" href="/writing">
+    <a href="/writing">All posts</a>
+    <a aria-label="All posts" href="/writing">
         <svg
             class="i i-arrow-right"
             viewBox=" 0 24 24"
@@ -36,6 +37,7 @@ const suggestedEntries = posts.slice(0, 3);
     h2 {
         margin-block-end: 0;
     }
+
     .i {
         width: 20px;
         height: 20px;

@@ -1,43 +1,37 @@
 :where(html) {
-    --neutral-100: hsl(0, 0%, 100%);
-    --neutral-200: hsl(60, 33.33%, 98.24%);
-    --neutral-300: hsl(55, 28.57%, 91.76%);
-    --neutral-400: hsl(60, 33.33%, 95.88%);
-    --neutral-500: hsl(240, 5.03%, 64.9%);
-    --neutral-600: hsl(0, 0%, 56.47%);
-    --neutral-700: hsl(0, 0%, 40%);
-    --neutral-800: hsl(0, 0%, 13.33%);
-    --neutral-900: hsl(210, 11.11%, 3.53%);
-
-    --blue-200: hsl(194.81, 55.1%, 71.18%);
-    --blue-400: hsl(195.11, 54.22%, 51.18%);
-    --blue-500: hsl(195, 53.61%, 38.04%);
-    --blue-600: hsl(195, 55.56%, 21.18%);
+    --neutral-50: #fafafa;
+    --neutral-100: #f7f8f8;
+    --neutral-200: #d0d6e0;
+    --neutral-300: #8a8f98;
+    --neutral-400: #62666d;
+    --neutral-500: #37393a;
+    --neutral-600: #28282c;
+    --neutral-700: #232326;
+    --neutral-800: #1c1c1f;
+    --neutral-900: #08090a;
 
     /* Light and dark modes */
     /* light */
-    --brand-primary-light: #6226f2;
-    --brand-secondary-light: var(--blue-600);
+    --brand-primary-light: #3a5bc7;
 
-    --background-primary-light: var(--neutral-200);
-    --background-secondary-light: var(--neutral-300);
+    --background-primary-light: var(--neutral-50);
+    --background-secondary-light: #fff;
     --surface-light: var(--neutral-400);
     --text-primary-light: var(--neutral-900);
-    --text-secondary-light: var(--neutral-700);
-    --text-soft-light: var(--neutral-600);
+    --text-secondary-light: var(--neutral-600);
+    --text-soft-light: var(--neutral-300);
     --border-light: var(--neutral-700);
     --shadow-color: var(--neutral-500);
 
     /*dark*/
-    --brand-primary-dark: #e4f223;
-    --brand-secondary-dark: var(--blue-200);
+    --brand-primary-dark: #5472e4;
 
     --background-primary-dark: var(--neutral-900);
     --background-secondary-dark: var(--neutral-800);
     --surface-dark: var(--neutral-500);
-    --text-primary-dark: var(--neutral-200);
-    --text-secondary-dark: var(--neutral-500);
-    --text-soft-dark: var(--neutral-600);
+    --text-primary-dark: var(--neutral-100);
+    --text-secondary-dark: var(--neutral-300);
+    --text-soft-dark: var(--neutral-400);
     --border-dark: var(--neutral-300);
     --shadow-color: var(--neutral-900);
 

@@ -105,12 +105,8 @@
     dl {
         margin: 0;
         padding: 0;
-        list-style: inside;
-        ul,
-        ol,
-        dl {
-            padding-inline-start: 2ch;
-        }
+        list-style: outside;
+        padding-inline-start: 3ch;
     }
 
     a {

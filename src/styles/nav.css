@@ -1,21 +1,20 @@
-header, footer {
-
-        width: 100%;
-        padding-inline: 0;
-        margin-inline: 0;
+header,
+footer {
+    width: 100%;
+    padding-inline: 0;
+    margin-inline: 0;
 }
 
 header {
-     padding-block: var(--size-5);
+    padding-block: var(--size-5);
 }
 
 footer {
     padding-block: var(--size-10);
 }
 
-
-
-nav, .bottom-nav {
+nav,
+.bottom-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -36,11 +35,11 @@ nav, .bottom-nav {
         color: var(--brand-primary);
         text-decoration: none;
     }
-
-
-        .pageLinks {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: var(--size-2);
-        }
+}
+.pageLinks,
+.socialLinks {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--size-2);
+}

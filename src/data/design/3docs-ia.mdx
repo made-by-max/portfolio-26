@@ -1,25 +1,22 @@
 ---
 title: Untangling the Auth0 Docs
-description: A research informed approach to information architecture that improved discoverability by 400%
-intro: A strong developer experience has always been a core part of Auth0’s DNA. Since our founding we have deliberately built a developer-first product and it continues to be a key part of our success to this day. Naturally, maintaining excellent developer documentation is an essential part of that strategy.
-img: featuredimage_zholgl
-
-tags:
-  - information-architecture
-  - user-research
-  - content-audit
-  - card-sorting
+description: A research informed approach to navigation that improved discoverability by 400%
+intro: I conducted user interviews, a content audit, card sorting, and usability testing to completely overhaul the information architecutre of Auth0's developer documentation.
+img: docs-featured-image_nhms2n
 
 ---
 
 import StandardSection from '../../components/StandardSection.astro'
 import FullBleedSection from '../../components/FullBleedSection.astro'
 import BlogImageFullBleed from '../../components/BlogImageFullBleed.astro'
+
+import Blockquote from '../../components/Blockquote.astro'
 import { CldImage } from 'astro-cloudinary';
 import { CldVideoPlayer } from 'astro-cloudinary';
 
 <StandardSection>
 
+A strong developer experience has always been a core part of Auth0’s DNA. Since their founding they have deliberately built a developer-first product and it continues to be a key part of their success to this day. Naturally, maintaining excellent developer documentation is an essential part of that strategy.
 
 
 ## Auth0 Docs - love ‘em or hate ‘em
@@ -28,26 +25,26 @@ We got a lot of feedback that our docs were amazing. They were frequently cited 
 I set out to find out why.
 
 ### Experience level was a key factor
+
 Developers who liked our docs:
 
 - Had more pre-existing Identity and Access management (IAM) knowledge
 - Relied more on Google searches to find docs or community forum posts
-
 
 Developers who struggled with our docs:
 - Had less Identity and Access management (IAM) knowledge
 - Relied more on our sidebar navigation because they didn’t know the concepts well enough to choose good search terms
 - Ended up jumping back and forth between lots of open of tabs
 
-
 ## Making sense of the mess
 I performed a content audit of all 1000+ pages of docs, putting together a massive spreadsheet highlighting the problems in the IA. (I am precisely the kind of nerd 🤓 who loves this stuff).
 
 Our sidebar navigation was manually generated, but our breadcrumbs were automatically generated based on the file structure of our CMS.
 
-Over time the two had diverged, leading to a number of mismatches.
+Over time the two had diverged, and the result was that **75% of docs pages had navigational errors**.
 
-Many of the pages had inconsistent hierarchies. Content might be multiple levels deep in the sidebar navigation, but appear to be at the top level in the breadcrumb navigation.
+### Many pages had inconsistent hierarchies.
+Content might be multiple levels deep in the sidebar navigation, but appear to be at the top level in the breadcrumb navigation.
 
 <CldImage
               src="inconsistentHierarchy_tgbdun"
@@ -57,8 +54,8 @@ Many of the pages had inconsistent hierarchies. Content might be multiple levels
 />
 
 
-
-Other pages had mismatches where the content resided in completely different categories in the sidebar versus the breadcrumbs.
+### Some pages were in multiple categories
+Pages frequently had mismatches where the content resided in completely different categories in the sidebar versus the breadcrumbs.
 
 <CldImage
               src="mismatchedNav_jja7yu"
@@ -67,8 +64,8 @@ Other pages had mismatches where the content resided in completely different cat
   class="case-study-image-lg"
 />
 
-
-Worst of all, a whopping 54% of pages were orphans that didn't show up in the sidebar navigation at all.
+### More than half the pages were orphans
+A whopping 54% of pages were orphans that didn't show up in the sidebar navigation at all.
 
 <CldImage
               src="orphan_sejwxt"
@@ -78,43 +75,24 @@ Worst of all, a whopping 54% of pages were orphans that didn't show up in the si
 />
 
 
-75% of pages had a mismatch between the sidebar and breadcrumbs
+## Card sorting revealed two basic mental models
 
-21% of pages had either mismatched parent categories or inconsistent hierarchies
-
-54% of pages that were orphaned and didn’t show up in the sidebar navigation
-
-### Card sorting to understand mental models
-Users typically took one of two approaches:
-
-Topics grouped by task, creating groups based on a user’s journey through setting up and configuring Auth0
-
-<CldImage
-              src="taskCardSort_gntuxi"
-          alt="a screenshot of the card sorting results"
-
-  class="case-study-image-lg"
-/>
+Some users grouped topics by task, creating groups based on a user’s journey through setting up and configuring Auth0
 
 
-
-Topics grouped by feature, creating groups around authentication users, securing their applications, or configuring different integrations
-
-<CldImage
-              src="featureCardSort_i1rba8"
-          alt="a screenshot of the card sorting results"
-
-  class="case-study-image-lg"
-/>
+Others grouped topics by feature, creating groups like authenticaion, security, or configuration.
 
 
-### Wayfinding to validate
+## Wayfinding revealed a slight preference for feature-based navigation
 To validate the results of the card sorting, I followed up with wayfinding tests for both a task-based IA and a feature-based IA.
 
 Once again, different people had different mental models about how the topics should be grouped. Overall, however, more people were successful with the feature-based navigation and reported preferring that option.
 
 
-"I preferred the [Feature-based] experience because the top bar navigation was segmented more and the headlines were much less ambiguous."
+<Blockquote>
+I preferred the [feature-based] experience because the top bar navigation was segmented more and the headlines were much less ambiguous.
+
+</Blockquote>
 
 
 ## Breaking up the monolith
@@ -144,8 +122,11 @@ Based on my findings from the card sorting and wayfinding tests, I split the doc
 ## Landing pages provide a high-level overview
 We wanted to introduce developers to each of these sections, while also helping them get a better high level understanding of the Auth0 product.
 
+
 Our technical writing staff developed new content for each landing page and the homepage and I tested three different design ideas with users.
 
+
+The first design used a simple illustration created by our brand design team. Users found this to be **too abstract** and not useful.
 <CldImage
               src="landingpageillustration_xaxp4w"
           alt="a screenshot of the auth0 docs landing page with a simple illustration"
@@ -153,7 +134,7 @@ Our technical writing staff developed new content for each landing page and the 
   class="case-study-image-lg"
 />
 
-The second design featured a detailed architectural diagram of the Auth0 ecosystem. The software architect I interviewed liked this view, but acknowledged it would probably be better deeper in the documentation. The other developers found it to be too complex for a landing page.
+The second design featured a detailed architectural diagram of the Auth0 ecosystem. Most developers found it to be **too complex** for a landing page.
 <CldImage
               src="landingpagearch_slq2yg"
           alt="a screenshot of the auth0 docs landing page with an architecture diagram"
@@ -163,7 +144,7 @@ The second design featured a detailed architectural diagram of the Auth0 ecosyst
 
 
 
-The final design used a simplified diagram that provided users with a big picture overview of the Auth0 pipeline. Testers unanimously preferred this option, and thought that it provided just the right level of detail.
+The final design used a simplified diagram that provided users with a big picture overview of the Auth0 pipeline. Testers unanimously preferred this option, and thought that it provided **just the right level of detail**.
 <CldImage
               src="landingpagesimplediagram_l4xskp"
           alt="a screenshot of the auth0 docs landing page with a simple diagram"
@@ -185,7 +166,12 @@ I paired with our frontend engineering team to iterate on the behavior of the ne
 />
 
 ## Results
-With no set path through our documentation, it is difficult to quantitatively measure the impact of information architecture. Metrics can tell us if a user is staying on a certain page for more or less time than before, but they can't tell us if that's because they found the information they needed more quickly or because they were in the wrong place.
+
+When I first assessed the docs site, 75% of pages had some sort of navigational error. After I restructured the information architecture I fixed the ingestion pipeline to ensure that the breadcrumbs and sidebar navigation always stayed in sync, resulting in a 400% improvement in discoverability.
+
+### Qualitative Feedback
+
+Documentation can be challenging to measure quantitatively. Metrics can tell us if a user is staying on a certain page for more or less time than before, but they can’t tell us if that’s because they found the information they needed more quickly or because they were in the wrong place.
 
 Therefore, most of the impact of this initiative was measured through qualitative feedback, including follow-up interviews with users, and monitoring the feedback from the customer satisfaction widget embedded on every page of our documentation.
 

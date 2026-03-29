@@ -1,7 +1,7 @@
 :where(html) {
     --wrapper-wide: 85rem;
     --wrapper-medium: 67.5rem;
-    --max-text-length: 60ch;
+    --max-text-length: 40rem;
 
     .theme-toggle {
         position: fixed;

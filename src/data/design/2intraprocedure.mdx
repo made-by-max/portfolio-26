@@ -1,12 +1,8 @@
 ---
 title: Breaking Down Silos at Olympus
 description: A system-wide workflow to decrease context switching by 78% and get leadership buy-in
-intro: Best’e is an AI-driven digital assistant within Best Buy’s Internal Developer Portal that improves developer productivity by reducing the barriers to discoverability within the Best Buy ecosystem. Best’e is backed by a Retrievel Augmented Generation architecture accessible via a natural language prompt.
+intro: I worked across teams to align on a shared vision for the digital hub experience at Olympus and got buy-in from senior leadership to work towards a more cohesive user experience.
 img: pre-new_u5o72t
-
-tags:
-  - UI-Design
-  - Cross-Team-Collaboration
 
 ---
 
@@ -20,8 +16,8 @@ import { CldImage } from 'astro-cloudinary';
 <StandardSection>
 
 
-## Problem
-Like a lot of large organizations, the product teams at Olympus have a tendency to develop features in siloes, without necessarily considering the overall user flow.
+## Users don't care about your org chart
+Like a lot of large organizations, the product teams at Olympus have a tendency to develop features in siloes, without necessarily considering how the bigger picture impacts users.
 
 This was particularly apparent in the design for the digital hub, a specialized computer that integrates into the equipment tower in the endoscopy suite and runs the software that doctors use during their procedures.
 
@@ -34,7 +30,7 @@ This was particularly apparent in the design for the digital hub, a specialized 
     />
 </BlogImageNarrow>
 
-The digital hub was initially intended to run our computer aided detection software, which uses AI to help identify potential anomalies.
+The digital hub was initially intended to run computer aided detection software, which uses AI to help identify potential anomalies.
 <CldImage
               src="endomodule-old_bwk57r"
           alt="A screenshot of the endomodule homescreen, with cards to select which module to run"
@@ -50,11 +46,13 @@ Then our automated imaging solutions team added a separate application to manage
 />
 Later the voice team needed to integrate with the digital hub to run the software that would allow endoscopists to to capture findings verbally.
 
-Each of these teams were developing these features in isolation, as well as partnering with separate outside vendors.
-
 There were also other teams that would potentially be adding additional apps.
 
-Each was added as a separate application, with its own login flow and settings, rather than as a unified product suite. These interactions would all take place on a touch screen panel attached to the tower.
+### Three applications with entirely separate user flows
+
+Each of these teams were developing these features in isolation, as well as partnering with separate outside vendors.
+
+Each was added as a separate application, with its own login flow and settings, rather than as a unified product suite, meaning users had to log in three separate times to start a procedure. Switching between apps required exiting all the way out of their current application.
 <CldImage
               src="app-switcher_ufh1xh"
           alt="A screenshot with cards for 3 different applications"
@@ -62,11 +60,20 @@ Each was added as a separate application, with its own login flow and settings, 
   class="case-study-image-lg"
 />
 
-This resulted in a very poor user flow where the users had to log in to each app individually and exit all the way out of their current application anytime they needed to access the features of a different application. This was a particularly bad experience because they were using a touch screen with no keyboard.
+## Working across teams to create a user-centered workflow
 
-To address these issues, I began working on an updated user flow, taking into consideration the needs of all the different applications, to remove redundancy and improve the interoperability of the different applications.
+I collaborated with the designers and product managers from each team to understand the needs of their applications and began working on a user flow to remove redundancy and improve the interoperability of the different applications.
 
-I started by mapping the existing experience, to highlight the user pain points.
+I started by mapping the existing experience, to highlight the pain points and get buy-in from senior leadership to address these issues.
+
+**Initial Workflow:**
+
+Procedure prep: 18 steps, 11 navigation changes
+
+Active procedure: 16 steps, 5 navigation changes
+
+Procedure wrap-up: 8 steps, 4 navigation changes
+
 </StandardSection>
 
 <FullBleedSection>
@@ -81,7 +88,18 @@ I started by mapping the existing experience, to highlight the user pain points.
 </FullBleedSection>
 
 <StandardSection>
+
+
+
 Next I created a flow demonstrating how the user experience could be drastically improved simply by rethinking the authentication experience and improving the navigation between applications.
+
+**Updated Workflow:**
+
+Procedure prep: 10 steps, 7 navigation changes
+
+Active procedure: 2 steps, 0 navigation changes
+
+Procedure wrap-up: 2 steps, 1 navigation changes
 
 </StandardSection>
     <FullBleedSection>
@@ -95,6 +113,18 @@ Next I created a flow demonstrating how the user experience could be drastically
 </FullBleedSection>
 <StandardSection>
 Finally, I put together a long term vision in which authentication is further simplified by allowing doctors to log in by scanning their ID badge and the system defaults to the appropriate settings based on the procedure type so the staff just needs to confirm it’s correct, rather than configuring it manually.
+
+This workflow has 78% fewer steps than the existing one.
+
+**Ideal Workflow:**
+
+Procedure prep: 7 steps, 3 navigation changes
+
+Active procedure: 2 steps, 0 navigation changes
+
+Procedure wrap-up: 0 steps, 0 navigation changes
+
+
 </StandardSection>
 <FullBleedSection>
 <BlogImageScroll>
@@ -106,19 +136,16 @@ Finally, I put together a long term vision in which authentication is further si
 </BlogImageScroll>
 </FullBleedSection>
 <StandardSection>
-Along with rethinking the workflows, I also proposed new designs for the touch panel, which included improved navigation and presented default selections for confirmation, rather than requiring everything to be configured manually.
+    ## Design updates for the improved workflow
+The proposed solution presents default selections for confirmation, rather than manual configuration.
+
 <CldImage
               src="pre-new_u5o72t"
           alt="a screenshot of the new pre-procedure page"
-
-  class="case-study-image-lg"
+              class="case-study-image-lg"
 />
-<CldImage
-              src="intra-new_c2z6nn"
-          alt="a screenshot of the new intra-procedure page"
 
-  class="case-study-image-lg"
-/>
+Settings can be configured for individual applications, with a global settings option for shared settings.
 <CldImage
               src="endomodule-new_omgyjr"
           alt="a screenshot of the new settings page"
@@ -126,8 +153,20 @@ Along with rethinking the workflows, I also proposed new designs for the touch p
   class="case-study-image-lg"
 />
 
+A new sidebar lowers the burden of switching between applications.
 
-Because there was no centralized owner of the digital hub experience, we had to appeal to senior leadership to get buy-in for any changes to the user flow. I worked with my design manager to put together a deck for him to present to them.
+<CldImage
+              src="intra-new_c2z6nn"
+          alt="a screenshot of the new intra-procedure page"
+
+  class="case-study-image-lg"
+/>
+
+
+
+## A lack of ownership meant appealing to senior product leadership
+
+Once I had a workflow that met the needs of each team without sacrificing the user experience, I worked with design leadership to put together a presentation for senior product leadership.
 
 Due to our tight delivery deadlines we knew these changes would be out of scope for our current release. However, these user flows really helped to illustrate to key stakeholders just how bad the current experience is and we were able to get sign off to pursue a more coordinated and unified experience for subsequent software releases.
 
