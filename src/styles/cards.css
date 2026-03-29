@@ -24,6 +24,10 @@
     border: 1px solid var(--blue-200);
 }
 
+.card-primary-action {
+    line-height: 2.5;
+}
+
 .card-primary-action::before {
     content: ""; /* 1 */
     position: absolute; /* 2 */
