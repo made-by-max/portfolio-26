@@ -1,5 +1,13 @@
+---
+import { Image } from "astro:assets";
+const { src } = Astro.props;
+const { alt } = Astro.props;
+---
+
 <div tabindex="0" class="image-scroll-container">
-    <div class="box"><slot /></div>
+    <div class="box">
+        <Image src={src} alt={alt} />
+    </div>
 </div>
 
 <style>

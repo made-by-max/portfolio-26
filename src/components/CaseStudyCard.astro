@@ -2,13 +2,14 @@
 import type { CollectionEntry } from "astro:content";
 
 const { post } = Astro.props;
-import { CldImage } from "astro-cloudinary";
+
+import { Image } from "astro:assets";
 ---
 
 <div class="case-study-card">
     <div class="img-container">
         <div class="img">
-            <CldImage
+            <Image
                 src={post.data.img}
                 alt={`Cover image for ${post.data.title}`}
             />
