@@ -1,10 +1,17 @@
-<div>
-    <slot />
-</div>
+---
+import { Image } from "astro:assets";
+const { src } = Astro.props;
+const { alt } = Astro.props;
+---
+
+<Image src={src} alt={alt} />
 
 <style>
-    div {
+    img {
         width: var(--wrapper-medium);
         margin-block: var(--size-10);
+    }
+    div {
+        max-width: var(--max-text-length);
     }
 </style>

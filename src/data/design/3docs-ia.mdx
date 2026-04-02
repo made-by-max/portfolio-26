@@ -2,17 +2,25 @@
 title: Untangling the Auth0 Docs
 description: A research informed approach to navigation that improved discoverability by 400%
 intro: I conducted user interviews, a content audit, card sorting, and usability testing to completely overhaul the information architecutre of Auth0's developer documentation.
-img: docs-featured-image_nhms2n
+img: ../../assets/docs-ia/docs-featured-image.png
 
 ---
 
 import StandardSection from '../../components/StandardSection.astro'
 import FullBleedSection from '../../components/FullBleedSection.astro'
 import BlogImageFullBleed from '../../components/BlogImageFullBleed.astro'
-
+import BlogImageWide from '../../components/BlogImageWide.astro'
 import Blockquote from '../../components/Blockquote.astro'
-import { CldImage } from 'astro-cloudinary';
-import { CldVideoPlayer } from 'astro-cloudinary';
+
+import featureCardSort from '../../assets/docs-ia/featureCardSort.png'
+import inconsistentHierarchy from '../../assets/docs-ia/inconsistentHierarchy.png'
+import landingpagearch from '../../assets/docs-ia/landingpagearch.png'
+import landingpageillustration from '../../assets/docs-ia/landingpageillustration.png'
+import landingpagesimplediagram from '../../assets/docs-ia/landingpagesimplediagram.png'
+import mismatchedNav from '../../assets/docs-ia/mismatchedNav.png'
+import orphan from '../../assets/docs-ia/orphan.png'
+import sidebars from '../../assets/docs-ia/sidebars.png'
+import taskCardSort from '../../assets/docs-ia/taskCardSort.png'
 
 <StandardSection>
 
@@ -46,34 +54,19 @@ Over time the two had diverged, and the result was that **75% of docs pages had 
 ### Many pages had inconsistent hierarchies.
 Content might be multiple levels deep in the sidebar navigation, but appear to be at the top level in the breadcrumb navigation.
 
-<CldImage
-              src="inconsistentHierarchy_tgbdun"
-          alt="a screenshot of the auth0 docs"
 
-  class="case-study-image-lg"
-/>
-
+<BlogImageWide src={inconsistentHierarchy} alt="a screenshot of the auth0 docs"/>
 
 ### Some pages were in multiple categories
 Pages frequently had mismatches where the content resided in completely different categories in the sidebar versus the breadcrumbs.
 
-<CldImage
-              src="mismatchedNav_jja7yu"
-          alt="a screenshot of the auth0 docs"
-
-  class="case-study-image-lg"
-/>
+<BlogImageWide src={mismatchedNav} alt="a screenshot of the auth0 docs"/>
 
 ### More than half the pages were orphans
 A whopping 54% of pages were orphans that didn't show up in the sidebar navigation at all.
 
-<CldImage
-              src="orphan_sejwxt"
-          alt="a screenshot of the auth0 docs"
 
-  class="case-study-image-lg"
-/>
-
+<BlogImageWide src={orphan} alt="a screenshot of the auth0 docs"/>
 
 ## Card sorting revealed two basic mental models
 
@@ -108,15 +101,8 @@ Based on my findings from the card sorting and wayfinding tests, I split the doc
 </StandardSection>
 
 <FullBleedSection backgroundColor={"#EBEFFF"}>
-    <BlogImageFullBleed>
+    <BlogImageFullBleed src="sidebars" alt="an image of the new sidebars" />
 
-<CldImage
-              src="sidebars_knqe3u"
-          alt="an image of the new sidebars"
-          width="100%"
-
-/>
-    </BlogImageFullBleed>
 </FullBleedSection>
 <StandardSection>
 ## Landing pages provide a high-level overview
@@ -127,43 +113,23 @@ Our technical writing staff developed new content for each landing page and the 
 
 
 The first design used a simple illustration created by our brand design team. Users found this to be **too abstract** and not useful.
-<CldImage
-              src="landingpageillustration_xaxp4w"
-          alt="a screenshot of the auth0 docs landing page with a simple illustration"
 
-  class="case-study-image-lg"
-/>
+<BlogImageWide src={landingpageillustration} alt="a screenshot of the auth0 docs landing page with a simple illustration"/>
 
 The second design featured a detailed architectural diagram of the Auth0 ecosystem. Most developers found it to be **too complex** for a landing page.
-<CldImage
-              src="landingpagearch_slq2yg"
-          alt="a screenshot of the auth0 docs landing page with an architecture diagram"
-
-  class="case-study-image-lg"
-/>
 
 
+<BlogImageWide src={landingpagearch} alt="a screenshot of the auth0 docs landing page with an architecture diagram"/>
 
 The final design used a simplified diagram that provided users with a big picture overview of the Auth0 pipeline. Testers unanimously preferred this option, and thought that it provided **just the right level of detail**.
-<CldImage
-              src="landingpagesimplediagram_l4xskp"
-          alt="a screenshot of the auth0 docs landing page with a simple diagram"
 
-  class="case-study-image-lg"
-/>
-
+<BlogImageWide src={landingpagesimplediagram} alt="a screenshot of the auth0 docs landing page with a simple diagram"/>
 
 ## Finalizing the Design
 I made some small tweaks based on some of the feedback from our usability testing and then designed the new sidebar sections.
 
 I paired with our frontend engineering team to iterate on the behavior of the new sidebar, how users would move from one section to another, and the mobile version of the navigation menu.
 
-<CldVideoPlayer
-              src="nav-demo_z4orvn"
-          alt="a demo of the auth0 navigation in action"
-
-  class="video"
-/>
 
 ## Results
 
