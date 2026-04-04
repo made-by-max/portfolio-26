@@ -2,7 +2,7 @@
 title: CSS Architecture with Beyond CSS
 date: 2024-08-19
 tags:
-  - css
+  - coding
   - learning
 ---
 ## The gap in CSS courses

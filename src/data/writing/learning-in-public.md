@@ -4,8 +4,8 @@ title: Learning in Public
 date: 2024-05-10
 
 tags:
-
-  - design engineering
+  - design-engineering
+  - coding
   - learning
 ---
 

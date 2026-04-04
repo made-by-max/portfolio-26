@@ -5,7 +5,7 @@ date: 2024-06-15
 
 tags:
 
-  - design engineering
+  - design-engineering
   - learning
 ---
 Welcome to my page. As I write this it’s a whole lot of nothing, though if you’re reading this it’s likely morphed into something worth visiting by now, in which case it seems like I’ve achieved at least some of my objectives in building it.

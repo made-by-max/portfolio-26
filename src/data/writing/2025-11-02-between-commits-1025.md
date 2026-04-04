@@ -1,9 +1,8 @@
 ---
-title: Between Commits 10.25
+title: October 2025 recap
 date: 2025-11-02
 tags:
   - life
-  - between-commits
 ---
 In an attempt to a) write more on my blog and b) remember what's going on in my life, I'm going to attempt to write up a monthly update, a la Dave Rupert's [Vibe Checks](https://daverupert.com/tag/vibecheck). Welcome to the inaugural issue.
 

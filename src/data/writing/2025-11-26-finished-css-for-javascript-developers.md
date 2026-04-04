@@ -2,7 +2,7 @@
 title: "Finished: CSS for JavaScript Developers"
 date: 2025-11-26
 tags:
-  - css
+  - coding
   - learning
 images:
   - /media/Screenshot 2025-11-26 at 10.06.45 PM.png

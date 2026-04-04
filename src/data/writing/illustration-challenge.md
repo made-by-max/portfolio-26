@@ -4,7 +4,7 @@ date: 2020-01-31
 
 tags:
 
-- illustration
+- design
 ---
 Last summer, I set out to complete my first hundred day challenge and decided to start with vector illustrations for a few reasons:
 

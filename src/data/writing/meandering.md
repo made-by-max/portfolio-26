@@ -4,7 +4,7 @@ date: 2019-04-05
 
 tags:
 
-- product design
+- product-design
 - career
 ---
 

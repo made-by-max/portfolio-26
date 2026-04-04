@@ -3,6 +3,7 @@ title: 100 days of code
 date: 2020-03-24
 tags:
   - learning
+  - coding
 ---
 
 On December 20, 2019 I decided to get a head start on one of my goals for 2020 - completing the 100 days of code challenge. The idea behind the challenge is simple - code for at least an hour a day, every day, for 100 days. You can code in any language or languages you want to learn, and your learning plan can be as structured or unstructured as you like. Check our some of the project I did on [my project page](https://radcode.netlify.app/).

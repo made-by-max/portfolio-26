@@ -4,8 +4,8 @@ date: 2021-03-29
 
 tags:
 
-- product design
-- inclusive design
+- product-design
+- inclusive-design
 ---
 
 The words and phrases we use reflect our values and attitudes towards those around us. As language is constantly evolving, words and phrases that were commonplace in the past may strike us as deeply offensive today. It’s important that we reflect on the terms we use and consider how they may be harming others or how and how they might be perceived in the future.
