@@ -1,7 +1,7 @@
 ---
 import Navigation from "../components/Navigation.astro";
 import { ClientRouter } from "astro:transitions";
-import ThemeToggleButton from "../components/ThemeToggleButton.astro";
+
 import Footer from "../components/Footer.astro";
 import ThemeManager from "../components/ThemeManager.astro";
 
@@ -30,9 +30,7 @@ const { pageTitle } = Astro.props;
         <main>
             <slot />
         </main>
-        <div class="theme-toggle">
-            <ThemeToggleButton />
-        </div>
+
         <Footer />
     </body><style is:global>
         :root[data-theme="light"] {
@@ -42,6 +40,7 @@ const { pageTitle } = Astro.props;
             --accent-secondary: var(--accent-secondary-light);
             --background-primary: var(--background-primary-light);
             --background-secondary: var(--background-secondary-light);
+            --background-brand: var(--background-brand-light);
             --surface: var(--surface-light);
             --text-primary: var(--text-primary-light);
             --text-secondary: var(--text-secondary-light);
@@ -55,6 +54,7 @@ const { pageTitle } = Astro.props;
             --accent-secondary: var(--accent-secondary-dark);
             --background-primary: var(--background-primary-dark);
             --background-secondary: var(--background-secondary-dark);
+            --background-brand: var(--background-brand-dark);
             --surface: var(--surface-dark);
             --text-primary: var(--text-primary-dark);
             --text-secondary: var(--text-secondary-dark);
