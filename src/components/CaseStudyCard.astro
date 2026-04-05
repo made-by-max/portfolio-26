@@ -18,9 +18,9 @@ import { Image } from "astro:assets";
 
     <div class="content">
         <a class="card-primary-action" href=`/${post.collection}/${post.id}`
-            ><h3 class="text-lg">{post.data.title}</h3></a
+            ><h3>{post.data.title}</h3></a
         >
-        {post.data.description}
+        <p>{post.data.description}</p>
     </div>
 </div>
 
@@ -54,21 +54,16 @@ import { Image } from "astro:assets";
         gap: 4px;
     }
 
-    p {
-        /*margin-block-end: var(--size-2);*/
-        font-size: 32px;
-    }
-
-    h2 {
+    h3 {
         /*font-size: var(--text-base);
         line-height: 1.4;*/
         margin-block-end: var(--size-1);
     }
 
     a {
-        font-size: var(--text-base);
-        font-weight: var(--font-weight-medium);
-        color: inherit;
+        /*font-size: var(--text-base);*/
+        /*font-weight: var(--font-weight-medium);*/
+        /*color: inherit;*/
         text-decoration: none;
     }
 
