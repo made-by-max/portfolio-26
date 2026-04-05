@@ -1,45 +1,45 @@
 header,
 footer {
-    width: 100%;
-    padding-inline: 0;
-    margin-inline: 0;
+  width: 100%;
+  padding-inline: 0;
+  margin-inline: 0;
 }
 
 header {
-    padding-block: var(--size-5);
+  padding-block: var(--size-5);
 }
 
 footer {
-    padding-block: var(--size-10);
+  padding-block: var(--size-10);
 }
 
 nav,
 .bottom-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--size-3);
-    max-width: var(--max-width);
-    margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-3);
+  max-width: var(--max-width);
+  margin-inline: auto;
 
-    a {
-        text-decoration: none;
-        color: inherit;
-        font-size: var(--text-medium);
-        font-weight: var(--font-weight-medium);
-    }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--text-s);
+    font-weight: var(--font-weight-medium);
+  }
 
-    a:hover,
-    a:focus {
-        color: var(--brand-primary);
-        text-decoration: none;
-    }
+  a:hover,
+  a:focus {
+    color: var(--brand-primary);
+    text-decoration: none;
+  }
 }
 .pageLinks,
 .socialLinks {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--size-2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--size-2);
 }

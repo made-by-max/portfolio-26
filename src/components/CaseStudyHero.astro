@@ -25,12 +25,13 @@ const { post } = Astro.props;
 
 <style>
     h1 {
-        margin-block-end: 16px;
+        margin-block-end: var(--size-12-fluid);
     }
 
     .intro {
         margin-block-end: var(--size-8);
-        font-size: var(--text-medium);
+        font-size: var(--text-xl);
+        line-height: var(--text-xl-line-height);
         max-width: 48rem;
     }
 
