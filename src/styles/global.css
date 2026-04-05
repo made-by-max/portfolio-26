@@ -25,7 +25,7 @@ body {
     }*/
 }
 
-body::before {
+main::before {
     --size: 32px;
     --line: color-mix(in hsl, canvasText, transparent 90%);
     content: "";
@@ -59,8 +59,12 @@ body::before {
 
 main {
     min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    background: var(--background-primary);
     max-width: var(--max-width);
     margin-inline: auto;
+    padding-block-end: var(--size-12-fluid);
 }
 
 img,
