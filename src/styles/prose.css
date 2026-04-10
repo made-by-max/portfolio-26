@@ -37,6 +37,8 @@ img {
 
 li {
   margin-block-end: var(--size-3);
+  font-size: var(--text-xl);
+  line-height: var(--text-xl-line-height);
 }
 
 ul {
