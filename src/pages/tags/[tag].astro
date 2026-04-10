@@ -37,6 +37,9 @@ const { posts } = Astro.props;
     <div class="wrapper-medium">
         <h1>Posts tagged with {tag}</h1>
 
+        <div class="corners">
+
         {posts.map((post) => <BlogCard post={post} />)}
+        </div>
     </div>
 </BaseLayout>

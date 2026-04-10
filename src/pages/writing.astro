@@ -19,14 +19,14 @@ const pageTitle = "Writing";
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-wide sidebarLayout">
         <h1>{heading}</h1>
-        <div class="main-content">
-            <article>
+        <!-- <div class="main-content"> -->
+            <article class="corners">
                 {posts.map((post) => <BlogCard post={post} />)}
             </article>
 
-            <aside>
+            <!-- <aside>
                 <TagCloud />
-            </aside>
-        </div>
+            </aside> -->
+        <!-- </div> -->
     </div>
 </BaseLayout>

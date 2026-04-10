@@ -6,7 +6,7 @@ const { post } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<div class="case-study-card">
+<div class="case-study-card border">
     <div class="img-container">
         <div class="img">
             <Image
@@ -29,15 +29,9 @@ import { Image } from "astro:assets";
         grid-row: span 3;
         display: grid;
         grid-template-rows: subgrid;
-        /*gap: var(--size-5);*/
+        gap: var(--size-5);
         position: relative;
-        /*background-color: var(--background-secondary);*/
-        /*background:
-            linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
-            linear-gradient(rgb(180, 220, 255) 0%, rgb(207, 162, 251) 100%);*/
-        /*border-radius: 8px;*/
-        /*border: 1px solid transparent;*/
-        border: 1px solid var(--line);
+        background-color: var(--background-primary);
 
     }
 

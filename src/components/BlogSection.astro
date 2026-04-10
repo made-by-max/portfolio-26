@@ -1,7 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 import BlogCard from "./BlogCard.astro";
+import LinkToMore from "./LinkToMore.astro";
 import SectionHeader from "./SectionHeader.astro";
+
+
 
 const posts = await getCollection("writing");
 
@@ -15,81 +18,18 @@ const suggestedEntries = posts.slice(0, 3);
 ---
 
 
-<div class="container">
-<div class="inner-container">
-
+<div class="corners">
+<div class="border">
 {suggestedEntries.map((post) => <BlogCard post={post} />)}
 </div>
 </div>
-<div class="link">
-    <a href="/writing">All posts</a>
-    <a aria-label="All posts" href="/writing">
-        <svg
-            class="i i-arrow-right"
-            viewBox=" 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-        >
-            <path d="M5 12h14m-7-7 7 7-7 7"></path>
-        </svg>
-    </a>
-</div>
+
+<LinkToMore text="All posts" url="/writing" />
+
 
 <style>
     h2 {
         margin-block-end: 0;
     }
 
-    .i {
-        width: 20px;
-        height: 20px;
-    }
-
-    .link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        gap: var(--size-1);
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            font-weight: var(--font-weight-medium);
-            line-height: 24px;
-        }
-    }
-
-    .inner-container {
-        border: 1px solid color-mix(in hsl, canvasText, transparent 95%);
-    }
-    .container {
-           /*border: 1px solid color-mix(in hsl, canvasText, transparent 90%);
-            border-radius: 16px;  /* Would normally overlap, but the browser prevents it*/
-            /*corner-shape: notch;
-            width: 50%;*/
-
-            /*box-shadow:
-              -10px -10px 10px -20px color-mix(in hsl, canvasText, transparent 90%),
-              50px 50px 0 -40px red;*/
-
-                --s: 20px; /* the size on the corner */
-                --t: 5px;  /* the thickness of the border */
-                --g: 0px; /* the gap between the border and image */
-
-                padding: calc(var(--g) + var(--t));
-                outline: 2px solid color-mix(in hsl, canvasText, transparent 90%); /* the color here */
-                outline-offset: -5px;
-                -webkit-mask:
-                  conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
-                  0 0/calc(100% - var(--s)) calc(100% - var(--s)),
-                  linear-gradient(#000 0 0) content-box;
-
-
-
-    }
 </style>
