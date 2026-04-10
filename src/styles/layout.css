@@ -1,7 +1,7 @@
 :where(html) {
   --wrapper-wide: 85rem;
   --wrapper-medium: 67.5rem;
-  --max-text-length: 40rem;
+  --max-text-length: 45rem;
 
   /*.theme-toggle {
         position: fixed;
@@ -54,16 +54,16 @@
 }
 
 .border {
-  border: 1px solid color-mix(in hsl, canvasText, transparent 95%);
+  border: 1px solid var(--line);
 }
 
 .corners {
   --s: 20px; /* the size on the corner */
-  --t: 5px; /* the thickness of the border */
-  --g: 0px; /* the gap between the border and image */
+  --t: 6px; /* the thickness of the border */
+  --g: 5px; /* the gap between the border and image */
 
   padding: calc(var(--g) + var(--t));
-  outline: 2px solid color-mix(in hsl, canvasText, transparent 90%); /* the color here */
+  outline: 2px solid var(--corner); /* the color here */
   outline-offset: -5px;
   -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
       calc(100% - var(--s)) calc(100% - var(--s)),

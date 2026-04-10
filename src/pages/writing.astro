@@ -21,7 +21,10 @@ const pageTitle = "Writing";
         <h1>{heading}</h1>
         <!-- <div class="main-content"> -->
             <article class="corners">
+                <div class="border">
+
                 {posts.map((post) => <BlogCard post={post} />)}
+                </div>
             </article>
 
             <!-- <aside>

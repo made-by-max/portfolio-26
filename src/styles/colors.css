@@ -25,7 +25,7 @@
   --text-soft-light: var(--neutral-300);
   --border-light: var(--neutral-700);
   --shadow-color: var(--neutral-500);
-  --corner-light: color-mix(in hsl, canvasText, transparent 95%);
+  --corner-light: color-mix(in hsl, canvasText, transparent 90%);
 
   /*dark*/
   --brand-primary-dark: #9eb1ff;
