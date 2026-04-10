@@ -14,7 +14,13 @@ posts.sort((a, b) => {
 const suggestedEntries = posts.slice(0, 3);
 ---
 
+
+<div class="container">
+<div class="inner-container">
+
 {suggestedEntries.map((post) => <BlogCard post={post} />)}
+</div>
+</div>
 <div class="link">
     <a href="/writing">All posts</a>
     <a aria-label="All posts" href="/writing">
@@ -56,5 +62,34 @@ const suggestedEntries = posts.slice(0, 3);
             font-weight: var(--font-weight-medium);
             line-height: 24px;
         }
+    }
+
+    .inner-container {
+        border: 1px solid color-mix(in hsl, canvasText, transparent 95%);
+    }
+    .container {
+           /*border: 1px solid color-mix(in hsl, canvasText, transparent 90%);
+            border-radius: 16px;  /* Would normally overlap, but the browser prevents it*/
+            /*corner-shape: notch;
+            width: 50%;*/
+
+            /*box-shadow:
+              -10px -10px 10px -20px color-mix(in hsl, canvasText, transparent 90%),
+              50px 50px 0 -40px red;*/
+
+                --s: 20px; /* the size on the corner */
+                --t: 5px;  /* the thickness of the border */
+                --g: 0px; /* the gap between the border and image */
+
+                padding: calc(var(--g) + var(--t));
+                outline: 2px solid color-mix(in hsl, canvasText, transparent 90%); /* the color here */
+                outline-offset: -5px;
+                -webkit-mask:
+                  conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+                  0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+                  linear-gradient(#000 0 0) content-box;
+
+
+
     }
 </style>

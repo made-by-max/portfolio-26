@@ -3,15 +3,50 @@ import { Image } from "astro:assets";
 const { src } = Astro.props;
 const { alt } = Astro.props;
 ---
-
+<div class="container">
+    <div class="inner-container">
 <Image src={src} alt={alt} />
+
+    </div>
+</div>
 
 <style>
     img {
         width: var(--wrapper-medium);
-        margin-block: var(--size-10);
+
     }
-    div {
+    /*div {
         max-width: var(--max-text-length);
+    }*/
+
+    .inner-container {
+        border: 1px solid color-mix(in hsl, canvasText, transparent 95%);
+
+    }
+    .container {
+           /*border: 1px solid color-mix(in hsl, canvasText, transparent 90%);
+            border-radius: 16px;  /* Would normally overlap, but the browser prevents it*/
+            /*corner-shape: notch;
+            width: 50%;*/
+
+            /*box-shadow:
+              -10px -10px 10px -20px color-mix(in hsl, canvasText, transparent 90%),
+              50px 50px 0 -40px red;*/
+
+                --s: 30px; /* the size on the corner */
+                --t: 2px;  /* the thickness of the border */
+                --g: 4px; /* the gap between the border and image */
+
+                padding: calc(var(--g) + var(--t));
+                outline: var(--t)solid color-mix(in hsl, canvasText, transparent 90%); /* the color here */
+                outline-offset: -5px;
+                -webkit-mask:
+                  conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+                  0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+                  linear-gradient(#000 0 0) content-box;
+
+                  margin-block: var(--size-10-fluid);
+
+
     }
 </style>

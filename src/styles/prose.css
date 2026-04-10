@@ -20,7 +20,6 @@ p {
 
 img {
   height: auto;
-  margin-block: var(--size-10-fluid);
 }
 
 li {
