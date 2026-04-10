@@ -13,12 +13,14 @@ const { post } = Astro.props;
                 {post.data.intro}
             </p>
         </div>
+        <div class="container">
 
         <div class="heroImage">
             <Image
                 src={post.data.img}
                 alt={`Cover image for ${post.data.title}`}
             />
+        </div>
         </div>
     </div>
 </div>
@@ -35,11 +37,25 @@ const { post } = Astro.props;
         max-width: 48rem;
     }
 
-    img {
-        border-radius: 8px;
-    }
+
 
     .hero {
         margin-block-end: var(--size-11-fluid);
     }
+
+    .container {
+                --s: 40px; /* the size on the corner */
+                --t: 2px;  /* the thickness of the border */
+                --g: 6px; /* the gap between the border and image */
+
+                padding: calc(var(--g) + var(--t));
+                outline: var(--t) solid var(--corner); /* the color here */
+                outline-offset: -5px;
+                -webkit-mask:
+                  conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+                  0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+                  linear-gradient(#000 0 0) content-box;
+
+
+
 </style>

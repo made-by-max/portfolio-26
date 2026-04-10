@@ -12,6 +12,7 @@
 
   --line: color-mix(in hsl, canvasText, transparent 95%);
   --corner: color-mix(in hsl, canvasText, transparent 90%);
+
   /* Light and dark modes */
   /* light */
   --brand-primary-light: #3a5bc7;
@@ -24,6 +25,7 @@
   --text-soft-light: var(--neutral-300);
   --border-light: var(--neutral-700);
   --shadow-color: var(--neutral-500);
+  --corner-light: color-mix(in hsl, canvasText, transparent 95%);
 
   /*dark*/
   --brand-primary-dark: #9eb1ff;
@@ -36,6 +38,7 @@
   --text-soft-dark: var(--neutral-400);
   --border-dark: var(--neutral-300);
   --shadow-color: var(--neutral-900);
+  --corner-dark: color-mix(in hsl, canvasText, transparent 90%);
 
   /* color schemes */
   color-scheme: light;
@@ -54,6 +57,7 @@
   --text-secondary: var(--text-secondary-light);
   --text-soft: var(--text-soft-light);
   --border: var(--border-light);
+  --corner: var(--corner-light);
 
   @media (prefers-color-scheme: dark) {
     --brand-primary: var(--brand-primary-dark);
@@ -68,6 +72,7 @@
     --text-secondary: var(--text-secondary-dark);
     --text-soft: var(--text-soft-dark);
     --border: var(--border-dark);
+    --corner: var(--corner-dark);
   }
 
   [data-theme="light"] {
@@ -98,5 +103,6 @@
     --text-primary: var(--text-primary-dark);
     --text-secondary: var(--text-secondary-dark);
     --border: var(--border-dark);
+    --corner: var(--corner-dark);
   }
 }

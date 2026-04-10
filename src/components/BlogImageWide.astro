@@ -19,17 +19,14 @@ const { alt } = Astro.props;
         max-width: var(--max-text-length);
     }*/
 
-    .inner-container {
-        border: 1px solid var(--line);
 
-    }
     .container {
                    --s: 30px; /* the size on the corner */
-                --t: 3px;  /* the thickness of the border */
-                --g: 4px; /* the gap between the border and image */
+                --t: 2px;  /* the thickness of the border */
+                --g: 5px; /* the gap between the border and image */
 
                 padding: calc(var(--g) + var(--t));
-                outline: var(--t)solid var(--corner); /* the color here */
+                outline: var(--t) solid var(--corner); /* the color here */
                 outline-offset: -5px;
                 -webkit-mask:
                   conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
