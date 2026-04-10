@@ -46,8 +46,8 @@ ul {
   height: auto;
 }
 
-.video {
+video {
   margin-block: var(--size-10-fluid);
-  width: var(--max-text-length);
+  width: var(--wrapper-medium);
   height: auto;
 }
