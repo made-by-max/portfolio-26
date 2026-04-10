@@ -1,54 +1,71 @@
 :where(html) {
-    --wrapper-wide: 85rem;
-    --wrapper-medium: 67.5rem;
-    --max-text-length: 40rem;
+  --wrapper-wide: 85rem;
+  --wrapper-medium: 67.5rem;
+  --max-text-length: 45rem;
 
-    /*.theme-toggle {
+  /*.theme-toggle {
         position: fixed;
         bottom: var(--size-3);
         right: var(--size-3);
     }*/
 
-    .wrapper-wide {
-        max-width: var(--wrapper-wide);
-        margin: 0 auto;
-        padding-inline: 16px;
+  .wrapper-wide {
+    max-width: var(--wrapper-wide);
+    margin: 0 auto;
+    padding-inline: 16px;
+  }
+
+  .wrapper-medium {
+    max-width: var(--wrapper-medium);
+    margin: 0 auto;
+    padding-inline: 16px;
+  }
+
+  /*Page Layouts*/
+
+  .sidebarLayout {
+    .main-content {
+      display: grid;
+
+      grid-template-columns: 2fr 1fr;
+
+      @media (max-width: 50rem) {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .wrapper-medium {
-        max-width: var(--wrapper-medium);
-        margin: 0 auto;
-        padding-inline: 16px;
+    article {
+      grid-column: 1;
     }
+    aside {
+      grid-column: 2;
 
-    /*Page Layouts*/
-
-    .sidebarLayout {
-        .main-content {
-            display: grid;
-
-            grid-template-columns: 2fr 1fr;
-
-            @media (max-width: 50rem) {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        article {
-            grid-column: 1;
-        }
-        aside {
-            grid-column: 2;
-
-            @media (max-width: 50rem) {
-                display: none;
-            }
-        }
+      @media (max-width: 50rem) {
+        display: none;
+      }
     }
+  }
 
-    .cardLayout {
-        display: grid;
-        gap: var(--size-3);
-        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
-    }
+  .cardLayout {
+    display: grid;
+    gap: var(--size-3);
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+  }
+}
+
+.border {
+  border: 1px solid var(--line);
+}
+
+.corners {
+  --s: 20px; /* the size on the corner */
+  --t: 6px; /* the thickness of the border */
+  --g: 5px; /* the gap between the border and image */
+
+  padding: calc(var(--g) + var(--t));
+  outline: 2px solid var(--corner); /* the color here */
+  outline-offset: -5px;
+  -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+      calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
 }

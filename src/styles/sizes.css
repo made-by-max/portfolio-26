@@ -12,15 +12,16 @@
   --size-10: 5rem;
   --size-11: 5.5rem;
   --size-12: 6rem;
-  --size-13: 7rem;
-  --size-14: 7.5rem;
-  --size-15: 8rem;
+  --size-13: 6.5rem;
+  --size-14: 7rem;
+  --size-15: 7.5rem;
+  --size-20: 10rem;
 
   --size-6-fluid: clamp(1.5rem, 0.8864rem + 2.7273vw, 3rem);
   --size-10-fluid: clamp(1.5rem, 0.0682rem + 6.3636vw, 5rem);
   --size-11-fluid: clamp(2rem, 0.5682rem + 6.3636vw, 5.5rem);
   --size-12-fluid: clamp(1.5rem, -0.3409rem + 8.1818vw, 6rem);
-  --size-13-fluid: clamp(1.5rem, -0.75rem + 10vw, 7rem);
+  --size-13-fluid: clamp(1.5rem, -0.75rem + 10vw, 6.5rem);
 
   --size-px-000: -8px;
   --size-px-00: -4px;

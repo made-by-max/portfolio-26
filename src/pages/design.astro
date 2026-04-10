@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CaseStudyCard from "../components/CaseStudyCard.astro";
+import CaseStudySection from "../components/CaseStudySection.astro";
 
 import "../styles/cards.css";
 const posts = await getCollection("design");
@@ -11,12 +11,15 @@ const pageTitle = "Selected Work";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="wrapper-wide">
-        <h1>{heading}</h1>
-        <div class="cardLayout">
-            {posts.map((post) => <CaseStudyCard post={post} />)}
+
+    <section>
+        <div class="wrapper-wide">
+            <h1 class="section-header">Selected Work</h1>
+            <CaseStudySection />
         </div>
-    </div>
+    </section>
+
+
 </BaseLayout>
 
 <style>
