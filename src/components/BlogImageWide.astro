@@ -20,25 +20,16 @@ const { alt } = Astro.props;
     }*/
 
     .inner-container {
-        border: 1px solid color-mix(in hsl, canvasText, transparent 95%);
+        border: 1px solid var(--line);
 
     }
     .container {
-           /*border: 1px solid color-mix(in hsl, canvasText, transparent 90%);
-            border-radius: 16px;  /* Would normally overlap, but the browser prevents it*/
-            /*corner-shape: notch;
-            width: 50%;*/
-
-            /*box-shadow:
-              -10px -10px 10px -20px color-mix(in hsl, canvasText, transparent 90%),
-              50px 50px 0 -40px red;*/
-
-                --s: 30px; /* the size on the corner */
-                --t: 2px;  /* the thickness of the border */
+                   --s: 30px; /* the size on the corner */
+                --t: 3px;  /* the thickness of the border */
                 --g: 4px; /* the gap between the border and image */
 
                 padding: calc(var(--g) + var(--t));
-                outline: var(--t)solid color-mix(in hsl, canvasText, transparent 90%); /* the color here */
+                outline: var(--t)solid var(--corner); /* the color here */
                 outline-offset: -5px;
                 -webkit-mask:
                   conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
