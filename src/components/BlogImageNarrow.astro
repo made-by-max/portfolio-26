@@ -4,8 +4,10 @@ import { Image } from "astro:assets";
 const { src } = Astro.props;
 const { alt } = Astro.props;
 ---
+<div class="container">
 
 <Image src={src} alt={alt} />
+</div>
 
 <style>
     img {
@@ -15,4 +17,6 @@ const { alt } = Astro.props;
     div {
         max-width: var(--max-text-length);
     }
+
+
 </style>

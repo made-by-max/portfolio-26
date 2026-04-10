@@ -20,6 +20,19 @@ p {
 
 img {
   height: auto;
+
+  --s: 30px; /* the size on the corner */
+  --t: 2px; /* the thickness of the border */
+  --g: 5px; /* the gap between the border and image */
+
+  padding: calc(var(--g) + var(--t));
+  outline: var(--t) solid var(--corner); /* the color here */
+  outline-offset: -5px;
+  -webkit-mask: conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+      calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+
+  margin-block: var(--size-12-fluid);
 }
 
 li {
