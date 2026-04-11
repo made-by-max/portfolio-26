@@ -24,6 +24,11 @@ import vision from '../../assets/intra/vision.svg'
 import unhappy from '../../assets/intra/unhappy.svg'
 import intermediate from '../../assets/intra/intermediate.svg'
 
+import mobileImage from "../../assets/intra/intra-old-dark.png"
+import desktopImage from "../../assets/intra/intra-old-light.png"
+
+import appSwitch from "../../assets/intra/app-switcher-transparent.png"
+
 <StandardSection>
 
 
@@ -32,10 +37,13 @@ Like a lot of large organizations, the product teams at Olympus have a tendency 
 
 This was particularly apparent in the design for the digital hub, a specialized computer that integrates into the equipment tower in the endoscopy suite and runs the software that doctors use during their procedures.
 
-<BlogImageNarrow src={hub} alt="A close-up of the digital hub shown against the image of an equipment tower"/>
+<BlogImageNarrow src={hub} alt="A screenshot of the endomodule homescreen, with cards to select which module to run"/>
+
 
 The digital hub was initially intended to run computer aided detection software, which uses AI to help identify potential anomalies.
+
 <BlogImageWide src={endoOld} alt="A screenshot of the endomodule homescreen, with cards to select which module to run"/>
+
 Then our automated imaging solutions team added a separate application to manage capturing images and videos during a procedure.
 <BlogImageWide src={intraOld} alt="A screenshot view an image from the endoscope and buttons to capture video, capture an image, or end the exam"/>
 Later the voice team needed to integrate with the digital hub to run the software that would allow endoscopists to to capture findings verbally.

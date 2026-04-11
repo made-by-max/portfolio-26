@@ -2,61 +2,65 @@
 import { Image } from "astro:assets";
 const { post } = Astro.props;
 ---
+<div class="full-bleed">
 
-<div class="wrapper-wide">
-    <div class="hero">
-        <div>
+    <div class="hero wrapper-medium">
+
+        <div class="heroContent">
             <h1 class="post-heading">
                 {post.data.title}
             </h1>
             <p class="intro">
-                {post.data.intro}
+                <span>Overview-- </span>{post.data.intro}
             </p>
         </div>
-        <div class="container">
 
-        <div class="heroImage">
+
+
+
             <Image
                 src={post.data.img}
                 alt={`Cover image for ${post.data.title}`}
             />
-        </div>
+
+
         </div>
     </div>
-</div>
+
 
 <style>
+
+.full-bleed {
+    background: radial-gradient(125% 125% at 50% 10%, var(--background-primary
+    ) 40%, var(--radial-gradient) 100%);
+
+}
+
     h1 {
-        margin-block-end: var(--size-12-fluid);
+        margin-block-end: var(--size-8);
     }
 
     .intro {
         margin-block-end: var(--size-8);
         font-size: var(--text-xl);
-        line-height: var(--text-xl-line-height);
-        max-width: 48rem;
+        line-height: var(--text-2xl-line-height);
+        max-width: var(--wrapper-medium);
+    }
+
+    .heroImage {
+        width: 100%;
+        margin-block-end: -20px;
     }
 
 
+.hero
+     {
+        margin-block-end:-20p;
 
-    .hero {
-        margin-block-end: var(--size-11-fluid);
     }
 
-    /*.container {
-                --s: 40px;
-                --t: 2px;
-                --g: 6px;
-
-                padding: calc(var(--g) + var(--t));
-                outline: var(--t) solid var(--corner);
-                outline-offset: -5px;
-                -webkit-mask:
-                  conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
-                  0 0/calc(100% - var(--s)) calc(100% - var(--s)),
-                  linear-gradient(#000 0 0) content-box
-    }*/
-
-
+    span {
+        font-weight: bold;
+    }
 
 </style>

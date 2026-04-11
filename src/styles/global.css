@@ -25,41 +25,6 @@ body {
     }*/
 }
 
-main::before {
-  --size: 32px;
-  --line: color-mix(in hsl, canvasText, transparent 90%);
-  content: "";
-  height: 90vh;
-  width: 100vw;
-  position: fixed;
-  background: linear-gradient(
-        90deg,
-        var(--line) 1px,
-        transparent 1px var(--size)
-      )
-      50% 50% / var(--size) var(--size),
-    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
-      var(--size) var(--size);
-
-  mask: linear-gradient(20deg, transparent 50%, white);
-  /*mask: radial-gradient(
-        ellipse 70% 60% at 50% 0%,
-        #000 60%,
-        transparent 100%
-
-    );*/
-
-  /*mask: radial-gradient(
-        ellipse 80% 80% at 100% 0%,
-        #000 50%,
-        transparent 100%
-    );*/
-  top: 0;
-  transform-style: flat;
-  pointer-events: none;
-  z-index: -1;
-}
-
 main {
   min-height: 100vh;
   position: relative;
