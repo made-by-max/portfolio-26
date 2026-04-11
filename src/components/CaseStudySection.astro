@@ -7,7 +7,7 @@ import "../styles/cards.css";
 const posts = await getCollection("design");
 ---
 
-<div class="cardLayout corners">
+<div class="cardLayout">
     {posts.map((post) => <CaseStudyCard post={post} />)}
 </div>
 

@@ -1,14 +1,14 @@
 :where(html) {
-  --neutral-50: #fafafa;
-  --neutral-100: #f7f8f8;
+  --neutral-50: #fff;
+  --neutral-100: #f7f7f7;
   --neutral-200: #d0d6e0;
   --neutral-300: #8a8f98;
   --neutral-400: #62666d;
   --neutral-500: #37393a;
   --neutral-600: #28282c;
   --neutral-700: #232326;
-  --neutral-800: #1c1c1f;
-  --neutral-900: #08090a;
+  --neutral-800: #171d27;
+  --neutral-900: #0d1118;
 
   --line: color-mix(in hsl, canvasText, transparent 95%);
   --corner: color-mix(in hsl, canvasText, transparent 90%);
@@ -17,8 +17,9 @@
   /* light */
   --brand-primary-light: #3a5bc7;
   --background-brand-light: #f7f9ff;
+  --radial-gradient-light: #c1d0ff;
   --background-primary-light: var(--neutral-50);
-  --background-secondary-light: #fff;
+  --background-secondary-light: var(--neutral-100);
   --surface-light: var(--neutral-400);
   --text-primary-light: var(--neutral-900);
   --text-secondary-light: var(--neutral-600);
@@ -30,6 +31,7 @@
   /*dark*/
   --brand-primary-dark: #9eb1ff;
   --background-brand-dark: #11131f;
+  --radial-gradient-dark: #3a5bc7;
   --background-primary-dark: var(--neutral-900);
   --background-secondary-dark: var(--neutral-800);
   --surface-dark: var(--neutral-500);
@@ -46,7 +48,7 @@
   /* set defaults */
   --brand-primary: var(--brand-primary-light);
   --brand-secondary: var(--brand-secondary-light);
-
+  --radial-gradient: var(--radial-gradient-light);
   --accent-primary: var(--accent-primary-light);
   --accent-secondary: var(--accent-secondary-light);
   --background-primary: var(--background-primary-light);
@@ -64,7 +66,7 @@
     --brand-secondary: var(--brand-secondary-dark);
     --accent-primary: var(--accent-primary-dark);
     --accent-secondary: var(--accent-secondary-dark);
-
+    --radial-gradient: var(--radial-gradient-dark);
     --background-primary: var(--background-primary-dark);
     --background-secondary: var(--background-secondary-dark);
     --surface: var(--surface-dark);
@@ -88,6 +90,7 @@
     --text-primary: var(--text-primary-light);
     --text-secondary: var(--text-secondary-light);
     --border: var(--border-light);
+    --radial-gradient: var(--radial-gradient-light);
   }
 
   [data-theme="dark"] {
@@ -104,5 +107,6 @@
     --text-secondary: var(--text-secondary-dark);
     --border: var(--border-dark);
     --corner: var(--corner-dark);
+    --radial-gradient: var(--radial-gradient-dark);
   }
 }

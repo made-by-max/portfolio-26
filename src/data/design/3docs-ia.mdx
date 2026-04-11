@@ -10,6 +10,7 @@ import StandardSection from '../../components/StandardSection.astro'
 import FullBleedSection from '../../components/FullBleedSection.astro'
 import BlogImageFullBleed from '../../components/BlogImageFullBleed.astro'
 import BlogImageWide from '../../components/BlogImageWide.astro'
+import BlogImageNarrow from '../../components/BlogImageNarrow.astro'
 import Blockquote from '../../components/Blockquote.astro'
 
 import featureCardSort from '../../assets/docs-ia/featureCardSort.png'
@@ -71,10 +72,13 @@ A whopping 54% of pages were orphans that didn't show up in the sidebar navigati
 
 ## Card sorting revealed two basic mental models
 
-Some users grouped topics by task, creating groups based on a user’s journey through setting up and configuring Auth0
+Some users grouped topics by task, creating groups based on a user’s journey through setting up and configuring Auth0.
 
+<BlogImageNarrow src={taskCardSort} alt="an illustration of the task-based card sort"/>
 
 Others grouped topics by feature, creating groups like authenticaion, security, or configuration.
+
+<BlogImageNarrow src={featureCardSort} alt="an illustration of the feature-based card sort"/>
 
 
 ## Wayfinding revealed a slight preference for feature-based navigation
@@ -104,7 +108,7 @@ Based on my findings from the card sorting and wayfinding tests, I split the doc
 <FullBleedSection backgroundColor="#D6E1FF">
 
  <BlogImageFullBleed src={sidebars} alt="an image of the new sidebars" />
-   
+
 
 </FullBleedSection>
 <StandardSection>

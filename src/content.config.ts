@@ -24,6 +24,7 @@ const design = defineCollection({
       description: z.string(),
       intro: z.string(),
       img: image(),
+      bg: z.string().optional(),
     }),
 });
 
