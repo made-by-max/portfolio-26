@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import BlogCard from "./BlogCard.astro";
-import LinkToMore from "./LinkToMore.astro";
 import SectionHeader from "./SectionHeader.astro";
 
 const posts = await getCollection("writing");
@@ -16,8 +15,6 @@ const suggestedEntries = posts.slice(0, 3);
 ---
 
 {suggestedEntries.map((post) => <BlogCard post={post} />)}
-
-<LinkToMore text="All posts" url="/writing" />
 
 <style>
     h2 {

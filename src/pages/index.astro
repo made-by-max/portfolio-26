@@ -6,13 +6,14 @@ const pageTitle = "Max Taylor";
 import BlogSection from "../components/BlogSection.astro";
 import CaseStudySection from "../components/CaseStudySection.astro";
 import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.astro";
+import LinkToMore from "../components/LinkToMore.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <section>
         <div class="wrapper-wide">
             <h1>Max Taylor</h1>
-            <p class="subhead">Product Designer and Frontend Developer</p>
+            <p class="subhead">Product Designer and Developer</p>
             <p class="intro">
                 With more than a decade of experience in product design and
                 coding skills to boot, I excel at systems thinking, rapid
@@ -25,9 +26,10 @@ import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.a
 
     <section>
         <div class="wrapper-wide">
+            <h2>Selected Work</h2>
             <div class="section-header">
-                
-            <h2 class="section-header">Product Design Case Studies</h2>
+                <p>Product design case studies</p>
+                <LinkToMore url="/work" text="All case studies" />
             </div>
             <CaseStudySection />
         </div>
@@ -35,14 +37,25 @@ import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.a
 
     <section>
         <div class="wrapper-wide">
-            <h2 class="section-header">Playground</h2>
+            <div class="section-intro">
+                <h2>Playground</h2>
+                <div class="section-header">
+                    <p>Prototypes, experiments, and smaller coding projects</p>
+                    <LinkToMore url="/playground" text="All playground" />
+                </div>
+            </div>
+
             <PlaygroundFeaturedSection />
         </div>
     </section>
 
     <section>
         <div class="wrapper-wide">
-            <h2 class="section-header">Latest Posts</h2>
+            <h2>Latest Posts</h2>
+            <div class="section-header">
+                <p>Various thoughts and musings</p>
+                <LinkToMore url="/writing" text="All posts" />
+            </div>
             <BlogSection />
         </div>
     </section>
@@ -70,9 +83,13 @@ import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.a
 
     .section-header {
         margin-block-end: var(--size-4);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
     }
 
     section {
-        margin-block: var(--size-13);
+        margin-block: 180px;
     }
 </style>
