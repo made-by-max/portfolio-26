@@ -1,0 +1,31 @@
+---
+title: Combobox redux
+date: 2025-10-07
+tags:
+  - animations
+---
+import StandardSection from '../../components/StandardSection.astro'
+import combobox from '../../assets/playground/combobox.png'
+import TechStack from '../../components/TechStack.astro'
+import react from '../../assets/logos/React.svg'
+import { Image } from "astro:assets";
+
+
+
+    <div class="leading"> 
+    <div class="media">
+    <Image src={combobox} alt="combobox" />
+    </div>
+    <div class="stack">
+      <TechStack logo={react} tech="React" />
+    </div>
+    </div>
+
+    <div class="trailing">     
+    <div class="content">
+    One of my coworkers is working on a way to display a large amount of information in a dropdown menu, and I suggested using a command palette. Then I used Shadcn's command and combobox components to build out a super simple demo to illustrate what I was thinking.
+    </div>
+    <div class="links">
+    [View on github](https://github.com)
+    </div>
+    </div>

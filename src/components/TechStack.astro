@@ -12,10 +12,20 @@ import { Image } from "astro:assets";
 <style>
 .tech-stack {
 display: flex;
-gap: var(--size-1);
+gap: 12px;
 align-items: center;
+width: fit-content;
 border: 1px solid var(--line);
+border-radius: 4px;
 padding-inline: var(--size-2);
-padding-block: var(--size-1);
+padding-block: 4px;
+background-color: var(--background-secondary);
+}
+p {
+    font-weight: bold;
+    font-size: var(--text-s)
+}
+img {
+    max-width: 24px;
 }
 </style>
