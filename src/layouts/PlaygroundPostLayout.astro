@@ -2,6 +2,7 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import "../styles/playground.css";
+
 const { post } = Astro.props;
 const { Content } = await render(post);
 const pageTitle = post.data.title;
@@ -17,7 +18,7 @@ const pageTitle = post.data.title;
         </div>
 
 
-        <div class="flex">
+        <div class="two-column-grid">
 
             <Content />
 

@@ -41,8 +41,8 @@ const playground = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/data/playground" }),
   schema: z.object({
     title: z.string(),
-    date: z.date(),
-    tags: z.array(z.string()),
+    featured: z.boolean().optional(),
+    tags: z.array(z.string().optional()),
     image: z.string().optional(),
   }),
 });

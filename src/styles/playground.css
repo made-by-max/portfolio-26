@@ -9,7 +9,7 @@ h1 {
   align-items: center;
 }*/
 
-.flex {
+.two-column-grid {
   display: grid;
   gap: var(--size-8);
   grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
@@ -42,7 +42,13 @@ h1 {
   padding-block-start: 24px;
 }
 
-.links {
+.links,
+.stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--size-1);
 }
 
 .case-study-card {
@@ -66,6 +72,10 @@ border-radius: 8px;*/
 .media {
   border-radius: 8px;
   background: var(--background-secondary);
+}
+
+p {
+  margin-block-end: var(--size-4);
 }
 
 /*.content {

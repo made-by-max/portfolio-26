@@ -18,11 +18,10 @@ const suggestedEntries = posts.slice(0, 3);
 ---
 
 
-<div class="corners">
-<div class="border">
+
 {suggestedEntries.map((post) => <BlogCard post={post} />)}
-</div>
-</div>
+
+
 
 <LinkToMore text="All posts" url="/writing" />
 

@@ -2,6 +2,22 @@
 import Column from "./Column.astro";
 ---
 
-<div class="twoColumnLayout">
-    <slot />
+<div class="flex">
+    <div class="leading">
+        <div class="media">
+            <slot />
+        </div>
+        <div class="stack">
+            <slot />
+        </div>
+    </div>
+    <div class="trailing">
+        <div class="content">
+            <slot />
+        </div>
+        <div class="links">
+            <slot />
+        </div>
+    </div>
+
 </div>
