@@ -2,25 +2,76 @@ h1 {
   margin-block-end: var(--size-8);
 }
 
-.flex {
+/*.flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+}*/
+
+.flex {
+  display: grid;
+  gap: var(--size-8);
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
 }
 
-.leading,
+/*.leading,
 .trailing {
   display: flex;
   flex-direction: column;
   align-items: start;
-  max-width: 50%;
+}*/
+
+.leading,
+.trailing {
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: var(--size-5);
 }
 
-img {
+.media img {
   max-width: 100%;
   height: auto;
+  border-radius: 32px;
+  padding: 24px;
 }
 
 .content {
+  align-self: self-start;
+  padding-block-start: 24px;
 }
+
+.links {
+}
+
+.case-study-card {
+  grid-row: span 5;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: var(--size-5);
+
+  /*background-color: var(--background-secondary);
+border-radius: 8px;*/
+}
+
+/*img {
+  max-width: 90%;
+  margin-inline: auto;
+  margin-block-start: var(--size-3);
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}*/
+
+.media {
+  border-radius: 8px;
+  background: var(--background-secondary);
+}
+
+/*.content {
+  grid-row: span 4;
+  display: grid;
+  grid-template-rows: subgrid;
+  padding-block-end: var(--size-5);
+  gap: 4px;
+}*/
