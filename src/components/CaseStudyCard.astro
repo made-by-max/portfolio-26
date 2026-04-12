@@ -28,7 +28,7 @@ import { Image } from "astro:assets";
         grid-row: span 5;
         display: grid;
         grid-template-rows: subgrid;
-        gap: var(--size-5);
+        gap: var(--size-3);
 
         /*background-color: var(--background-secondary);
    border-radius: 8px;*/
@@ -44,10 +44,10 @@ import { Image } from "astro:assets";
 
     .imgBg {
         border-radius: 8px;
-        background: radial-gradient(125% 125% at 50% 30%, var(--background-secondary
+        /*background: radial-gradient(125% 125% at 50% 30%, var(--background-secondary
         ) 40%,
-       var(--radial-gradient)  100%);
-        /*background: var(--background-secondary);*/
+       var(--radial-gradient)  100%);*/
+        background: var(--background-secondary);
 
     }
 
@@ -57,7 +57,7 @@ import { Image } from "astro:assets";
         grid-template-rows: subgrid;
         /*padding-inline: var(--size-3);*/
         padding-block-end: var(--size-5);
-        gap: 4px;
+        gap: 16px;
     }
 
 
