@@ -8,19 +8,19 @@ import { Image } from "astro:assets";
 
 <div class="case-study-card">
     <div class="imgBg">
-            <a href={`/${post.collection}/${post.id}`}><Image
+        <a href={`/${post.collection}/${post.id}`}
+            ><Image
                 src={post.data.img}
                 alt={`Cover image for ${post.data.title}`}
-            /></a>
+            /></a
+        >
     </div>
 
     <div class="content">
-
-      <h3>{post.data.title}</h3>
+        <h3>{post.data.title}</h3>
         <p>{post.data.description}</p>
         <LinkToMore text="Case study" url={`/${post.collection}/${post.id}`} />
     </div>
-
 </div>
 
 <style>
@@ -38,17 +38,20 @@ import { Image } from "astro:assets";
         max-width: 90%;
         margin-inline: auto;
         margin-block-start: var(--size-3);
+        margin-block-end: -2px;
         height: auto;
         border-radius: 4px 4px 0 0;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     }
 
     .imgBg {
         border-radius: 8px;
-        background: radial-gradient(125% 125% at 50% 30%, var(--background-secondary
-        ) 40%,
-       var(--radial-gradient)  100%);
+        background: radial-gradient(
+            125% 125% at 50% 30%,
+            var(--background-secondary) 40%,
+            var(--radial-gradient) 100%
+        );
         /*background: var(--background-secondary);*/
-
     }
 
     .content {
@@ -60,13 +63,11 @@ import { Image } from "astro:assets";
         gap: 4px;
     }
 
+    h3 {
+        margin-block-end: var(--size-1);
+    }
 
-        h3 {
-
-     margin-block-end: var(--size-1);
-        }
-
-     /*a {
+    /*a {
          color: var(--brand-primary);
                 text-decoration: none;
 
@@ -79,10 +80,7 @@ import { Image } from "astro:assets";
     }
         }*/
 
-
     /*.case-study-card:hover {
         border: 1px solid var(--blue-200);
     }*/
-
-
 </style>

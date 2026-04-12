@@ -11,19 +11,24 @@ const pageTitle = "Selected Work";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-
     <section>
         <div class="wrapper-wide">
             <h1 class="section-header">Selected Work</h1>
+            <p class="subhead">Product design case studies</p>
             <CaseStudySection />
         </div>
     </section>
-
-
 </BaseLayout>
 
 <style>
     h1 {
+        margin-block-end: var(--size-2);
+    }
+    .subhead {
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl-line-height);
+        font-weight: var(--font-weight-normal);
+        color: var(--text-soft);
         margin-block-end: var(--size-10);
     }
 </style>
