@@ -39,12 +39,13 @@ const dev = defineCollection({
 
 const playground = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/data/playground" }),
-  schema: z.object({
-    title: z.string(),
-    featured: z.boolean().optional(),
-    tags: z.array(z.string().optional()),
-    image: z.string().optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      featured: z.boolean().optional(),
+      tags: z.array(z.string().optional()),
+      img: image(),
+    }),
 });
 
 export const collections = { writing, design, dev, playground };

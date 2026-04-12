@@ -5,7 +5,7 @@ const pageTitle = "Max Taylor";
 
 import BlogSection from "../components/BlogSection.astro";
 import CaseStudySection from "../components/CaseStudySection.astro";
-
+import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -16,18 +16,27 @@ import CaseStudySection from "../components/CaseStudySection.astro";
             <p class="intro">
                 With more than a decade of experience in product design and
                 coding skills to boot, I excel at systems thinking, rapid
-                prototyping, and solving complex problems. I believe that iterative
-                improvement and cross-team collaboration are key to developing
-                user-centric products.
+                prototyping, and solving complex problems. I believe that
+                iterative improvement and cross-team collaboration are key to
+                developing user-centric products.
             </p>
-
         </div>
     </section>
 
     <section>
         <div class="wrapper-wide">
-            <h2 class="section-header">Selected Work</h2>
+            <div class="section-header">
+                
+            <h2 class="section-header">Product Design Case Studies</h2>
+            </div>
             <CaseStudySection />
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper-wide">
+            <h2 class="section-header">Playground</h2>
+            <PlaygroundFeaturedSection />
         </div>
     </section>
 
@@ -40,7 +49,6 @@ import CaseStudySection from "../components/CaseStudySection.astro";
 </BaseLayout>
 
 <style>
-
     h1 {
         margin-block-end: var(--size-2);
     }

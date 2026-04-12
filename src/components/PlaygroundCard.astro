@@ -1,0 +1,72 @@
+---
+import type { CollectionEntry } from "astro:content";
+const { post } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="container">
+    <div class="playground-card">
+        <div class="imgContainer">
+            <a href={`/${post.collection}/${post.id}`}
+                ><Image
+                    src={post.data.img}
+                    alt={`Cover image for ${post.data.title}`}
+                /></a
+            >
+        </div>
+
+        <div class="content">
+            <a href={`/${post.collection}/${post.id}`}>
+                <h3>{post.data.title}</h3></a
+            >
+        </div>
+    </div>
+</div>
+
+<style>
+    .playground-card {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-5);
+    }
+
+    img {
+        /*margin-inline: auto;
+        margin-block-start: var(--size-3);*/
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        aspect-ratio: 16/9;
+    }
+
+    .imgContainer {
+    }
+    .container {
+        border-radius: 8px;
+        width: fit-content;
+        background: var(--background-secondary);
+        padding: 16px;
+    }
+
+    .content {
+    }
+
+    h3 {
+        color: var(--brand-primary);
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover,
+        a:focus {
+            text-decoration: none;
+        }
+    }
+
+    a,
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
+</style>
