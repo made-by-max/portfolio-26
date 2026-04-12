@@ -1,33 +1,29 @@
 ---
-import { ArrowRight } from '@lucide/astro';
+import { ArrowRight } from "@lucide/astro";
 const { text } = Astro.props;
-const { url } = Astro.props
+const { url } = Astro.props;
 ---
 
-
-    <a href={url}>{text}<ArrowRight /> </a>
-
-
+<a href={url}>{text}<ArrowRight /> </a>
 
 <style>
+    a {
+        text-decoration: none;
+        color: var(--brand-primary);
+        font-weight: var(--font-weight-medium);
+        line-height: 24px;
 
-a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: var(--font-weight-medium);
-    line-height: 24px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+        gap: var(--size-1);
+        margin-block-start: var(--size-4);
+    }
 
-    gap: var(--size-1);
-    margin-block-start: var(--size-4);
-}
-
-a:hover,
-a:focus {
-  color: var(--brand-primary);
-  text-decoration: none;
-}
+    a:hover,
+    a:focus {
+        color: var(--brand-primary);
+        text-decoration: none;
+    }
 </style>

@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import PlaygroundCard from "../components/PlaygroundCard.astro";
+
+const posts = await getCollection("playground");
+// posts.sort((a, b) => {
+//     const dateA = new Date(a.data.date);
+//     const dateB = new Date(b.data.date);
+//     return dateB.getTime() - dateA.getTime();
+// });
+
+const heading = "Playground";
+const pageTitle = "Playground";
+---
+
+<article>
+    {posts.map((post) => <PlaygroundCard post={post} />)}
+</article>
+
+<style>
+    article {
+        display: grid;
+        gap: var(--size-3);
+        grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    }
+</style>

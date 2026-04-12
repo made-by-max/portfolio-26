@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import PlaygroundCard from "../components/PlaygroundCard.astro";
+
+const posts = await getCollection("playground");
+const filteredPosts = posts.filter((status) => status.data.featured === true);
+
+const heading = "Playground";
+const pageTitle = "Playground";
+---
+
+<article>
+    {filteredPosts.map((post) => <PlaygroundCard post={post} />)}
+</article>
+
+<style>
+    article {
+        display: grid;
+        gap: var(--size-3);
+        grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    }
+</style>

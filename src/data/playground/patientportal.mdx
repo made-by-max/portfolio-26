@@ -1,0 +1,38 @@
+---
+title: Patient Portal Prototype
+featured: true
+img: ../../assets/playground/patientportal.png
+tags:
+  - animations
+---
+import portal from '../../assets/playground/patientportal.png'
+import TechStack from '../../components/TechStack.astro'
+import Button from '../../components/Button.astro'
+import GithubButton from '../../components/GithubButton.astro'
+import claude from '../../assets/logos/Claude.svg'
+import replit from '../../assets/logos/replit.webp'
+import { Image } from "astro:assets";
+
+
+
+    <div class="leading">
+    <div class="media">
+    <Image src={portal} alt="patient portal screenshot" />
+    </div>
+    <div class="stack">
+      <TechStack logo={replit} tech="Replit" />
+      <TechStack logo={claude} tech="Claude.ai" />
+    </div>
+    </div>
+
+    <div class="trailing">
+    <div class="content">
+    This was an experiment to see how well various vibe coding tools worked for one-shotting prototypes for rapid validation.
+
+    I used Claude to generate a product requirements doc and built prototypes using Replit, v0, and Figma Make. The Replit app is shown here.
+
+    </div>
+    <div class="links">
+    <Button url="https://patient-portal--madebymax.replit.app/"/>
+    </div>
+    </div>

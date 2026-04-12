@@ -1,0 +1,51 @@
+---
+const { url } = Astro.props
+---
+
+<a href={url} target="_blank"><div class="button-gh"><img src="../../../public/icons/github.svg" alt="github logo" />View on Github</div></a>
+
+<style>
+.button-gh {
+
+  background-color: var(--neutral-800);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  gap: var(--size-2);
+  align-items: center;
+  font-size: var(--text-base);
+  font-weight: var( --font-weight-medium);
+  margin: 0;
+  min-height: 44px;
+  padding-inline: var(--size-2);
+  padding-block: 0px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  will-change: transform;
+}
+
+.button-gh:disabled {
+  pointer-events: none;
+}
+
+a {
+    text-decoration: none;
+}
+.button-gh:hover, :focus {
+  background-color: var(--neutral-700);
+}
+
+.button-gh img {
+    max-width: 24px;
+}
+.button-gh:active {
+    scale: 0.98;
+}
+</style>

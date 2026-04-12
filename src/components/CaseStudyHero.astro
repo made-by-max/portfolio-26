@@ -2,10 +2,9 @@
 import { Image } from "astro:assets";
 const { post } = Astro.props;
 ---
+
 <div class="full-bleed">
-
     <div class="hero wrapper-medium">
-
         <div class="heroContent">
             <h1 class="post-heading">
                 {post.data.title}
@@ -15,26 +14,18 @@ const { post } = Astro.props;
             </p>
         </div>
 
-
-
-
-            <Image
-                src={post.data.img}
-                alt={`Cover image for ${post.data.title}`}
-            />
-
-
-        </div>
+        <Image src={post.data.img} alt={`Cover image for ${post.data.title}`} />
     </div>
-
+</div>
 
 <style>
-
-.full-bleed {
-    background: radial-gradient(125% 125% at 50% 10%, var(--background-primary
-    ) 40%, var(--radial-gradient) 100%);
-
-}
+    .full-bleed {
+        background: radial-gradient(
+            125% 125% at 50% 10%,
+            var(--background-primary) 40%,
+            var(--radial-gradient) 100%
+        );
+    }
 
     h1 {
         margin-block-end: var(--size-8);
@@ -47,20 +38,18 @@ const { post } = Astro.props;
         max-width: var(--wrapper-medium);
     }
 
-    .heroImage {
-        width: 100%;
+    .hero {
         margin-block-end: -20px;
+        padding-block-end: -20px;
     }
 
-
-.hero
-     {
-        margin-block-end:-20p;
-
+    img {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        border-radius: 8px 8px 0px 0px;
+        padding-block-end: -20px;
     }
 
     span {
         font-weight: bold;
     }
-
 </style>

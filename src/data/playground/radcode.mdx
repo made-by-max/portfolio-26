@@ -1,0 +1,39 @@
+---
+title: 100 Days of Code
+featured: false
+img: ../../assets/playground/100daysofcode.png
+tags:
+  - animations
+---
+import radcode from '../../assets/playground/100daysofcode.png'
+import TechStack from '../../components/TechStack.astro'
+import Button from '../../components/Button.astro'
+import GithubButton from '../../components/GithubButton.astro'
+import css from '../../assets/logos/css.svg'
+import js from '../../assets/logos/js.png'
+import { Image } from "astro:assets";
+
+
+
+    <div class="leading">
+    <div class="media">
+    <Image src={radcode} alt="animation screenshot" />
+    </div>
+    <div class="stack">
+      <TechStack logo={css} tech="CSS" />
+      <TechStack logo={js} tech="JavaScript" />
+    </div>
+    </div>
+
+    <div class="trailing">
+    <div class="content">
+       Some of the projects I built during my first round of 100 Days of Code.
+       It wasn't the most focused effort. I made a lot of cool animations and experiments, though.
+    </div>
+    <div class="links">
+
+        <GithubButton url="https://github.com/made-by-max/100daysofcode" />
+
+    <Button url="https://radcode.netlify.app"/>
+    </div>
+    </div>

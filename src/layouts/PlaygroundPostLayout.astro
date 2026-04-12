@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
+import "../styles/playground.css";
 
 const { post } = Astro.props;
 const { Content } = await render(post);
@@ -8,16 +9,19 @@ const pageTitle = post.data.title;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div>
-        <div>
+    <div class="wrapper-medium">
+        <div class="hero wrapper-medium">
             <h1 class="post-heading">
                 {post.data.title}
             </h1>
+
         </div>
-    </div>
-    <div class="post-container">
-        <article>
+
+
+        <div class="two-column-grid">
+
             <Content />
-        </article>
+
+    </div>
     </div>
 </BaseLayout>
