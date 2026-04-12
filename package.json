@@ -16,7 +16,11 @@
     "@fontsource-variable/albert-sans": "^5.2.8",
     "@fontsource-variable/figtree": "^5.2.10",
     "@fontsource-variable/instrument-sans": "^5.2.8",
+<<<<<<< HEAD
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+=======
     "@fontsource-variable/inter": "^5.2.8",
+>>>>>>> c5d5fa153f8f27dca949eb4ea97768f99c7e667e
     "@lucide/astro": "^1.8.0",
     "@mdx-js/mdx": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
