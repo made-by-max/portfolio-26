@@ -1,0 +1,21 @@
+---
+const { logo, tech } = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<div class="tech-stack">
+
+    <Image src={logo} alt=`${tech} logo` />
+    <p>{tech}</p>
+
+</div>
+<style>
+.tech-stack {
+display: flex;
+gap: var(--size-1);
+align-items: center;
+border: 1px solid var(--line);
+padding-inline: var(--size-2);
+padding-block: var(--size-1);
+}
+</style>

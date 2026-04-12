@@ -20,7 +20,7 @@ p {
 
 img {
   height: auto;
-
+  width: var(--wrapper-medium);
   margin-block: var(--size-12-fluid);
 }
 
@@ -35,22 +35,8 @@ ul {
   margin-block-end: 40px;
 }
 
-.case-study-image-lg {
-  border-radius: 8px;
-  margin-block: var(--size-10-fluid);
-  width: var(--wrapper-medium);
-  height: auto;
-}
-
-.case-study-image-md {
-  border-radius: 8px;
-  margin-block: var(--size-10-fluid);
-  width: var(--max-text-length);
-  height: auto;
-}
-
 video {
-  margin-block: var(--size-10-fluid);
+  margin-block: var(--size-12-fluid);
   width: var(--wrapper-medium);
   height: auto;
 }
