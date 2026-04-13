@@ -3,8 +3,6 @@ title: My Meandering Path to UX
 date: 2019-04-05
 
 tags:
-
-- product-design
 - career
 ---
 

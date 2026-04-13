@@ -1,0 +1,37 @@
+---
+title: Claude Code and Figma MCP
+featured: true
+img: ../../assets/playground/figmamcp.png
+tags:
+  - animations
+---
+import figmamcp from '../../assets/playground/figmamcp.png'
+import TechStack from '../../components/TechStack.astro'
+import Button from '../../components/Button.astro'
+import GithubButton from '../../components/GithubButton.astro'
+import figma from '../../assets/logos/figma.svg'
+import claude from '../../assets/logos/Claude.svg'
+import { Image } from "astro:assets";
+
+
+
+    <div class="leading">
+    <div class="media">
+    <Image src={figmamcp} alt="a screenshot of a website for a conservation nonprofit" />
+    </div>
+    <div class="stack">
+      <TechStack logo={figma} tech="Figma MCP" />
+      <TechStack logo={claude} tech="Claude Code" />
+    </div>
+    </div>
+
+    <div class="trailing">
+    <div class="content">
+    I used the Figma MCP to import the Shadcn design system into Claude Code, then prompted Claude to use the design system to design a landing page for a non-profit focused on conservation in the Pacific Northwest.
+    
+    Claude added the design in my Figma file, then I made a few edits and used Claude Code to code the design.
+    </div>
+    <div class="links">
+    <Button url="https://timely-buttercream-545448.netlify.app/"/>
+    </div>
+    </div>

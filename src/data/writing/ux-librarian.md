@@ -2,7 +2,6 @@
 title: What’s a UX Librarian?
 date: 2018-03-08
 tags:
-  - product-design
   - career
 ---
 What’s a UX Librarian? It’s a question I get asked a lot during interviews and at meet-ups, every time I bring up my former career. It’s often accompanied by a bewildered tone and a skeptical look. Surely I’m just making this up?
