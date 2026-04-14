@@ -8,10 +8,13 @@
 :where(html) {
   --font-sans: "Albert Sans Variable", Avenir, Montserrat, Corbel, URW Gothic,
     source-sans-pro, sans-serif;
-  --font-display: "Space Grotesk", "Albert Sans Variable", sans-serif;
+  --font-accent: "Space Grotesk", "Albert Sans Variable", sans-serif;
   --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
     SF Mono, Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo,
     Consolas, DejaVu Sans Mono, monospace;
+
+  --text-xxs: 0.7rem;
+  --text-xxs-line-height: 1.225rem;
 
   --text-xs: 0.875rem;
   --text-xs-line-height: 1.225rem;
@@ -70,7 +73,7 @@
   }
 
   h1 {
-    font-family: var(--font-display);
+    font-family: var(--font-accent);
     font-size: var(--text-3xl);
     line-height: var(--text-3xl-line-height);
     font-weight: var(--font-weight-bold);
@@ -80,7 +83,7 @@
   }
 
   h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-accent);
     font-size: var(--text-2xl);
     line-height: var(--text-2xl-line-height);
     font-weight: var(--font-weight-bold);
@@ -89,7 +92,7 @@
   }
 
   h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-accent);
     font-size: var(--text-lg);
     line-height: var(--text-lg-line-height);
     font-weight: var(--font-weight-medium);
@@ -102,6 +105,14 @@
     font-weight: var(--font-weight-normal);
     max-inline-size: var(--max-text-length);
     text-wrap: pretty;
+  }
+
+  .eyebrow {
+    font-family: var(--font-accent);
+    font-size: var(--text-s);
+    text-transform: uppercase;
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-soft);
   }
 
   li,

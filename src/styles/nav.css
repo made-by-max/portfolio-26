@@ -6,11 +6,7 @@ footer {
 }
 
 header {
-  padding-block: var(--size-5);
-}
-
-footer {
-  /* Footer styles are handled in Footer.astro */
+  padding-block: var(--size-7);
 }
 
 nav,
@@ -25,14 +21,14 @@ nav,
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: var(--text);
     font-size: var(--text-s);
     font-weight: var(--font-weight-medium);
   }
 
   a:hover,
   a:focus {
-    color: var(--brand-primary);
+    color: var(--text-brand);
     text-decoration: none;
   }
 }

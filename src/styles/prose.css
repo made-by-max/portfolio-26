@@ -22,7 +22,7 @@ p {
 img {
   height: auto;
   width: var(--wrapper-medium);
-  margin-block: var(--size-12-fluid);
+  /*margin-block: var(--size-12-fluid);*/
 }
 
 li {

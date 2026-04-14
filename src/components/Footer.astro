@@ -45,7 +45,7 @@ footer {
 .footer-links {
   display: flex;
   justify-content: flex-end;
-  gap: clamp(48px, 8vw, 120px);
+  gap: 16px;
 }
 
 .footer-nav,
@@ -53,11 +53,13 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: start;
+  width: fit-content;
 }
 
 footer a {
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: var(--text-s);
   font-weight: 500;
   color: var(--text-primary-inverted, #f3f4f2);
   text-decoration: none;

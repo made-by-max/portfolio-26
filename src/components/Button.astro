@@ -14,11 +14,11 @@ const { url } = Astro.props
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--button-bg, #ff5c00);
-  border: 2px solid var(--button-border, #111);
+  background-color: var(--button-bg);
+  border: 2px solid var(--button-border);
   border-radius: 99px;
-  box-shadow: 4px 4px 0px 0px var(--button-shadow, #111);
-  color: var(--button-text, #111);
+  box-shadow: 4px 4px 0px 0px var(--button-shadow);
+  color: var(--button-text);
   cursor: pointer;
   font-family: var(--font-display);
   font-size: 1rem;
@@ -31,19 +31,7 @@ const { url } = Astro.props
   white-space: nowrap;
 }
 
-@media (prefers-color-scheme: dark) {
-  .button {
-    --button-border: var(--neutral-200, #d0d6e0);
-    --button-shadow: var(--neutral-200, #d0d6e0);
-    --button-text: var(--neutral-900, #111);
-  }
-}
-
-:global([data-theme="dark"]) .button {
-  --button-border: var(--neutral-200, #d0d6e0);
-  --button-shadow: var(--neutral-200, #d0d6e0);
-  --button-text: var(--neutral-900, #111);
-}
+/**/
 
 .button:hover,
 .button:focus {

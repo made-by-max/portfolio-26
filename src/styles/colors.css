@@ -1,20 +1,21 @@
 :where(html) {
-  --neutral-50: #fff;
-  --neutral-100: #f3f4f2;
-  --neutral-200: #d0d6e0;
-  --neutral-300: #808080;
-  --neutral-400: #444;
+  --neutral-100: #fff;
+  --neutral-200: #f3f4f2;
+  --neutral-300: #8a8f98;
+  --neutral-400: #808080;
   --neutral-500: #37393a;
-  --neutral-600: #28282c;
+  --neutral-600: #444444;
   --neutral-700: #232326;
   --neutral-800: #1a1a1a;
-  --neutral-900: #111;
+  --neutral-900: #111111;
 
   /* Brand palette */
-  --orange-500: #ff5c00;
-  --orange-600: #e05200;
+  --orange-300: #d19372;
+  --orange-500: #f26a21;
+  --orange-600: #ff5c00;
+  --orange-700: #c04807;
+  --orange-800: #923300;
   --yellow-500: #f2c94c;
-  --brown-soft: #923300;
 
   --indigo-0: #edf2ff;
   --indigo-1: #dbe4ff;
@@ -34,37 +35,40 @@
   --corner: color-mix(in hsl, canvasText, transparent 90%);
 
   /* Component tokens */
-  --card-background: var(--neutral-100);
-  --card-stroke: var(--neutral-900);
+  --card-background: var(--neutral-200);
+
   --card-text-primary: var(--neutral-900);
-  --card-text-soft: var(--neutral-400);
-  --card-shadow: var(--yellow-500);
-
-  --tag-background: var(--neutral-50);
-  --tag-stroke: var(--neutral-800);
-  --tag-text: var(--neutral-900);
-  --tag-shadow: var(--yellow-500);
-
-  --button-bg: var(--orange-500);
-  --button-border: var(--neutral-900);
-  --button-shadow: var(--neutral-900);
-  --button-text: var(--neutral-900);
+  --card-text-soft: var(--neutral-600);
+  --card-shadow-yellow: var(--yellow-500);
+  --card-shadow-orange: var(--orange-500);
+  --tag-shadow-blog: var(--yellow-500);
+  --tag-shadow-tech: var(--orange-500);
+  --button-bg: var(--orange-600);
 
   /* Light and dark modes */
   /* light */
   --brand-primary-light: var(--orange-500);
   --brand-secondary-light: var(--yellow-500);
-  --background-brand-light: var(--neutral-100);
-  --radial-gradient-light: var(--yellow-500);
-  --background-primary-light: var(--neutral-50);
+  --brand-primary-soft-light: var(--orange-300);
+
+  --background-primary-light: var(--neutral-200);
   --background-secondary-light: var(--neutral-100);
-  --background-inverted-light: var(--neutral-900);
-  --surface-light: var(--neutral-400);
+  --background-primary-inverted-light: var(--neutral-900);
+  --background-secondary-inverted-light: var(--neutral-800);
+
   --text-primary-light: var(--neutral-900);
-  --text-secondary-light: var(--neutral-600);
-  --text-soft-light: var(--neutral-300);
-  --text-primary-inverted-light: var(--neutral-100);
-  --text-brand-soft-light: var(--brown-soft);
+  --text-soft-light: var(--neutral-600);
+  --text-primary-inverted-light: var(--neutral-200);
+  --text-brand-light: var(--orange-700);
+  --text-brand-soft-light: var(--orange-900);
+
+  --card-stroke-light: var(--neutral-900);
+  --tag-background-light: var(--neutral-100);
+  --tag-stroke-light: var(--neutral-800);
+  --tag-text-light: var(--neutral-900);
+  --button-border-light: var(--neutral-900);
+  --button-shadow-light: var(--neutral-900);
+
   --border-light: var(--neutral-900);
   --shadow-color: var(--neutral-500);
   --corner-light: color-mix(in hsl, canvasText, transparent 90%);
@@ -72,17 +76,25 @@
   /*dark*/
   --brand-primary-dark: var(--orange-500);
   --brand-secondary-dark: var(--yellow-500);
-  --background-brand-dark: var(--neutral-900);
-  --radial-gradient-dark: var(--orange-500);
+  --brand-primary-soft-dark: var(--orange-700);
+
   --background-primary-dark: var(--neutral-900);
   --background-secondary-dark: var(--neutral-800);
-  --background-inverted-dark: var(--neutral-900);
-  --surface-dark: var(--neutral-500);
+  --background-primary-inverted-dark: var(--neutral-200);
+  --background-secondary-inverted-dark: var(--neutral-100);
+
   --text-primary-dark: var(--neutral-100);
-  --text-secondary-dark: var(--neutral-300);
-  --text-soft-dark: var(--neutral-300);
-  --text-primary-inverted-dark: var(--neutral-100);
-  --text-brand-soft-dark: var(--brown-soft);
+  --text-soft-dark: var(--neutral-400);
+  --text-primary-inverted-dark: var(--neutral-200);
+  --text-brand-soft-dark: var(--orange-300);
+  --text-brand-dark: var(--orange-500);
+  --card-stroke-dark: var(--neutral-100);
+  --tag-background-dark: var(--neutral-800);
+  --tag-stroke-dark: var(--neutral-200);
+  --tag-text-dark: var(--neutral-200);
+  --button-border-dark: var(--neutral-200);
+  --button-text-dark: var(--neutral-200);
+
   --border-dark: var(--neutral-100);
   --shadow-color: var(--neutral-900);
   --corner-dark: color-mix(in hsl, canvasText, transparent 90%);
@@ -91,56 +103,87 @@
   color-scheme: light;
 
   /* set defaults */
+
   --brand-primary: var(--brand-primary-light);
   --brand-secondary: var(--brand-secondary-light);
-  --text-brand: var(--brand-primary);
-  --radial-gradient: var(--radial-gradient-light);
+  --brand-primary-soft: var(--brand-primary-soft-light);
+
   --background-primary: var(--background-primary-light);
   --background-secondary: var(--background-secondary-light);
-  --background-inverted: var(--background-inverted-light);
+  --background-primary-inverted: var(--background-primary-inverted-light);
+  --background-secondary-inverted: var(--background-secondary-inverted-light);
 
-  --surface: var(--surface-light);
+  --text: var(--text-primary-light);
   --text-primary: var(--text-primary-light);
-  --text-secondary: var(--text-secondary-light);
   --text-soft: var(--text-soft-light);
+  --text-brand: var(--text-brand-light);
   --text-primary-inverted: var(--text-primary-inverted-light);
   --text-brand-soft: var(--text-brand-soft-light);
+
+  --card-stroke: var(--card-stroke-light);
+  --tag-background: var(--tag-background-light);
+  --tag-stroke: var(--tag-stroke-light);
+  --tag-text: var(--tag-text-light);
+  --button-border: var(--button-border-light);
+  --button-shadow: var(--button-shadow-light);
+
   --border: var(--border-light);
   --corner: var(--corner-light);
 
   @media (prefers-color-scheme: dark) {
     --brand-primary: var(--brand-primary-dark);
     --brand-secondary: var(--brand-secondary-dark);
-    --radial-gradient: var(--radial-gradient-dark);
+    --brand-primary-soft: var(--brand-primary-soft-dark);
+
     --background-primary: var(--background-primary-dark);
     --background-secondary: var(--background-secondary-dark);
-    --background-inverted: var(--background-inverted-dark);
-    --surface: var(--surface-dark);
-    --text-primary: var(--text-primary-dark);
-    --text-secondary: var(--text-secondary-dark);
+    --background-primary-inverted: var(--background-primary-inverted-dark);
+    --background-secondary-inverted: var(--background-secondary-inverted-dark);
+
+    --text: var(--text-primary-dark);
     --text-soft: var(--text-soft-dark);
     --text-primary-inverted: var(--text-primary-inverted-dark);
     --text-brand-soft: var(--text-brand-soft-dark);
+    --text-brand: var(--text-brand-dark);
+    --card-stroke: var(--card-stroke-dark);
+    --tag-background: var(--tag-background-dark);
+    --tag-stroke: var(--tag-stroke-dark);
+    --tag-text: var(--tag-text-dark);
+    --button-border: var(--button-border-dark);
+    --button-shadow: var(--button-shadow-dark);
+
     --border: var(--border-dark);
     --corner: var(--corner-dark);
   }
 
-  [data-theme="light"] {
+  /*[data-theme="light"] {
     color-scheme: light;
 
     --brand-primary: var(--brand-primary-light);
     --brand-secondary: var(--brand-secondary-light);
+    --brand-primary-soft: var(--brand-primary-soft-light);
+
     --background-primary: var(--background-primary-light);
     --background-secondary: var(--background-secondary-light);
-    --background-inverted: var(--background-inverted-light);
-    --surface: var(--surface-light);
+    --background-primary-inverted: var(--background-primary-inverted-light);
+    --background-secondary-inverted: var(--background-secondary-inverted-light);
+
+    --text: var(--text-primary-light);
     --text-primary: var(--text-primary-light);
-    --text-secondary: var(--text-secondary-light);
     --text-soft: var(--text-soft-light);
+    --text-brand: var(--text-brand-light);
     --text-primary-inverted: var(--text-primary-inverted-light);
     --text-brand-soft: var(--text-brand-soft-light);
+
+    --card-stroke: var(--card-stroke-light);
+    --tag-background: var(--tag-background-light);
+    --tag-stroke: var(--tag-stroke-light);
+    --tag-text: var(--tag-text-light);
+    --button-border: var(--button-border-light);
+    --button-shadow: var(--button-shadow-light);
+
     --border: var(--border-light);
-    --radial-gradient: var(--radial-gradient-light);
+    --corner: var(--corner-light);
   }
 
   [data-theme="dark"] {
@@ -148,17 +191,26 @@
 
     --brand-primary: var(--brand-primary-dark);
     --brand-secondary: var(--brand-secondary-dark);
+    --brand-primary-soft: var(--brand-primary-soft-dark);
+
     --background-primary: var(--background-primary-dark);
     --background-secondary: var(--background-secondary-dark);
-    --background-inverted: var(--background-inverted-dark);
-    --surface: var(--surface-dark);
-    --text-primary: var(--text-primary-dark);
-    --text-secondary: var(--text-secondary-dark);
+    --background-primary-inverted: var(--background-primary-inverted-dark);
+    --background-secondary-inverted: var(--background-secondary-inverted-dark);
+
+    --text: var(--text-primary-dark);
     --text-soft: var(--text-soft-dark);
     --text-primary-inverted: var(--text-primary-inverted-dark);
     --text-brand-soft: var(--text-brand-soft-dark);
+    --text-brand: var(--text-brand-dark);
+    --card-stroke: var(--card-stroke-dark);
+    --tag-background: var(--tag-background-dark);
+    --tag-stroke: var(--tag-stroke-dark);
+    --tag-text: var(--tag-text-dark);
+    --button-border: var(--button-border-dark);
+    --button-shadow: var(--button-shadow-dark);
+
     --border: var(--border-dark);
     --corner: var(--corner-dark);
-    --radial-gradient: var(--radial-gradient-dark);
-  }
+  }*/
 }
