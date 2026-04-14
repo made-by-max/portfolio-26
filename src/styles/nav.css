@@ -10,21 +10,7 @@ header {
 }
 
 footer {
-  padding-block: var(--size-20);
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  --size: 16px;
-  --line: color-mix(in hsl, canvasText, transparent 95%);
-  content: "";
-
-  /*background:
-        linear-gradient(90deg, var(--line) 1px, transparent 1px var(--size)) 50%
-            50% / var(--size) var(--size),
-        linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
-            var(--size) var(--size);*/
-  background-color: var(--background-brand);
+  /* Footer styles are handled in Footer.astro */
 }
 
 nav,

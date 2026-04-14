@@ -1,14 +1,20 @@
 :where(html) {
   --neutral-50: #fff;
-  --neutral-100: #f7f7f7;
+  --neutral-100: #f3f4f2;
   --neutral-200: #d0d6e0;
-  --neutral-300: #8a8f98;
-  --neutral-400: #62666d;
+  --neutral-300: #808080;
+  --neutral-400: #444;
   --neutral-500: #37393a;
   --neutral-600: #28282c;
   --neutral-700: #232326;
-  --neutral-800: #171d27;
-  --neutral-900: #0d1118;
+  --neutral-800: #1a1a1a;
+  --neutral-900: #111;
+
+  /* Brand palette */
+  --orange-500: #ff5c00;
+  --orange-600: #e05200;
+  --yellow-500: #f2c94c;
+  --brown-soft: #923300;
 
   --indigo-0: #edf2ff;
   --indigo-1: #dbe4ff;
@@ -27,32 +33,57 @@
   --line: color-mix(in hsl, canvasText, transparent 95%);
   --corner: color-mix(in hsl, canvasText, transparent 90%);
 
+  /* Component tokens */
+  --card-background: var(--neutral-100);
+  --card-stroke: var(--neutral-900);
+  --card-text-primary: var(--neutral-900);
+  --card-text-soft: var(--neutral-400);
+  --card-shadow: var(--yellow-500);
+
+  --tag-background: var(--neutral-50);
+  --tag-stroke: var(--neutral-800);
+  --tag-text: var(--neutral-900);
+  --tag-shadow: var(--yellow-500);
+
+  --button-bg: var(--orange-500);
+  --button-border: var(--neutral-900);
+  --button-shadow: var(--neutral-900);
+  --button-text: var(--neutral-900);
+
   /* Light and dark modes */
   /* light */
-  --brand-primary-light: var(--indigo-8);
-  --background-brand-light: var(--indigo-1);
-  --radial-gradient-light: var(--indigo-2);
+  --brand-primary-light: var(--orange-500);
+  --brand-secondary-light: var(--yellow-500);
+  --background-brand-light: var(--neutral-100);
+  --radial-gradient-light: var(--yellow-500);
   --background-primary-light: var(--neutral-50);
   --background-secondary-light: var(--neutral-100);
+  --background-inverted-light: var(--neutral-900);
   --surface-light: var(--neutral-400);
   --text-primary-light: var(--neutral-900);
   --text-secondary-light: var(--neutral-600);
   --text-soft-light: var(--neutral-300);
-  --border-light: var(--neutral-700);
+  --text-primary-inverted-light: var(--neutral-100);
+  --text-brand-soft-light: var(--brown-soft);
+  --border-light: var(--neutral-900);
   --shadow-color: var(--neutral-500);
   --corner-light: color-mix(in hsl, canvasText, transparent 90%);
 
   /*dark*/
-  --brand-primary-dark: var(--indigo-3);
-  --background-brand-dark: var(--indigo-12);
-  --radial-gradient-dark: var(--indigo-9);
+  --brand-primary-dark: var(--orange-500);
+  --brand-secondary-dark: var(--yellow-500);
+  --background-brand-dark: var(--neutral-900);
+  --radial-gradient-dark: var(--orange-500);
   --background-primary-dark: var(--neutral-900);
   --background-secondary-dark: var(--neutral-800);
+  --background-inverted-dark: var(--neutral-900);
   --surface-dark: var(--neutral-500);
   --text-primary-dark: var(--neutral-100);
   --text-secondary-dark: var(--neutral-300);
-  --text-soft-dark: var(--neutral-400);
-  --border-dark: var(--neutral-300);
+  --text-soft-dark: var(--neutral-300);
+  --text-primary-inverted-dark: var(--neutral-100);
+  --text-brand-soft-dark: var(--brown-soft);
+  --border-dark: var(--neutral-100);
   --shadow-color: var(--neutral-900);
   --corner-dark: color-mix(in hsl, canvasText, transparent 90%);
 
@@ -62,31 +93,34 @@
   /* set defaults */
   --brand-primary: var(--brand-primary-light);
   --brand-secondary: var(--brand-secondary-light);
+  --text-brand: var(--brand-primary);
   --radial-gradient: var(--radial-gradient-light);
-  --accent-primary: var(--accent-primary-light);
-  --accent-secondary: var(--accent-secondary-light);
   --background-primary: var(--background-primary-light);
   --background-secondary: var(--background-secondary-light);
+  --background-inverted: var(--background-inverted-light);
 
   --surface: var(--surface-light);
   --text-primary: var(--text-primary-light);
   --text-secondary: var(--text-secondary-light);
   --text-soft: var(--text-soft-light);
+  --text-primary-inverted: var(--text-primary-inverted-light);
+  --text-brand-soft: var(--text-brand-soft-light);
   --border: var(--border-light);
   --corner: var(--corner-light);
 
   @media (prefers-color-scheme: dark) {
     --brand-primary: var(--brand-primary-dark);
     --brand-secondary: var(--brand-secondary-dark);
-    --accent-primary: var(--accent-primary-dark);
-    --accent-secondary: var(--accent-secondary-dark);
     --radial-gradient: var(--radial-gradient-dark);
     --background-primary: var(--background-primary-dark);
     --background-secondary: var(--background-secondary-dark);
+    --background-inverted: var(--background-inverted-dark);
     --surface: var(--surface-dark);
     --text-primary: var(--text-primary-dark);
     --text-secondary: var(--text-secondary-dark);
     --text-soft: var(--text-soft-dark);
+    --text-primary-inverted: var(--text-primary-inverted-dark);
+    --text-brand-soft: var(--text-brand-soft-dark);
     --border: var(--border-dark);
     --corner: var(--corner-dark);
   }
@@ -96,13 +130,15 @@
 
     --brand-primary: var(--brand-primary-light);
     --brand-secondary: var(--brand-secondary-light);
-    --accent-primary: var(--accent-primary-light);
-    --accent-secondary: var(--accent-secondary-light);
     --background-primary: var(--background-primary-light);
     --background-secondary: var(--background-secondary-light);
+    --background-inverted: var(--background-inverted-light);
     --surface: var(--surface-light);
     --text-primary: var(--text-primary-light);
     --text-secondary: var(--text-secondary-light);
+    --text-soft: var(--text-soft-light);
+    --text-primary-inverted: var(--text-primary-inverted-light);
+    --text-brand-soft: var(--text-brand-soft-light);
     --border: var(--border-light);
     --radial-gradient: var(--radial-gradient-light);
   }
@@ -112,13 +148,15 @@
 
     --brand-primary: var(--brand-primary-dark);
     --brand-secondary: var(--brand-secondary-dark);
-    --accent-primary: var(--accent-primary-dark);
-    --accent-secondary: var(--accent-secondary-dark);
     --background-primary: var(--background-primary-dark);
     --background-secondary: var(--background-secondary-dark);
+    --background-inverted: var(--background-inverted-dark);
     --surface: var(--surface-dark);
     --text-primary: var(--text-primary-dark);
     --text-secondary: var(--text-secondary-dark);
+    --text-soft: var(--text-soft-dark);
+    --text-primary-inverted: var(--text-primary-inverted-dark);
+    --text-brand-soft: var(--text-brand-soft-dark);
     --border: var(--border-dark);
     --corner: var(--corner-dark);
     --radial-gradient: var(--radial-gradient-dark);

@@ -1,58 +1,50 @@
 ---
 import { Image } from "astro:assets";
-const { src } = Astro.props;
-const { alt } = Astro.props;
+const { src, alt } = Astro.props;
 ---
-<div class="imgBg">
 
-<Image src={src} alt={alt} />
-
-    </div>
-
+<div class="img-wrap">
+  <div class="img-shadow-bg" aria-hidden="true"></div>
+  <div class="img-inner">
+    <Image src={src} alt={alt} />
+  </div>
+</div>
 
 <style>
-    img {
-        width: var(--max-text-length);
-        padding: 0px;
-    }
+  .img-wrap {
+    position: relative;
+    /* Space at bottom and right for shadow card */
+    margin-bottom: 16px;
+    margin-right: 16px;
+    margin-block: var(--size-10-fluid, 2.5rem);
+    max-width: var(--max-text-length);
+  }
 
+  /* Orange shadow card at BOTTOM-RIGHT */
+  .img-shadow-bg {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -16px;
+    bottom: -16px;
+    background-color: var(--brand-primary, #ff5c00);
+    border: 2px solid var(--card-stroke, #111);
+    border-radius: 8px;
+    transform: rotate(1deg);
+  }
 
-    .imgBg {
-        border-radius: 6px;
-        background: var(--background-secondary);
-        max-width: var(--max-text-length);
-    }
+  .img-inner {
+    position: relative;
+    z-index: 1;
+    border: 2px solid var(--card-stroke, #111);
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0px 8px 26px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .img-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 </style>
-
-
-
-<!-- ---
-import type { ImageMetadata } from "astro";
-import { getImage } from "astro:assets";
-
-interface Props {
-    mobileImgUrl: string | ImageMetadata;
-    desktopImgUrl: string | ImageMetadata;
-    alt: string;
-}
-
-const { mobileImgUrl, desktopImgUrl, alt } = Astro.props;
-
-const mobileImg = await getImage({
-    src: mobileImgUrl,
-    format: "webp",
-
-});
-
-const desktopImg = await getImage({
-    src: desktopImgUrl,
-    format: "webp",
-
-});
----
-
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset={mobileImg.src} />
-    <source media="(prefers-color-scheme: light)" srcset={desktopImg.src} />
-    <img src={desktopImg.src} alt={alt} />
-</picture> -->

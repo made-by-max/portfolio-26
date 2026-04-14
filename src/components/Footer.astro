@@ -1,23 +1,86 @@
 ---
-import SocialLinks from "../components/SocialLinks.astro";
 import "../styles/global.css";
 import "../styles/nav.css";
 ---
 
 <footer>
-    <div class="wrapper-wide">
-        <div class="bottom-nav">
-            <div class="leading">
-                <div>
-                    <a href="mailto:hi@madebymax.dev">hi@madebymax.dev</a>
-                </div>
-            </div>
-
-            <div class="trailing">
-                <div class="socialLinks">
-                    <SocialLinks />
-                </div>
-            </div>
-        </div>
+  <div class="footer-inner wrapper-wide">
+    <div class="footer-links">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/design/">Work</a>
+        <a href="/writing/">Writing</a>
+        <a href="/playground/">Playground</a>
+        <a href="/about/">About</a>
+      </nav>
+      <nav class="footer-social" aria-label="Social links">
+        <a href="mailto:hi@madebymax.dev">hi@madebymax.dev</a>
+        <a href="https://bsky.app/profile/madebymax.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+        <a href="https://github.com/made-by-max" target="_blank" rel="noopener">Github</a>
+        <a href="https://www.linkedin.com/in/madebymax/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
     </div>
+  </div>
+  <div class="footer-wordmark" aria-hidden="true">max</div>
 </footer>
+
+<style>
+footer {
+  background-color: var(--background-inverted, #111);
+  color: var(--text-primary-inverted, #f3f4f2);
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding-block-start: var(--size-20);
+  min-height: 400px;
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: clamp(48px, 8vw, 120px);
+}
+
+.footer-nav,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer a {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary-inverted, #f3f4f2);
+  text-decoration: none;
+  transition: opacity 150ms ease;
+}
+
+footer a:hover,
+footer a:focus {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.footer-wordmark {
+  position: absolute;
+  bottom: -0.15em;
+  left: -0.02em;
+  font-family: var(--font-display);
+  font-size: clamp(160px, 28vw, 400px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text-brand-soft, #923300);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+</style>

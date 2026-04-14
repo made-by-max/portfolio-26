@@ -1,25 +1,50 @@
 ---
 import { Image } from "astro:assets";
-const { src } = Astro.props;
-const { alt } = Astro.props;
+const { src, alt } = Astro.props;
 ---
-<div class="imgBg">
 
-<Image src={src} alt={alt} />
+<div class="img-wrap">
+  <div class="img-shadow-bg" aria-hidden="true"></div>
+  <div class="img-inner">
+    <Image src={src} alt={alt} />
+  </div>
+</div>
 
-    </div>
+<style>
+  .img-wrap {
+    position: relative;
+    /* Space at bottom and right for shadow card */
+    margin-bottom: 16px;
+    margin-right: 16px;
+    margin-block: var(--size-10-fluid, 2.5rem);
+    max-width: var(--wrapper-medium);
+  }
 
+  /* Orange shadow card at BOTTOM-RIGHT */
+  .img-shadow-bg {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: -16px;
+    bottom: -16px;
+    background-color: var(--brand-primary, #ff5c00);
+    border: 2px solid var(--card-stroke, #111);
+    border-radius: 10px;
+    transform: rotate(0.73deg);
+  }
 
-    <style>
-        Image {
+  .img-inner {
+    position: relative;
+    z-index: 1;
+    border: 2px solid var(--card-stroke, #111);
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0px 8px 26px 0px rgba(0, 0, 0, 0.12);
+  }
 
-            padding: 0px;
-        }
-
-
-        .imgBg {
-            border-radius: 8px;
-            background: var(--background-secondary);
-            max-width: var(--wrapper-medium);
-        }
-    </style>
+  .img-inner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

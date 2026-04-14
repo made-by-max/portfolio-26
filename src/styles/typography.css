@@ -1,10 +1,14 @@
 @import "@fontsource-variable/instrument-sans";
 @import "@fontsource-variable/figtree/wght.css";
 @import "@fontsource-variable/albert-sans/wght.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/700.css";
 
 :where(html) {
   --font-sans: "Albert Sans Variable", Avenir, Montserrat, Corbel, URW Gothic,
     source-sans-pro, sans-serif;
+  --font-display: "Space Grotesk", "Albert Sans Variable", sans-serif;
   --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
     SF Mono, Monaco, Droid Sans Mono, Source Code Pro, Cascadia Code, Menlo,
     Consolas, DejaVu Sans Mono, monospace;
@@ -66,25 +70,29 @@
   }
 
   h1 {
+    font-family: var(--font-display);
     font-size: var(--text-3xl);
     line-height: var(--text-3xl-line-height);
-    font-weight: var(--font-weight-normal);
-    letter-spacing: -0.7px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.03em;
     margin-block-start: clamp(1.5rem, -2.4886rem + 17.7273vw, 11.25rem);
     margin-block-end: var(--size-12);
   }
 
   h2 {
+    font-family: var(--font-display);
     font-size: var(--text-2xl);
     line-height: var(--text-2xl-line-height);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: -0.01em;
     max-inline-size: var(--max-text-length);
   }
 
   h3 {
+    font-family: var(--font-display);
     font-size: var(--text-lg);
     line-height: var(--text-lg-line-height);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
     max-inline-size: var(--max-text-length);
   }
 

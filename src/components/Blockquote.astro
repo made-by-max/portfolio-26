@@ -1,50 +1,26 @@
-<div class="container">
-    <div class="inner-container">
+---
+---
 
+<blockquote>
+  <slot />
+</blockquote>
 
-<div class="quote">
-    <slot />
-</div>
-    </div>
-</div>
 <style>
-    .quote {
-        font-style: italic;
+  blockquote {
+    background-color: color-mix(in srgb, var(--brand-primary, #ff5c00) 10%, transparent);
+    border-left: 8px solid var(--brand-primary, #ff5c00);
+    padding: 40px 48px;
+    margin-block: var(--size-8, 2rem);
+    margin-inline: 0;
+    max-width: var(--max-text-length);
+  }
 
-        padding-inline: var(--size-5);
-        padding-block-start: var(--size-7);
-        padding-block-end: var(--size-5);
-    }
-
-    .inner-container {
-        border: 1px solid color-mix(in hsl, canvasText, transparent 95%);
-    }
-    .container {
-           /*border: 1px solid color-mix(in hsl, canvasText, transparent 90%);
-            border-radius: 16px;  /* Would normally overlap, but the browser prevents it*/
-            /*corner-shape: notch;
-            width: 50%;*/
-
-            /*box-shadow:
-              -10px -10px 10px -20px color-mix(in hsl, canvasText, transparent 90%),
-              50px 50px 0 -40px red;*/
-
-                --s: 20px; /* the size on the corner */
-                --t: 5px;  /* the thickness of the border */
-                --g: 0px; /* the gap between the border and image */
-
-                padding: calc(var(--g) + var(--t));
-                outline: 2px solid color-mix(in hsl, canvasText, transparent 90%); /* the color here */
-                outline-offset: -5px;
-                -webkit-mask:
-                  conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
-                  0 0/calc(100% - var(--s)) calc(100% - var(--s)),
-                  linear-gradient(#000 0 0) content-box;
-                  max-width: var(--max-text-length);
-margin-block: var(--size-6);
-
-    }
-    .quote p {
-        margin-block-end: 0;
-    }
+  blockquote :global(p) {
+    font-style: italic;
+    font-size: 1.375rem;
+    line-height: 1.54;
+    color: var(--text-primary, #111);
+    margin: 0;
+    max-inline-size: none;
+  }
 </style>
