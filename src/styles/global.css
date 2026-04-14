@@ -15,7 +15,7 @@ body {
   font-family: var(--font-sans);
   background: var(--background-primary);
   font-size: var(--text-base);
-  color: var(--text-primary);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
 
   /*padding-inline: var(--size-fluid-3);*/

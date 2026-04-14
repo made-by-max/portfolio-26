@@ -6,14 +6,15 @@ const pageTitle = "Max Taylor";
 import BlogSection from "../components/BlogSection.astro";
 import CaseStudySection from "../components/CaseStudySection.astro";
 import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.astro";
-import LinkToMore from "../components/LinkToMore.astro";
+import SectionHeader from "../components/SectionHeader.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <section>
         <div class="wrapper-wide">
+
             <h1>Max Taylor</h1>
-            <p class="subhead">Product Designer and Developer</p>
+<p class="eyebrow">Product Designer and Developer</p>
             <p class="intro">
                 With more than a decade of experience in product design and
                 coding skills to boot, I excel at systems thinking, rapid
@@ -26,36 +27,36 @@ import LinkToMore from "../components/LinkToMore.astro";
 
     <section>
         <div class="wrapper-wide">
-            <h2>Selected Work</h2>
-            <div class="section-header">
-                <p>Product design case studies</p>
-                <LinkToMore url="/work" text="All case studies" />
-            </div>
+            <SectionHeader
+                sectionNumber="01"
+                headerText="Selected Work"
+                linkText="All case studies"
+                link="/design/"
+            />
             <CaseStudySection />
         </div>
     </section>
 
     <section>
         <div class="wrapper-wide">
-            <div class="section-intro">
-                <h2>Playground</h2>
-                <div class="section-header">
-                    <p>Prototypes, experiments, and smaller coding projects</p>
-                    <LinkToMore url="/playground" text="All playground" />
-                </div>
-            </div>
-
+            <SectionHeader
+                sectionNumber="02"
+                headerText="Playground"
+                linkText="All playground"
+                link="/playground/"
+            />
             <PlaygroundFeaturedSection />
         </div>
     </section>
 
     <section>
         <div class="wrapper-wide">
-            <h2>Latest Posts</h2>
-            <div class="section-header">
-                <p>Various thoughts and musings</p>
-                <LinkToMore url="/writing" text="All posts" />
-            </div>
+            <SectionHeader
+                sectionNumber="03"
+                headerText="Latest Posts"
+                linkText="All posts"
+                link="/writing/"
+            />
             <BlogSection />
         </div>
     </section>
@@ -65,28 +66,16 @@ import LinkToMore from "../components/LinkToMore.astro";
     h1 {
         margin-block-end: var(--size-2);
     }
-    .subhead {
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl-line-height);
-        font-weight: var(--font-weight-normal);
-        color: var(--text-soft);
+
+    .eyebrow {
         margin-block-end: var(--size-5);
     }
-
     .intro {
         font-size: var(--text-xl);
         line-height: var(--text-xl-line-height);
         margin-block-end: var(--size-1);
         text-wrap: balance;
         max-width: 65ch;
-    }
-
-    .section-header {
-        margin-block-end: var(--size-4);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: baseline;
     }
 
     section {

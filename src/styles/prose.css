@@ -5,6 +5,7 @@ h1 {
 h2 {
   margin-block-start: var(--size-13-fluid);
   margin-block-end: var(--size-6-fluid);
+  font-weight: 500;
 }
 
 h3 {
@@ -21,7 +22,7 @@ p {
 img {
   height: auto;
   width: var(--wrapper-medium);
-  margin-block: var(--size-12-fluid);
+  /*margin-block: var(--size-12-fluid);*/
 }
 
 li {

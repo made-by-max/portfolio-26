@@ -6,25 +6,7 @@ footer {
 }
 
 header {
-  padding-block: var(--size-5);
-}
-
-footer {
-  padding-block: var(--size-20);
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  --size: 16px;
-  --line: color-mix(in hsl, canvasText, transparent 95%);
-  content: "";
-
-  /*background:
-        linear-gradient(90deg, var(--line) 1px, transparent 1px var(--size)) 50%
-            50% / var(--size) var(--size),
-        linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
-            var(--size) var(--size);*/
-  background-color: var(--background-brand);
+  padding-block: var(--size-7);
 }
 
 nav,
@@ -39,14 +21,14 @@ nav,
 
   a {
     text-decoration: none;
-    color: inherit;
+    color: var(--text);
     font-size: var(--text-s);
     font-weight: var(--font-weight-medium);
   }
 
   a:hover,
   a:focus {
-    color: var(--brand-primary);
+    color: var(--text-brand);
     text-decoration: none;
   }
 }

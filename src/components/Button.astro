@@ -1,52 +1,51 @@
 ---
-import { ExternalLink } from '@lucide/astro';
 const { url } = Astro.props
 ---
 
-<a href={url} target="_blank"><div class="button">View live site <ExternalLink /></div>
+<a href={url} target="_blank" class="button">
+  View live site
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
+  </svg>
+</a>
 
 <style>
 .button {
-
-  background-color: var(--indigo-8);
-  border: var(--indigo-9);
-  border-radius: 8px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: flex;
-  gap: var(--size-2);
+  display: inline-flex;
   align-items: center;
-  font-size: var(--text-base);
-  font-weight: var( --font-weight-medium);
-  margin: 0;
-  min-height: 44px;
-  padding-inline: var(--size-2);
-  padding-block: 0px;
-  text-align: center;
+  gap: 8px;
+  background-color: var(--button-bg);
+  border: 2px solid var(--button-border);
+  border-radius: 99px;
+  box-shadow: 4px 4px 0px 0px var(--button-shadow);
+  color: var(--button-text);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 14px 26px;
   text-decoration: none;
-  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  transition: box-shadow 150ms ease, transform 150ms ease;
   width: fit-content;
-  will-change: transform;
+  white-space: nowrap;
 }
 
-.button:disabled {
-  pointer-events: none;
+/**/
+
+.button:hover,
+.button:focus {
+  box-shadow: 2px 2px 0px 0px var(--button-shadow, #111);
+  transform: translate(2px, 2px);
+  text-decoration: none;
 }
 
-a {
-    text-decoration: none;
-}
-.button:hover, :focus {
-  background-color: var(--indigo-10);
-}
-
-.button img {
-    max-width: 24px;
-}
 .button:active {
-    scale: 0.98;
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+.button svg {
+  flex-shrink: 0;
 }
 </style>

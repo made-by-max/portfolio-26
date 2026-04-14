@@ -1,50 +1,82 @@
 ---
-const { headerText, linkText, link } = Astro.props;
+const { sectionNumber = "01", headerText, linkText, link } = Astro.props;
 ---
 
-<div>
-    <h2 class="section-header">{headerText}</h2>
-    <div class="link">
-        <a href={link}>{linkText}</a>
-        <a aria-label={linkText} href={link}>
-            <svg
-                class="i i-arrow-right"
-                viewBox=" 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            >
-                <path d="M5 12h14m-7-7 7 7-7 7"></path>
-            </svg>
-        </a>
-    </div>
+<div class="section-header">
+  <div class="section-title">
+    <span class="section-number">{sectionNumber} //</span>
+    <h2>{headerText}</h2>
+  </div>
+  {link && linkText && (
+    <a class="section-link" href={link}>
+      {linkText}
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 12h14m-7-7 7 7-7 7"/>
+      </svg>
+    </a>
+  )}
 </div>
 
 <style>
-    .section-header {
-        margin-block-end: var(--size-4);
-    }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-block-end: var(--size-8, 2rem);
+    border-bottom: 1px solid var(--border, #111);
+    padding-block-end: var(--size-4, 1rem);
+  }
 
-    .i {
-        width: 20px;
-        height: 20px;
-    }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 
-    .link {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+  .section-number {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-brand, var(--brand-primary, #ff5c00));
+    white-space: nowrap;
+  }
 
-        gap: var(--size-1);
+  h2 {
+    font-family: var(--font-accent);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: var(--text-2xl-line-height);
+    letter-spacing: -0.01em;
+    /*text-transform: uppercase;*/
+    color: var(--text, #111);
+    margin: 0;
+    max-inline-size: none;
+  }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-            font-weight: var(--font-weight-medium);
-            line-height: 24px;
-        }
-    }
+  .section-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--text-brand, var(--brand-primary, #ff5c00));
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 150ms ease;
+    flex-shrink: 0;
+  }
+
+  .section-link:hover,
+  .section-link:focus {
+    opacity: 0.7;
+    text-decoration: none;
+  }
+
+  .section-link svg {
+    flex-shrink: 0;
+  }
 </style>
