@@ -1,0 +1,69 @@
+---
+const { url, target = "_blank", variant = "primary" } = Astro.props;
+---
+
+<a href={url} target={target} class:list={["btn", `btn--${variant}`]}>
+  <slot />
+</a>
+
+<style>
+  /* Shared button base */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-px-2);
+    border-radius: 99px;
+    border: 2px solid var(--button-border);
+    cursor: pointer;
+    font-family: var(--font-accent);
+    font-size: var(--text-s);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--font-letterspacing-1);
+    padding: 14px 26px;
+    text-decoration: none;
+    transition: box-shadow 150ms ease, transform 150ms ease;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  .btn:active {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+  }
+
+  .btn svg,
+  .btn img {
+    flex-shrink: 0;
+  }
+
+  /* Primary (orange) */
+  .btn--primary {
+    background-color: var(--button-bg);
+    box-shadow: 4px 4px 0px 0px var(--button-shadow);
+    color: var(--button-text);
+  }
+
+  .btn--primary:hover,
+  .btn--primary:focus {
+    box-shadow: 2px 2px 0px 0px var(--button-shadow);
+    transform: translate(2px, 2px);
+    text-decoration: none;
+  }
+
+  /**/
+
+  /* GitHub (dark) */
+  .btn--github {
+    background-color: var(--neutral-800);
+    box-shadow: 4px 4px 0px 0px var(--neutral-100);
+    color: var(--neutral-100);
+  }
+
+  .btn--github:hover,
+  .btn--github:focus {
+    box-shadow: 2px 2px 0px 0px var(--neutral-100);
+    transform: translate(2px, 2px);
+    text-decoration: none;
+    color: var(--neutral-100);
+  }
+</style>

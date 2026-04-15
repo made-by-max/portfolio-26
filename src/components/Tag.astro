@@ -1,0 +1,46 @@
+---
+const { href, text, class: className = "" } = Astro.props;
+const El = href ? "a" : "span";
+---
+
+<El href={href} class:list={["tag", className]}>
+  {text}
+</El>
+
+<style>
+  /* Shared pill styles */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--tag-background);
+    border: 1px solid var(--tag-stroke);
+    border-radius: 99px;
+    color: var(--tag-text);
+    font-family: var(--font-accent);
+    font-size: var(--text-xxs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--font-letterspacing-3);
+    padding: 4px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* Blog tags: yellow shadow + hover translate */
+  .tag.blog {
+    box-shadow: 1.5px 1.5px 0px 0px var(--tag-shadow-blog);
+    transition: box-shadow 120ms ease, transform 120ms ease;
+  }
+
+  .tag.blog:hover,
+  .tag.blog:focus {
+    box-shadow: none;
+    transform: translate(1.5px, 1.5px);
+    text-decoration: none;
+  }
+
+  /* Tech tags: orange shadow, no hover */
+  .tag.tech {
+    box-shadow: 1.5px 1.5px 0px 0px var(--tag-shadow-tech);
+  }
+</style>

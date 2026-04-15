@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CaseStudySection from "../components/CaseStudySection.astro";
-import LinkToMore from "../components/LinkToMore.astro";
 import ProductDesignBlogSection from "../components/ProductDesignBlogSection.astro";
 import "../styles/cards.css";
 const posts = await getCollection("design");
@@ -22,15 +21,12 @@ const pageTitle = "Selected Work";
     </section>
     <section>
         <div class="wrapper-wide">
-
-            <div class="section-header">
-              <h2>Related Blog Posts</h2>
- <LinkToMore url="/writing" text="All posts" />
-
-            </div>
-
+            <SectionHeader
+                headerText="Related Blog Posts"
+                linkText="All posts"
+                link="/writing"
+            />
             <ProductDesignBlogSection />
-
         </div>
     </section>
 </BaseLayout>
@@ -47,15 +43,6 @@ h1 {
     margin-block-end: var(--size-10);
 }
 
-    .section-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-block-end: var(--size-8, 2rem);
-        border-bottom: 1px solid var(--border, #111);
-        padding-block-end: var(--size-4, 1rem);
-    }
     section {
         margin-block: 180px;
     }

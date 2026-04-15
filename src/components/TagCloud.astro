@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import BlogTag from "./BlogTag.astro";
 
 const writing = await getCollection("writing");
 
@@ -10,9 +11,7 @@ const allTags = [...new Set(writing.map((post) => post.data.tags).flat())];
 {
     allTags.map((tag) => (
         <p class="post-tags">
-            <a class="tag" href={`/tags/${tag}`}>
-                {tag}
-            </a>
+            <BlogTag href={`/tags/${tag}`} text={tag} />
         </p>
     ))
 }

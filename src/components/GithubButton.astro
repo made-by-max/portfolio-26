@@ -1,50 +1,12 @@
 ---
+import BaseButton from "./BaseButton.astro";
 const { url } = Astro.props;
 ---
 
-<a href={url} target="_blank" class="button">
-    <img src="../../public/icons/github.svg" alt="GitHub" width="18" height="18" />
+<BaseButton url={url} variant="github">
+  <img src="../../public/icons/github.svg" alt="GitHub" width="18" height="18" />
   View on Github
   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M7 7h10v10"/><path d="M7 17 17 7"/>
   </svg>
-</a>
-
-<style>
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: var(--neutral-800, #1a1a1a);
-  border: 2px solid var(--button-border);
-  border-radius: 99px;
-  box-shadow: 4px 4px 0px 0px var(--button-shadow, #f3f4f2);
-  color: var(--neutral-100, #f3f4f2);
-  cursor: pointer;
-  font-family: var(--font-accent);
-  font-size: var(--text-s);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 14px 26px;
-  text-decoration: none;
-  transition: box-shadow 150ms ease, transform 150ms ease;
-  width: fit-content;
-  white-space: nowrap;
-}
-
-.button:hover,
-.button:focus {
-  box-shadow: 2px 2px 0px 0px var(--neutral-100, #f3f4f2);
-  transform: translate(2px, 2px);
-  text-decoration: none;
-}
-
-.button:active {
-  box-shadow: none;
-  transform: translate(4px, 4px);
-}
-
-.button svg {
-  flex-shrink: 0;
-}
-</style>
+</BaseButton>
