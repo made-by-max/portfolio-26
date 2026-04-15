@@ -34,11 +34,19 @@ const heading = "About Max";
             </article>
 
             <aside>
-                <img
 
-                    src="../profilepicwithbg.png"
-                    alt="A headshot of Max, a white person with short brown hair and glasses."
-                />
+                <div class="img-wrap">
+                  <div class="img-shadow-bg" aria-hidden="true"></div>
+                  <div class="img-inner">
+                      <img
+
+                          src="../profilepic.JPG"
+                          alt="A headshot of Max, a white person with short brown hair and glasses."
+                      />
+                  </div>
+                </div>
+
+
             </aside>
         </div>
     </div>
@@ -52,11 +60,11 @@ const heading = "About Max";
         color: var(--text-secondary);
     }
 
-    img.profile {
+    /*img.profile {
         max-width: 300px;
         border-radius: 100%;
         margin-block-start: 180px;
-    }
+    }*/
 
     p {
         font-size: var(--text-xl);
@@ -64,5 +72,48 @@ const heading = "About Max";
         margin-block-end: var(--size-4);
         text-wrap: balance;
         max-width: 65ch;
+    }
+
+
+
+    .img-wrap {
+      position: relative;
+      /* Space at bottom and right for shadow card */
+      margin-bottom: 16px;
+      margin-right: 16px;
+      margin-block: var(--size-10-fluid, 2.5rem);
+      max-width: 300px;
+    }
+
+    /* Orange shadow card at BOTTOM-RIGHT */
+    .img-shadow-bg {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      right: -16px;
+      bottom: -16px;
+      background-color: var(--brand-primary, #ff5c00);
+      border: 2px solid var(--card-stroke, #111);
+      border-radius: 10px;
+      transform: rotate(0.73deg);
+    }
+
+    .img-inner {
+        position: relative;
+        background-color: var(--background-secondary, #f3f4f2);
+        border: 2.5px solid var(--card-stroke, #111);
+        border-radius: 11px;
+        overflow: hidden;
+        z-index: 1;
+        /* Stretch to fill, with text content expanding */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-inner img {
+      max-width: 300px;
+      height: auto;
+      display: block;
     }
 </style>
