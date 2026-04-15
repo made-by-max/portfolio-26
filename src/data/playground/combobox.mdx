@@ -15,8 +15,14 @@ import { Image } from "astro:assets";
 
 
     <div class="leading">
-    <div class="media">
-    <Image src={combobox} alt="combobox" />
+    
+    <div class="img-wrap">
+  <div class="img-shadow-bg" aria-hidden="true"></div>
+  <div class="img-inner">
+      <Image src={combobox} alt="combobox" />
+  </div>
+
+    
     </div>
     <div class="stack">
       <TechStack logo={nextjs} tech="NextJS" />

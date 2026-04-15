@@ -1,10 +1,10 @@
 ---
-const { sectionNumber = "01", headerText, linkText, link } = Astro.props;
+const {  headerText, linkText, link } = Astro.props;
 ---
 
 <div class="section-header">
   <div class="section-title">
-    <span class="section-number">{sectionNumber} //</span>
+    <span class="section-number"> //</span>
     <h2>{headerText}</h2>
   </div>
   {link && linkText && (

@@ -16,9 +16,15 @@ import { Image } from "astro:assets";
 
 
     <div class="leading">
-    <div class="media">
-    <Image src={figmamcp} alt="a screenshot of a website for a conservation nonprofit" />
+        <div class="img-wrap">
+  <div class="img-shadow-bg" aria-hidden="true"></div>
+  <div class="img-inner">
+      <Image src={figmamcp} alt="a screenshot of a website for a conservation nonprofit" />
+  </div>
+
+    
     </div>
+  
     <div class="stack">
       <TechStack logo={figma} tech="Figma MCP" />
       <TechStack logo={claude} tech="Claude Code" />

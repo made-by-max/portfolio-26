@@ -16,9 +16,16 @@ import { Image } from "astro:assets";
 
 
     <div class="leading">
-    <div class="media">
-    <Image src={radcode} alt="animation screenshot" />
-    </div>
+                <div class="img-wrap">
+  <div class="img-shadow-bg" aria-hidden="true"></div>
+  <div class="img-inner">
+      <Image src={radcode} alt="animation screenshot" />
+  </div>
+  
+   </div>
+   
+    
+   
     <div class="stack">
       <TechStack logo={css} tech="CSS" />
       <TechStack logo={js} tech="JavaScript" />
