@@ -6,7 +6,7 @@ footer {
 }
 
 header {
-  padding-block: var(--size-7);
+  padding-block-start: var(--size-5);
 }
 
 nav,
@@ -39,4 +39,15 @@ nav,
   flex-wrap: wrap;
   align-items: center;
   gap: var(--size-2);
+}
+
+@media (max-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .pageLinks {
+    display: flex;
+    flex-direction: column;
+  }
 }

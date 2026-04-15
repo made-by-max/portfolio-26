@@ -17,6 +17,9 @@ body {
   font-size: var(--text-base);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 
   /*padding-inline: var(--size-fluid-3);*/
   /*
@@ -30,9 +33,10 @@ main {
   position: relative;
   z-index: 1;
   background: var(--background-primary);
-  max-width: var(--max-width);
+  width: 100%;
   margin-inline: auto;
-  padding-block-end: var(--size-12-fluid);
+  /*padding-block-end: var(--size-12-fluid);*/
+  padding-bottom: 400px;
 }
 
 img,

@@ -34,20 +34,26 @@ footer {
   width: 100%;
   overflow: hidden;
   padding-block-start: var(--size-15);
-  /*min-height: 400px;*/
+  min-height: 400px;
 }
 
 .footer-inner {
   position: relative;
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer-links {
-  display: grid;
-  grid-template-columns: (1fr, 1fr, 1fr, 1fr, 1fr);
-  /*justify-content: flex-end;
-  gap: 16px;*/
+    display: inline-flex;
+    flex-flow: row wrap;
+    /* This aligns items to the end line on main-axis */
+    /*justify-content: flex-end;*/
+    gap: var(--size-10);
+
 }
+
+
 
 .footer-nav,
 .footer-social {
@@ -55,15 +61,33 @@ footer {
   flex-direction: column;
   gap: 10px;
   align-items: start;
-  width: fit-content;
+  justify-content: start;
+  /*width: fit-content;*/
 }
 
-.footer-nav {
+@media (max-width: 500px) {
+    .footer-inner {
+        display: flex;
+        justify-content: center;
+        margin-bottom: var(--size-10);
+    }
+  .footer-links {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+    gap: var(--size-5);
+  }
+  .footer-nav,
+  .footer-social {
+      align-items: center;
+  }
+}
+
+/*.footer-nav {
     grid-column: 3;
 }
 .footer-social {
 grid-column: 4;
-}
+}*/
 
 footer a {
   font-family: var(--font-sans);
