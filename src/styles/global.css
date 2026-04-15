@@ -10,6 +10,9 @@
   box-sizing: border-box;
   margin: 0;
 }
+html {
+  height: 100%;
+}
 
 body {
   font-family: var(--font-sans);
@@ -17,7 +20,7 @@ body {
   font-size: var(--text-base);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
-  min-height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 
@@ -36,7 +39,9 @@ main {
   width: 100%;
   margin-inline: auto;
   /*padding-block-end: var(--size-12-fluid);*/
+  margin-top: 30px;
   padding-bottom: 400px;
+  min-height: 100dvh;
 }
 
 img,
