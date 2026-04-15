@@ -33,7 +33,7 @@ import "../styles/nav.css";
             </nav>
         </div>
     </div>
-    <!-- <div class="footer-wordmark" aria-hidden="true">max</div> -->
+    <div class="footer-wordmark" aria-hidden="true">max</div>
 </footer>
 
 <style>
@@ -41,7 +41,7 @@ import "../styles/nav.css";
 footer {
   background-color: var(--background-primary-inverted);
   color: var(--text-primary-inverted);
-  position: sticky;
+ position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -51,7 +51,7 @@ footer {
 }
 
 .footer-inner {
-  position: relative;
+
   z-index: 1;
   display: flex;
   justify-content: flex-end;
@@ -109,7 +109,7 @@ footer a:focus {
 
 
 
-    /*.footer-wordmark {
+    .footer-wordmark {
         position: absolute;
         bottom: -0.35em;
         left: -0.02em;
@@ -121,5 +121,5 @@ footer a:focus {
         pointer-events: none;
         user-select: none;
         white-space: nowrap;
-    }*/
+    }
 </style>
