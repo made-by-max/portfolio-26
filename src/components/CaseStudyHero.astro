@@ -14,10 +14,10 @@ const { post } = Astro.props;
   </div>
 
   <!-- Brutalist image wrapper: yellow rotated card behind image -->
-  <div class="hero-image-wrap">
-    <div class="image-shadow-bg" aria-hidden="true"></div>
-    <div class="image-inner">
-      <Image src={post.data.img} alt={`Cover image for ${post.data.title}`} />
+  <div class="brutalist-card-wrap hero-image-wrap">
+    <div class="brutalist-shadow hero-image-shadow" aria-hidden="true"></div>
+    <div class="brutalist-inner">
+      <Image src={post.data.img} alt={`Cover image for ${post.data.title}`} class="card-img hero-img" />
     </div>
   </div>
 </div>
@@ -41,53 +41,33 @@ const { post } = Astro.props;
 
   .overview-label {
     font-family: var(--font-accent);
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-s);
+    letter-spacing: var(--font-letterspacing-2);
     color: var(--text-soft, #808080);
   }
 
   .eyebrow {
-      margin-block-end: var(--size-2);
+    margin-block-end: var(--size-2);
   }
 
-  /* Brutalist image wrapper */
+  /* Hero uses a 14px offset instead of the card default 12px */
   .hero-image-wrap {
-    position: relative;
     padding-top: 14px;
     padding-right: 14px;
   }
 
-  .image-shadow-bg {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .hero-image-wrap .brutalist-shadow {
     bottom: 14px;
     left: 14px;
+  }
+
+  .hero-image-shadow {
     background-color: var(--brand-secondary, #f2c94c);
-    border: 2px solid var(--card-stroke, #111);
-    border-radius: 10px;
     transform: rotate(0.73deg);
-
   }
 
-  .image-inner {
-      position: relative;
-      background-color: var(--card-background, #f3f4f2);
-      border: 2.5px solid var(--card-stroke, #111);
-      border-radius: 11px;
-      overflow: hidden;
-      z-index: 1;
-      /* Stretch to fill, with text content expanding */
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-  }
-
-  .image-inner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+  .hero-img {
+    border-radius: var(--size-1);
   }
 </style>

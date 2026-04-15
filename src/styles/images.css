@@ -1,0 +1,109 @@
+/* =========================================
+   Shared brutalist image/card frame styles
+   Used by BlogImageWide, BlogImageNarrow,
+   CaseStudyCard, CaseStudyHero, PlaygroundCard
+   ========================================= */
+
+/* ── Core frame pieces ─────────────────── */
+
+/* The main visible frame (border + rounded corners + overflow clip) */
+.brutalist-inner {
+  position: relative;
+  background-color: var(--card-background, #f3f4f2);
+  border: 2.5px solid var(--card-stroke, #111);
+  border-radius: 11px;
+  overflow: hidden;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The rotated shadow card behind the main frame */
+.brutalist-shadow {
+  position: absolute;
+  border: 2px solid var(--card-stroke, #111);
+  border-radius: 10px;
+  transform: rotate(0.4deg);
+  transition: transform 250ms ease;
+}
+
+/* ── Card wrapper (top-right shadow, 12px offset) ── */
+/* Used by CaseStudyCard and PlaygroundCard */
+
+.brutalist-card-wrap {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding-top: 12px;
+  padding-right: 12px;
+  height: 100%;
+}
+
+/* Shadow positioned at top-right */
+.brutalist-card-wrap .brutalist-shadow {
+  top: 0;
+  right: 0;
+  bottom: 12px;
+  left: 12px;
+}
+
+/* Hover: shadow card rotates */
+.brutalist-card-wrap:hover .brutalist-shadow {
+  transform: rotate(2.5deg);
+}
+
+/* ── Image section inside a card ───────── */
+/* Shared by CaseStudyCard and PlaygroundCard */
+
+.card-image {
+  padding: var(--size-px-3);
+  flex-shrink: 0;
+}
+
+.card-image .card-img {
+  object-fit: cover;
+  border-radius: var(--size-px-2);
+}
+
+/* Content section inside a card */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* ── Blog image wrapper (bottom-right shadow, 16px offset) ── */
+/* Used by BlogImageWide and BlogImageNarrow */
+
+.brutalist-img-wrap {
+  position: relative;
+  /* Space at bottom and right for shadow card */
+  margin-bottom: var(--size-px-3);
+  margin-right: var(--size-px-3);
+  margin-block: var(--size-10-fluid);
+}
+
+/* Shadow positioned at bottom-right */
+.brutalist-img-wrap .brutalist-shadow {
+  top: var(--size-px-3);
+  left: var(--size-px-3);
+  right: -16px;
+  bottom: -16px;
+  background-color: var(--brand-primary, #ff5c00);
+  transition: none;
+}
+
+/* Blog images use the lighter page background, not the card gray */
+.brutalist-img-wrap .brutalist-inner {
+  background-color: var(--background-secondary, #fff);
+}
+
+/* ── Base img reset ─────────────────────── */
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

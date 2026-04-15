@@ -41,9 +41,10 @@
   --card-text-soft: var(--neutral-600);
   --card-shadow-yellow: var(--yellow-500);
   --card-shadow-orange: var(--orange-500);
-  --tag-shadow-blog: var(--yellow-500);
-  --tag-shadow-tech: var(--orange-500);
+  --tag-shadow-blog: var(--orange-500);
+  --tag-shadow-tech: var(--yellow-500);
   --button-bg: var(--orange-600);
+  --button-text: var(--neutral-100);
 
   /* Light and dark modes */
   /* light */
@@ -94,6 +95,7 @@
   --tag-text-dark: var(--neutral-200);
   --button-border-dark: var(--neutral-200);
   --button-text-dark: var(--neutral-200);
+  --button-shadow-dark: var(--neutral-200);
 
   --border-dark: var(--neutral-100);
   --shadow-color: var(--neutral-900);

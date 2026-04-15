@@ -1,24 +1,12 @@
 ---
+import Tag from "./Tag.astro";
 const { tech } = Astro.props;
 ---
 
-<span class="tech-tag">{tech}</span>
+<Tag text={tech} class="tech" />
 
 <style>
-  .tech-tag {
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--tag-background, #fff);
-    border: 1px solid var(--tag-stroke, #1a1a1a);
-    border-radius: 99px;
-    box-shadow: 1.5px 1.5px 0px 0px var(--orange-500, #ff5c00);
-    color: var(--tag-text, #111);
-    font-family: var(--font-display);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 4px 12px;
-    text-transform: uppercase;
-    white-space: nowrap;
-  }
+.tag.tech {
+  box-shadow: 1.5px 1.5px 0px 0px var(--tag-shadow-tech);
+}
 </style>

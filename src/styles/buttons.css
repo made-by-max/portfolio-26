@@ -1,0 +1,64 @@
+/* =========================================
+   Base button
+   ========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--size-px-2);
+  border-radius: 99px;
+  border: 2px solid;
+  cursor: pointer;
+  font-family: var(--font-accent);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-letterspacing-1);
+  padding: 14px 26px;
+  text-decoration: none;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+  width: fit-content;
+  white-space: nowrap;
+  border-color: var(--button-border);
+  box-shadow: 4px 4px 0px 0px var(--button-shadow);
+}
+
+.btn:hover,
+.btn:focus {
+  text-decoration: none;
+  box-shadow: 2px 2px 0px 0px var(--button-shadow);
+  transform: translate(2px, 2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+.btn svg,
+.btn img {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   Primary (orange) variant
+   ========================================= */
+
+.btn--primary {
+  background-color: var(--button-bg);
+
+  color: var(--button-text, var(--neutral-100));
+}
+
+/* =========================================
+   GitHub variant
+   ========================================= */
+
+.btn--github {
+  background-color: var(--neutral-800);
+
+  color: var(--neutral-100);
+}
+
+/* =========================================
+   Link-to-more variant
+   ========================================= */

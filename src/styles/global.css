@@ -3,6 +3,7 @@
 @import "layout.css";
 @import "colors.css";
 @import "shadows.css";
+@import "images.css";
 
 *,
 *::before,
@@ -21,8 +22,6 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
 
   /*padding-inline: var(--size-fluid-3);*/
   /*
@@ -31,15 +30,36 @@ body {
     }*/
 }
 
+body::before {
+  --size: 45px;
+  --line: color-mix(in hsl, canvasText, transparent 70%);
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: linear-gradient(
+        90deg,
+        var(--line) 1px,
+        transparent 1px var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+      var(--size) var(--size);
+  mask: linear-gradient(15deg, transparent 65%, white);
+  top: 0;
+  transform-style: flat;
+  pointer-events: none;
+  z-index: -1;
+}
+
 main {
   min-height: 100vh;
   position: relative;
   z-index: 1;
-  background: var(--background-primary);
   width: 100%;
   margin-inline: auto;
-  /*padding-block-end: var(--size-12-fluid);*/
-  margin-top: 30px;
+  padding-block-end: var(--size-12-fluid);
+  margin-top: var(--size-4);
 
   min-height: 100dvh;
   /*padding-bottom: 400px;*/

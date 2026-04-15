@@ -1,29 +1,28 @@
 ---
 import { ArrowRight } from "@lucide/astro";
-const { text } = Astro.props;
-const { url } = Astro.props;
+const { text, url } = Astro.props;
 ---
 
-<a href={url}>{text}<ArrowRight /> </a>
+<a href={url} class="link-to-more">
+  {text}<ArrowRight />
+</a>
 
 <style>
-    a {
-        text-decoration: none;
-        color: var(--text-brand);
-        font-weight: var(--font-weight-medium);
-        line-height: 24px;
+  .link-to-more {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--size-1);
+    color: var(--text-brand);
+    font-family: var(--font-sans);
+    font-size: var(--text-s);
+    font-weight: var(--font-weight-medium);
+    line-height: 24px;
+    text-decoration: none;
+  }
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        gap: var(--size-1);
-        margin-block-start: var(--size-4);
-    }
-
-    a:hover,
-    a:focus {
-        color: var(--text-brand);
-        text-decoration: none;
-    }
+  .link-to-more:hover,
+  .link-to-more:focus {
+    color: var(--text-brand);
+    text-decoration: none;
+  }
 </style>

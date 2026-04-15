@@ -33,27 +33,26 @@ h4 {
 }*/
 
 h1 {
-    font-size: 56px;
-    font-weight: 500;
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-medium);
     text-wrap: pretty;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: var(--text-2xl);
     text-wrap: pretty;
     max-inline-size: var(--max-text-length);
     margin-block-start: 72px;
-    margin-block-end: 16px;
-    font-weight: 500;
+    margin-block-end: var(--size-px-3);
+    font-weight: var(--font-weight-medium);
 }
 
 h3 {
-    font-size: 20px;
-
+    font-size: var(--text-lg);
     max-inline-size: var(--max-text-length);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     margin-block-start: 72px;
-    margin-block-end: 16px;
+    margin-block-end: var(--size-px-3);
 }
 
 p {
