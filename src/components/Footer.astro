@@ -4,93 +4,106 @@ import "../styles/nav.css";
 ---
 
 <footer>
-  <div class="footer-inner wrapper-wide">
-    <div class="footer-links">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/">Home</a>
-        <a href="/design/">Work</a>
-        <a href="/writing/">Writing</a>
-        <a href="/playground/">Playground</a>
-        <a href="/about/">About</a>
-      </nav>
-      <nav class="footer-social" aria-label="Social links">
-        <a href="mailto:hi@madebymax.dev">hi@madebymax.dev</a>
-        <a href="https://bsky.app/profile/madebymax.bsky.social" target="_blank" rel="noopener">Bluesky</a>
-        <a href="https://github.com/made-by-max" target="_blank" rel="noopener">Github</a>
-        <a href="https://www.linkedin.com/in/madebymax/" target="_blank" rel="noopener">LinkedIn</a>
-      </nav>
+    <div class="footer-inner wrapper-wide">
+        <div class="footer-links">
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="/">Home</a>
+                <a href="/design/">Work</a>
+                <a href="/writing/">Writing</a>
+                <a href="/playground/">Playground</a>
+                <a href="/about/">About</a>
+            </nav>
+            <nav class="footer-social" aria-label="Social links">
+                <a href="mailto:hi@madebymax.dev">hi@madebymax.dev</a>
+                <a
+                    href="https://bsky.app/profile/madebymax.bsky.social"
+                    target="_blank"
+                    rel="noopener">Bluesky</a
+                >
+                <a
+                    href="https://github.com/made-by-max"
+                    target="_blank"
+                    rel="noopener">Github</a
+                >
+                <a
+                    href="https://www.linkedin.com/in/madebymax/"
+                    target="_blank"
+                    rel="noopener">LinkedIn</a
+                >
+            </nav>
+        </div>
     </div>
-  </div>
-  <div class="footer-wordmark" aria-hidden="true">max</div>
+    <div class="footer-wordmark" aria-hidden="true">max</div>
 </footer>
 
 <style>
-footer {
-  background-color: var(--background-primary-inverted);
-  color: var(--text-primary-inverted, #f3f4f2);
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  padding-block-start: var(--size-15);
-  /*min-height: 400px;*/
-}
+    footer {
+        background-color: var(--background-primary-inverted);
+        color: var(--text-primary-inverted, #f3f4f2);
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        padding-block-start: var(--size-15);
+        /*min-height: 400px;*/
+    }
 
-.footer-inner {
-  position: relative;
-  z-index: 1;
-}
+    .footer-inner {
+        position: relative;
+        z-index: 1;
+    }
 
-.footer-links {
-  display: grid;
-  grid-template-columns: (1fr, 1fr, 1fr, 1fr, 1fr);
-  /*justify-content: flex-end;
+    .footer-links {
+        display: grid;
+        grid-template-columns: (1fr, 1fr, 1fr, 1fr, 1fr);
+        padding-block-end: var(--size-7);
+        /*justify-content: flex-end;
   gap: 16px;*/
-}
+    }
 
-.footer-nav,
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: start;
-  width: fit-content;
-}
+    .footer-nav,
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+        width: fit-content;
+    }
 
-.footer-nav {
-    grid-column: 3;
-}
-.footer-social {
-grid-column: 4;
-}
+    .footer-nav {
+        grid-column: 3;
+    }
+    .footer-social {
+        grid-column: 4;
+    }
 
-footer a {
-  font-family: var(--font-sans);
-  font-size: var(--text-s);
-  font-weight: 500;
-  color: var(--text-primary-inverted, #f3f4f2);
-  text-decoration: none;
-  transition: opacity 150ms ease;
-}
+    footer a {
+        font-family: var(--font-sans);
+        font-size: var(--text-s);
+        font-weight: 500;
+        color: var(--text-primary-inverted, #f3f4f2);
+        text-decoration: none;
+        transition: opacity 150ms ease;
+    }
 
-footer a:hover,
-footer a:focus {
-  opacity: 0.6;
-  text-decoration: none;
-}
+    footer a:hover,
+    footer a:focus {
+        opacity: 0.6;
+        text-decoration: none;
+    }
 
-.footer-wordmark {
-  position: absolute;
-  bottom: -0.35em;
-  left: -0.02em;
-  font-family: var(--font-display);
-  font-size: clamp(160px, 28vw, 400px);
-  font-weight: 500;
-  line-height: 1;
-  color: var(--text-brand-soft, #923300);
-  pointer-events: none;
-  user-select: none;
-  white-space: nowrap;
-}
+    .footer-wordmark {
+        position: absolute;
+        bottom: -0.35em;
+        left: -0.02em;
+        font-family: var(--font-display);
+        font-size: clamp(160px, 28vw, 400px);
+        font-weight: 500;
+        line-height: 1;
+        color: var(--text-brand-soft, #923300);
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+    }
 </style>
