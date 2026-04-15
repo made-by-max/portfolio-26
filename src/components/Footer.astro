@@ -108,9 +108,55 @@ footer a:focus {
 }
 
 
+=======
+    footer {
+        background-color: var(--background-primary-inverted);
+        color: var(--text-primary-inverted, #f3f4f2);
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        padding-block-start: var(--size-15);
+        /*min-height: 400px;*/
+    }
+
+    .footer-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+
+
+    .footer-nav,
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+        width: fit-content;
+    }
+
+
+>>>>>>> c6ca5c14dc6d1526980ccb5beeccb0c2ff94c741
+
+    footer a {
+        font-family: var(--font-sans);
+        font-size: var(--text-s);
+        font-weight: 500;
+        color: var(--text-primary-inverted, #f3f4f2);
+        text-decoration: none;
+        transition: opacity 150ms ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+        opacity: 0.6;
+        text-decoration: none;
+    }
 
     .footer-wordmark {
-        position: fixed;
+        position: absolute;
         bottom: -0.35em;
         left: -0.02em;
         font-family: var(--font-display);
