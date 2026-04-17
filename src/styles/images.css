@@ -10,7 +10,7 @@
 .brutalist-inner {
   position: relative;
   background-color: var(--card-background, #f3f4f2);
-  border: 2.5px solid var(--card-stroke, #111);
+  border: 2px solid var(--card-stroke, #111);
   border-radius: 11px;
   overflow: hidden;
   z-index: 1;

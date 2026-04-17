@@ -1,12 +1,36 @@
 ---
-import Tag from "./Tag.astro";
-const { tech } = Astro.props;
+const { logo, tech } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
-<Tag text={tech} class="tech" />
+<div class="tech-stack">
+    <Image src={logo} alt={tech} />
+    {tech}
+</div>
+
 
 <style>
-.tag.tech {
-  box-shadow: 1.5px 1.5px 0px 0px var(--tag-shadow-tech);
+.tech-stack {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--tag-background);
+    border: 2px solid var(--tag-stroke);
+    border-radius: 99px;
+    color: var(--tag-text);
+    font-family: var(--font-accent);
+    font-size: var(--text-xxs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--font-letterspacing-3);
+    padding: 6px 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    gap: var(--size-1);
+}
+
+img {
+    max-height: 16px;
+    width: auto;
+
 }
 </style>
