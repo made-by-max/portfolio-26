@@ -132,7 +132,7 @@
   --border: var(--border-light);
   --corner: var(--corner-light);
 
-  @media (prefers-color-scheme: dark) {
+  /*@media (prefers-color-scheme: dark) {
     --brand-primary: var(--brand-primary-dark);
     --brand-secondary: var(--brand-secondary-dark);
     --brand-primary-soft: var(--brand-primary-soft-dark);
@@ -156,7 +156,7 @@
 
     --border: var(--border-dark);
     --corner: var(--corner-dark);
-  }
+  }*/
 
   /*[data-theme="light"] {
     color-scheme: light;

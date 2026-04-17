@@ -19,12 +19,6 @@ p {
   line-height: var(--text-xl-line-height);
 }
 
-img {
-  height: auto;
-  width: var(--wrapper-medium);
-  /*margin-block: var(--size-12-fluid);*/
-}
-
 li {
   margin-block-end: var(--size-3);
   font-size: var(--text-xl);
@@ -38,6 +32,6 @@ ul {
 
 video {
   margin-block: var(--size-12-fluid);
-  width: var(--wrapper-medium);
+  /*width: var(--wrapper-medium);*/
   height: auto;
 }

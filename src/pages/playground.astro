@@ -2,6 +2,8 @@
 import { getCollection } from "astro:content";
 import PlaygroundCardSection from "../components/PlaygroundSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+
 
 const posts = await getCollection("playground");
 // posts.sort((a, b) => {
@@ -16,8 +18,9 @@ const pageTitle = "Playground";
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-wide sidebarLayout">
+
         <h1>{heading}</h1>
-        <p class="subhead">
+        <p class="eyebrow">
             Prototypes, experiments, and smaller coding projects
         </p>
         <!-- <div class="main-content"> -->
@@ -31,11 +34,8 @@ const pageTitle = "Playground";
     h1 {
         margin-block-end: var(--size-2);
     }
-    .subhead {
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl-line-height);
-        font-weight: var(--font-weight-normal);
-        color: var(--text-soft);
+    .eyebrow {
+
         margin-block-end: var(--size-10);
     }
 </style>

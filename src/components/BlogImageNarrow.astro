@@ -3,22 +3,19 @@ import { Image } from "astro:assets";
 const { src, alt } = Astro.props;
 ---
 
-<div class="brutalist-img-wrap img-wrap-narrow">
-  <!-- Orange shadow card at BOTTOM-RIGHT -->
-  <div class="brutalist-shadow" aria-hidden="true"></div>
-  <div class="brutalist-inner">
+
     <Image src={src} alt={alt} class="card-img" />
-  </div>
-</div>
+
 
 <style>
-  .img-wrap-narrow {
-    max-width: var(--max-text-length);
+
+
+  img {
+    border-radius: 11px;
+    border: 2px solid var(--card-stroke, #111);
+    box-shadow: 4px 4px 0px 0px var(--card-stroke);
+    margin-block: var(--size-12-fluid);
+    background-color: var(--background-primary, #f3f4f2);
   }
 
-  /* Narrow image uses a steeper rotation and slightly smaller radius */
-  .brutalist-shadow {
-    transform: rotate(1deg);
-    border-radius: var(--size-px-2);
-  }
 </style>
