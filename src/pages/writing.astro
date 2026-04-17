@@ -19,6 +19,9 @@ const pageTitle = "Writing";
 <BaseLayout pageTitle={pageTitle}>
     <div class="wrapper-wide sidebarLayout">
         <h1>{heading}</h1>
+        <p class="eyebrow">
+            Assorted thoughts and musings
+        </p>
         <!-- <div class="main-content"> -->
             <article>
 
@@ -32,4 +35,12 @@ const pageTitle = "Writing";
             </aside> -->
         <!-- </div> -->
     </div>
+<style>
+h1 {
+    margin-block-end: var(--size-2);
+}
+    .eyebrow {
+        margin-block-end: var(--size-10);
+    }
+</style>
 </BaseLayout>

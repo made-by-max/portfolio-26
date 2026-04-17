@@ -10,8 +10,8 @@ const heading = "About Max";
         <div class="main-content">
             <article>
                 <h1>👋 Hey there, I'm Max!</h1>
-                <p class="subhead">
-                    I work hard so my dog can have a better life.
+                <p class="eyebrow">
+                    I work hard so my dog can have a better life
                 </p>
                 <p>
                     I've been a product designer for more than 10 years, working
@@ -53,18 +53,16 @@ const heading = "About Max";
 </BaseLayout>
 
 <style>
-    .subhead {
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl-line-height);
-        font-weight: var(--font-weight-medium);
-        color: var(--text-secondary);
-    }
+
 
     /*img.profile {
         max-width: 300px;
         border-radius: 100%;
         margin-block-start: 180px;
     }*/
+    h1 {
+        margin-block-end: var(--size-2);
+    }
 
     p {
         font-size: var(--text-xl);
@@ -75,6 +73,9 @@ const heading = "About Max";
     }
 
 
+    .eyebrow {
+        font-size: var(--text-base);
+    }
 
     .img-wrap {
       position: relative;

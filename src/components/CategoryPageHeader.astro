@@ -1,22 +1,14 @@
 ---
 import LinkToMore from "./LinkToMore.astro";
-const { headerText, linkText, link, subtitleText } = Astro.props;
+const { headerText, linkText, link } = Astro.props;
 ---
 
-
-
-
-    <div class="section-header">
+<div class="section-header">
   <div class="section-title">
     <span class="section-number"> //</span>
-    <h2>{headerText}</h2>
+    <h1>{headerText}</h1>
   </div>
-
-  {link && linkText && (
-    <LinkToMore url={link} text={linkText} />
-  )}
 </div>
-
 
 <style>
   .section-header {
@@ -44,7 +36,7 @@ const { headerText, linkText, link, subtitleText } = Astro.props;
     white-space: nowrap;
   }
 
-  h2 {
+  h1 {
     font-family: var(--font-accent);
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-bold);

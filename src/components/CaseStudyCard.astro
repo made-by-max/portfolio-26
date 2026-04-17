@@ -5,12 +5,12 @@ const { post } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
-<a href={`/${post.collection}/${post.id}`} class="brutalist-card-wrap">
+<a href={`/${post.collection}/${post.id}`} class="card-wrap">
   <!-- Yellow shadow card at TOP-RIGHT (behind main card) -->
-  <div class="brutalist-shadow card-shadow" aria-hidden="true"></div>
+  <!-- <div class="brutalist-shadow card-shadow" aria-hidden="true"></div> -->
 
   <!-- Main card (bottom-left) -->
-  <div class="brutalist-inner">
+  <div class="inner-card">
     <div class="card-image card-image-16-10">
       <Image
         src={post.data.img}
@@ -26,11 +26,34 @@ import { Image } from "astro:assets";
 </a>
 
 <style>
+
+.inner-card {
+    box-shadow: 6px 6px 0px  0px var(--brand-secondary);
+     transition: box-shadow 150ms ease, transform 150ms ease;
+
+      border-radius: 11px;
+      position: relative;
+      background-color: var(--card-background, #f3f4f2);
+      border: 2px solid var(--card-stroke, #111);
+      border-radius: 11px;
+      overflow: hidden;
+      z-index: 1;
+      height: 100%;
+}
+
+.inner-card:hover,
+.inner-card:focus {
+  box-shadow: 3px 3px 0px 0px var(--brand-secondary);
+  transform: translate(2px, 2px);
+  text-decoration: none;
+}
+
+
   /* Yellow shadow, slightly thicker border */
-  .card-shadow {
+  /*.card-shadow {
     background-color: var(--brand-secondary, #f2c94c);
     border-width: 2.5px;
-  }
+  }*/
 
   /* Crop image top/bottom; remove bottom padding so image butts against content */
   .card-image-16-10 {
@@ -39,6 +62,8 @@ import { Image } from "astro:assets";
 
   .card-image-16-10 .card-img {
     aspect-ratio: 16 / 10;
+    border-radius: var(--size-px-1);
+    border: .5px solid var(--card-stroke);
   }
 
   .case-study-content {
@@ -62,5 +87,13 @@ import { Image } from "astro:assets";
     color: var(--card-text-soft, #444);
     margin: 0;
     max-inline-size: none;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  a:hover, a:focus {
+      text-decoration: none;
   }
 </style>

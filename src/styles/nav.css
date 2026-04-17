@@ -9,8 +9,7 @@ header {
   padding-block-start: var(--size-5);
 }
 
-nav,
-.bottom-nav {
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -30,6 +29,15 @@ nav,
   a:focus {
     color: var(--text-brand);
     text-decoration: none;
+  }
+
+  span {
+    font-family: var(--font-accent);
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--font-letterspacing-1);
+    color: var(--brand-primary);
+    white-space: nowrap;
   }
 }
 
@@ -65,14 +73,16 @@ footer {
   left: 0;
   width: 100%;
   overflow: hidden;
-  padding-block-start: var(--size-15);
+  padding-block-start: var(--size-20);
   min-height: 400px;
 }
 
 .footer-inner {
   z-index: 1;
+
   display: flex;
   justify-content: flex-end;
+  margin-inline-end: var(--size-12);
 }
 
 .footer-links {
@@ -80,7 +90,7 @@ footer {
   flex-flow: row wrap;
   /* This aligns items to the end line on main-axis */
   /*justify-content: flex-end;*/
-  gap: var(--size-10);
+  gap: var(--size-12);
 }
 
 footer a {
@@ -94,7 +104,8 @@ footer a {
 
 footer a:hover,
 footer a:focus {
-  opacity: 0.6;
+  color: var(--text-brand-dark);
+  /*opacity: 0.6;*/
   text-decoration: none;
 }
 
@@ -110,13 +121,14 @@ footer a:focus {
 
 .footer-wordmark {
   position: absolute;
-  bottom: -0.35em;
+  bottom: -0.15em;
   left: -0.02em;
   font-family: var(--font-accent);
   font-size: clamp(160px, 28vw, 400px);
   font-weight: var(--font-weight-medium);
   line-height: 1;
-  color: var(--text-brand-soft, #923300);
+  color: var(--brand-primary, #923300);
+  opacity: 0.3;
   pointer-events: none;
   user-select: none;
   white-space: nowrap;
