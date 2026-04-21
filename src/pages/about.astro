@@ -34,27 +34,21 @@ const heading = "About Max";
             </article>
 
             <aside>
-
                 <div class="img-wrap">
-                  <div class="img-shadow-bg" aria-hidden="true"></div>
-                  <div class="img-inner">
-                      <img
-
-                          src="../profilepic.JPG"
-                          alt="A headshot of Max, a white person with short brown hair and glasses."
-                      />
-                  </div>
+                    <div class="img-shadow-bg" aria-hidden="true"></div>
+                    <div class="img-inner">
+                        <img
+                            src="../profilepic.JPG"
+                            alt="A headshot of Max, a white person with short brown hair and glasses."
+                        />
+                    </div>
                 </div>
-
-
             </aside>
         </div>
     </div>
 </BaseLayout>
 
 <style>
-
-
     /*img.profile {
         max-width: 300px;
         border-radius: 100%;
@@ -72,31 +66,34 @@ const heading = "About Max";
         max-width: 65ch;
     }
 
-
     .eyebrow {
-        font-size: var(--text-base);
+        font-family: var(--font-accent);
+        font-size: var(--text-s);
+        text-transform: uppercase;
+        /*font-weight: var(--font-weight-semibold);*/
+        color: var(--text-soft);
     }
 
     .img-wrap {
-      position: relative;
-      /* Space at bottom and right for shadow card */
-      margin-bottom: 16px;
-      margin-right: 16px;
-      margin-block: var(--size-10-fluid, 2.5rem);
-      max-width: 300px;
+        position: relative;
+        /* Space at bottom and right for shadow card */
+        margin-bottom: 16px;
+        margin-right: 16px;
+        margin-block: var(--size-10-fluid, 2.5rem);
+        max-width: 300px;
     }
 
     /* Orange shadow card at BOTTOM-RIGHT */
     .img-shadow-bg {
-      position: absolute;
-      top: 16px;
-      left: 16px;
-      right: -16px;
-      bottom: -16px;
-      background-color: var(--brand-primary, #ff5c00);
-      border: 2px solid var(--card-stroke, #111);
-      border-radius: 10px;
-      transform: rotate(0.73deg);
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        right: -16px;
+        bottom: -16px;
+        background-color: var(--brand-primary, #ff5c00);
+        border: 2px solid var(--card-stroke, #111);
+        border-radius: 10px;
+        transform: rotate(0.73deg);
     }
 
     .img-inner {
@@ -113,8 +110,8 @@ const heading = "About Max";
     }
 
     .img-inner img {
-      max-width: 300px;
-      height: auto;
-      display: block;
+        max-width: 300px;
+        height: auto;
+        display: block;
     }
 </style>

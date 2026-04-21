@@ -3,56 +3,50 @@ import LinkToMore from "./LinkToMore.astro";
 const { headerText, linkText, link, subtitleText } = Astro.props;
 ---
 
+<div class="section-header">
+    <div class="section-title">
+        <span class="section-number" aria-hidden="true"> //</span>
+        <h2>{headerText}</h2>
+    </div>
 
-
-
-    <div class="section-header">
-  <div class="section-title">
-    <span class="section-number"> //</span>
-    <h2>{headerText}</h2>
-  </div>
-
-  {link && linkText && (
-    <LinkToMore url={link} text={linkText} />
-  )}
+    {link && linkText && <LinkToMore url={link} text={linkText} />}
 </div>
 
-
 <style>
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--size-px-3);
-    margin-block-end: var(--size-8);
-    border-bottom: 1px solid var(--border);
-    padding-block-end: var(--size-4);
-  }
+    .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--size-px-3);
+        margin-block-end: var(--size-8);
+        border-bottom: 1px solid var(--border);
+        padding-block-end: var(--size-4);
+    }
 
-  .section-title {
-    display: flex;
-    align-items: start;
-    gap: var(--size-px-3);
-  }
+    .section-title {
+        display: flex;
+        align-items: start;
+        gap: var(--size-px-3);
+    }
 
-  .section-number {
-    font-family: var(--font-accent);
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: var(--font-letterspacing-1);
-    color: var(--brand-primary);
-    white-space: nowrap;
-  }
+    .section-number {
+        font-family: var(--font-accent);
+        font-size: var(--text-xl);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: var(--font-letterspacing-1);
+        color: var(--brand-primary);
+        white-space: nowrap;
+    }
 
-  h2 {
-    font-family: var(--font-accent);
-    font-size: var(--text-2xl);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--text-2xl-line-height);
-    letter-spacing: -0.01em;
-    /*text-transform: uppercase;*/
-    color: var(--text);
-    margin: 0;
-    max-inline-size: none;
-  }
+    h2 {
+        font-family: var(--font-accent);
+        font-size: var(--text-2xl);
+        font-weight: var(--font-weight-bold);
+        line-height: var(--text-2xl-line-height);
+        letter-spacing: -0.01em;
+        /*text-transform: uppercase;*/
+        color: var(--text);
+        margin: 0;
+        max-inline-size: none;
+    }
 </style>

@@ -1,0 +1,153 @@
+---
+title: Untangling the Auth0 Docs
+description: A research informed approach to navigation that improved discoverability by 400%
+intro: I conducted user interviews, a content audit, card sorting, and usability testing to completely overhaul the information architecutre of Auth0's developer documentation.
+img: ../../assets/docs-ia/docs-featured-image.png
+featured: false
+---
+
+import StandardSection from '../../components/StandardSection.astro'
+import FullBleedSection from '../../components/FullBleedSection.astro'
+import BlogImageFullBleed from '../../components/BlogImageFullBleed.astro'
+import BlogImageWide from '../../components/BlogImageWide.astro'
+import BlogImageNarrow from '../../components/BlogImageNarrow.astro'
+import Blockquote from '../../components/Blockquote.astro'
+
+import featureCardSort from '../../assets/docs-ia/featureCardSort.png'
+import inconsistentHierarchy from '../../assets/docs-ia/inconsistentHierarchy.png'
+import landingpagearch from '../../assets/docs-ia/landingpagearch.png'
+import landingpageillustration from '../../assets/docs-ia/landingpageillustration.png'
+import landingpagesimplediagram from '../../assets/docs-ia/landingpagesimplediagram.png'
+import mismatchedNav from '../../assets/docs-ia/mismatchedNav.png'
+import orphan from '../../assets/docs-ia/orphan.png'
+import sidebars from '../../assets/docs-ia/sidebars.png'
+import taskCardSort from '../../assets/docs-ia/taskCardSort.png'
+
+
+<StandardSection>
+
+A strong developer experience has always been a core part of Auth0’s DNA. Since their founding they have deliberately built a developer-first product and it continues to be a key part of their success to this day. Naturally, maintaining excellent developer documentation is an essential part of that strategy.
+
+
+## Auth0 Docs - love ‘em or hate ‘em
+We got a lot of feedback that our docs were amazing. They were frequently cited as a competitive differentiator. We also got a lot of feedback that our docs were terrible and impossible to navigate.
+
+I set out to find out why.
+
+### Experience level was a key factor
+
+Developers who liked our docs:
+
+- Had more pre-existing Identity and Access management (IAM) knowledge
+- Relied more on Google searches to find docs or community forum posts
+
+Developers who struggled with our docs:
+- Had less Identity and Access management (IAM) knowledge
+- Relied more on our sidebar navigation because they didn’t know the concepts well enough to choose good search terms
+- Ended up jumping back and forth between lots of open of tabs
+
+## Making sense of the mess
+I performed a content audit of all 1000+ pages of docs, putting together a massive spreadsheet highlighting the problems in the IA. (I am precisely the kind of nerd 🤓 who loves this stuff).
+
+Our sidebar navigation was manually generated, but our breadcrumbs were automatically generated based on the file structure of our CMS.
+
+Over time the two had diverged, and the result was that **75% of docs pages had navigational errors**.
+
+### Many pages had inconsistent hierarchies.
+Content might be multiple levels deep in the sidebar navigation, but appear to be at the top level in the breadcrumb navigation.
+
+
+<BlogImageWide src={inconsistentHierarchy} alt="a screenshot of the auth0 docs"/>
+
+### Some pages were in multiple categories
+Pages frequently had mismatches where the content resided in completely different categories in the sidebar versus the breadcrumbs.
+
+<BlogImageWide src={mismatchedNav} alt="a screenshot of the auth0 docs"/>
+
+### More than half the pages were orphans
+A whopping 54% of pages were orphans that didn't show up in the sidebar navigation at all.
+
+
+<BlogImageWide src={orphan} alt="a screenshot of the auth0 docs"/>
+
+## Card sorting revealed two basic mental models
+
+Some users grouped topics by task, creating groups based on a user’s journey through setting up and configuring Auth0.
+
+<BlogImageNarrow src={taskCardSort} alt="an illustration of the task-based card sort"/>
+
+Others grouped topics by feature, creating groups like authenticaion, security, or configuration.
+
+<BlogImageNarrow src={featureCardSort} alt="an illustration of the feature-based card sort"/>
+
+
+## Wayfinding revealed a slight preference for feature-based navigation
+To validate the results of the card sorting, I followed up with wayfinding tests for both a task-based IA and a feature-based IA.
+
+Once again, different people had different mental models about how the topics should be grouped. Overall, however, more people were successful with the feature-based navigation and reported preferring that option.
+
+
+<Blockquote>
+I preferred the [feature-based] experience because the top bar navigation was segmented more and the headlines were much less ambiguous.
+</Blockquote>
+
+
+## Breaking up the monolith
+Based on my findings from the card sorting and wayfinding tests, I split the docs content into 7 main categories, each with their own sub-menu:
+
+- Get started
+- Authentication
+- Manage Users
+- Customize
+- Secure
+- Deploy and Monitor
+- Troubleshoot
+
+</StandardSection>
+
+<FullBleedSection backgroundColor="#D6E1FF">
+
+ <BlogImageFullBleed src={sidebars} alt="an image of the new sidebars" />
+
+
+</FullBleedSection>
+<StandardSection>
+## Landing pages provide a high-level overview
+We wanted to introduce developers to each of these sections, while also helping them get a better high level understanding of the Auth0 product.
+
+
+Our technical writing staff developed new content for each landing page and the homepage and I tested three different design ideas with users.
+
+
+The first design used a simple illustration created by our brand design team. Users found this to be **too abstract** and not useful.
+
+<BlogImageWide src={landingpageillustration} alt="a screenshot of the auth0 docs landing page with a simple illustration"/>
+
+The second design featured a detailed architectural diagram of the Auth0 ecosystem. Most developers found it to be **too complex** for a landing page.
+
+
+<BlogImageWide src={landingpagearch} alt="a screenshot of the auth0 docs landing page with an architecture diagram"/>
+
+The final design used a simplified diagram that provided users with a big picture overview of the Auth0 pipeline. Testers unanimously preferred this option, and thought that it provided **just the right level of detail**.
+
+<BlogImageWide src={landingpagesimplediagram} alt="a screenshot of the auth0 docs landing page with a simple diagram"/>
+
+## Finalizing the Design
+I made some small tweaks based on some of the feedback from our usability testing and then designed the new sidebar sections.
+
+I paired with our frontend engineering team to iterate on the behavior of the new sidebar, how users would move from one section to another, and the mobile version of the navigation menu.
+
+<video src="https://ik.imagekit.io/uls82veyl/nav-demo.mp4"  controls > Your browser does not support the video tag. </video>
+
+## Results
+
+When I first assessed the docs site, 75% of pages had some sort of navigational error. After I restructured the information architecture I fixed the ingestion pipeline to ensure that the breadcrumbs and sidebar navigation always stayed in sync, resulting in a 400% improvement in discoverability.
+
+### Qualitative Feedback
+
+Documentation can be challenging to measure quantitatively. Metrics can tell us if a user is staying on a certain page for more or less time than before, but they can’t tell us if that’s because they found the information they needed more quickly or because they were in the wrong place.
+
+Therefore, most of the impact of this initiative was measured through qualitative feedback, including follow-up interviews with users, and monitoring the feedback from the customer satisfaction widget embedded on every page of our documentation.
+
+The response to the new design was overwhelmingly positive, with users reporting that the new menus were much easier to navigate and that the landing pages gave them more context and helped them get a better sense of the Auth0 product as a whole.
+</StandardSection>

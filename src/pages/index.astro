@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "Max Taylor";
 
 import BlogSection from "../components/BlogSection.astro";
-import CaseStudySection from "../components/CaseStudySection.astro";
+import FeaturedCaseStudies from "../components/FeaturedCaseStudies.astro";
 import PlaygroundFeaturedSection from "../components/PlaygroundFeaturedSection.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 ---
@@ -12,9 +12,8 @@ import SectionHeader from "../components/SectionHeader.astro";
 <BaseLayout pageTitle={pageTitle}>
     <section>
         <div class="wrapper-wide">
-
             <h1>Max Taylor</h1>
-<p class="eyebrow">Product Designer and Developer</p>
+            <p class="eyebrow">Product Designer and Developer</p>
             <p class="intro">
                 With more than a decade of experience in product design and
                 coding skills to boot, I excel at systems thinking, rapid
@@ -30,11 +29,10 @@ import SectionHeader from "../components/SectionHeader.astro";
             <SectionHeader
                 sectionNumber="01"
                 headerText="Selected Case Studies"
-
                 linkText="All case studies"
                 link="/design/"
             />
-            <CaseStudySection />
+            <FeaturedCaseStudies />
         </div>
     </section>
 

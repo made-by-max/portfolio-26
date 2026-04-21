@@ -5,12 +5,17 @@ import SectionHeader from "../components/SectionHeader.astro";
 
 import "../styles/cards.css";
 const posts = await getCollection("design");
+const filteredPosts = posts.filter((status) => status.data.featured === true);
 ---
 
-<div class="cardLayout">
+<article>
     {posts.map((post) => <CaseStudyCard post={post} />)}
-</div>
+</article>
 
 <style>
-
+    article {
+        display: grid;
+        gap: var(--size-3);
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+    }
 </style>

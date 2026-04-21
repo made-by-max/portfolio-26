@@ -1,138 +1,138 @@
 :where(html) {
-  --neutral-100: #fff;
-  --neutral-200: #f3f4f2;
-  --neutral-300: #8a8f98;
-  --neutral-400: #808080;
-  --neutral-500: #37393a;
-  --neutral-600: #444444;
-  --neutral-700: #232326;
-  --neutral-800: #1a1a1a;
-  --neutral-900: #111111;
+    --neutral-100: #fff;
+    --neutral-200: #f3f4f2;
+    --neutral-300: #8a8f98;
+    --neutral-400: #808080;
+    --neutral-500: #6b6b6b;
+    --neutral-600: #444444;
+    --neutral-700: #232326;
+    --neutral-800: #1a1a1a;
+    --neutral-900: #111111;
 
-  /* Brand palette */
-  --orange-300: #d19372;
-  --orange-500: #f26a21;
-  --orange-600: #ff5c00;
-  --orange-700: #c04807;
-  --orange-800: #923300;
-  --yellow-500: #f2c94c;
+    /* Brand palette */
+    --orange-300: #d19372;
+    --orange-500: #f26a21;
+    --orange-600: #ff5c00;
+    --orange-700: #c04807;
+    --orange-800: #923300;
+    --yellow-500: #f2c94c;
 
-  --indigo-0: #edf2ff;
-  --indigo-1: #dbe4ff;
-  --indigo-2: #bac8ff;
-  --indigo-3: #91a7ff;
-  --indigo-4: #748ffc;
-  --indigo-5: #5c7cfa;
-  --indigo-6: #4c6ef5;
-  --indigo-7: #4263eb;
-  --indigo-8: #3b5bdb;
-  --indigo-9: #364fc7;
-  --indigo-10: #2f44ad;
-  --indigo-11: #283a94;
-  --indigo-12: #21307a;
+    --indigo-0: #edf2ff;
+    --indigo-1: #dbe4ff;
+    --indigo-2: #bac8ff;
+    --indigo-3: #91a7ff;
+    --indigo-4: #748ffc;
+    --indigo-5: #5c7cfa;
+    --indigo-6: #4c6ef5;
+    --indigo-7: #4263eb;
+    --indigo-8: #3b5bdb;
+    --indigo-9: #364fc7;
+    --indigo-10: #2f44ad;
+    --indigo-11: #283a94;
+    --indigo-12: #21307a;
 
-  --line: color-mix(in hsl, canvasText, transparent 95%);
-  --corner: color-mix(in hsl, canvasText, transparent 90%);
+    --line: color-mix(in hsl, canvasText, transparent 95%);
+    --corner: color-mix(in hsl, canvasText, transparent 90%);
 
-  /* Component tokens */
-  --card-background: var(--neutral-200);
+    /* Component tokens */
+    --card-background: var(--neutral-200);
 
-  --card-text-primary: var(--neutral-900);
-  --card-text-soft: var(--neutral-600);
-  --card-shadow-yellow: var(--yellow-500);
-  --card-shadow-orange: var(--orange-500);
-  --tag-shadow-blog: var(--orange-500);
-  --tag-shadow-tech: var(--yellow-500);
-  --button-bg: var(--orange-600);
-  --button-text: var(--neutral-100);
+    --card-text-primary: var(--neutral-900);
+    --card-text-soft: var(--neutral-500);
+    --card-shadow-yellow: var(--yellow-500);
+    --card-shadow-orange: var(--orange-500);
+    --tag-shadow-blog: var(--orange-500);
+    --tag-shadow-tech: var(--yellow-500);
+    --button-bg: var(--orange-600);
+    --button-text: var(--neutral-100);
 
-  /* Light and dark modes */
-  /* light */
-  --brand-primary-light: var(--orange-500);
-  --brand-secondary-light: var(--yellow-500);
-  --brand-primary-soft-light: var(--orange-300);
+    /* Light and dark modes */
+    /* light */
+    --brand-primary-light: var(--orange-500);
+    --brand-secondary-light: var(--yellow-500);
+    --brand-primary-soft-light: var(--orange-300);
 
-  --background-primary-light: var(--neutral-200);
-  --background-secondary-light: var(--neutral-100);
-  --background-primary-inverted-light: var(--neutral-900);
-  --background-secondary-inverted-light: var(--neutral-800);
+    --background-primary-light: var(--neutral-200);
+    --background-secondary-light: var(--neutral-100);
+    --background-primary-inverted-light: var(--neutral-900);
+    --background-secondary-inverted-light: var(--neutral-800);
 
-  --text-primary-light: var(--neutral-900);
-  --text-soft-light: var(--neutral-600);
-  --text-primary-inverted-light: var(--neutral-200);
-  --text-brand-light: var(--orange-700);
-  --text-brand-soft-light: var(--orange-900);
+    --text-primary-light: var(--neutral-900);
+    --text-soft-light: var(--neutral-500);
+    --text-primary-inverted-light: var(--neutral-200);
+    --text-brand-light: var(--orange-700);
+    --text-brand-soft-light: var(--orange-900);
 
-  --card-stroke-light: var(--neutral-900);
-  --tag-background-light: var(--neutral-100);
-  --tag-stroke-light: var(--neutral-800);
-  --tag-text-light: var(--neutral-900);
-  --button-border-light: var(--neutral-900);
-  --button-shadow-light: var(--neutral-900);
+    --card-stroke-light: var(--neutral-900);
+    --tag-background-light: var(--neutral-100);
+    --tag-stroke-light: var(--neutral-800);
+    --tag-text-light: var(--neutral-900);
+    --button-border-light: var(--neutral-900);
+    --button-shadow-light: var(--neutral-900);
 
-  --border-light: var(--neutral-900);
-  --shadow-color: var(--neutral-500);
-  --corner-light: color-mix(in hsl, canvasText, transparent 90%);
+    --border-light: var(--neutral-900);
+    --shadow-color: var(--neutral-500);
+    --corner-light: color-mix(in hsl, canvasText, transparent 90%);
 
-  /*dark*/
-  --brand-primary-dark: var(--orange-500);
-  --brand-secondary-dark: var(--yellow-500);
-  --brand-primary-soft-dark: var(--orange-700);
+    /*dark*/
+    --brand-primary-dark: var(--orange-500);
+    --brand-secondary-dark: var(--yellow-500);
+    --brand-primary-soft-dark: var(--orange-700);
 
-  --background-primary-dark: var(--neutral-900);
-  --background-secondary-dark: var(--neutral-800);
-  --background-primary-inverted-dark: var(--neutral-200);
-  --background-secondary-inverted-dark: var(--neutral-100);
+    --background-primary-dark: var(--neutral-900);
+    --background-secondary-dark: var(--neutral-800);
+    --background-primary-inverted-dark: var(--neutral-200);
+    --background-secondary-inverted-dark: var(--neutral-100);
 
-  --text-primary-dark: var(--neutral-100);
-  --text-soft-dark: var(--neutral-400);
-  --text-primary-inverted-dark: var(--neutral-800);
-  --text-brand-soft-dark: var(--orange-300);
-  --text-brand-dark: var(--orange-500);
-  --card-stroke-dark: var(--neutral-100);
-  --tag-background-dark: var(--neutral-800);
-  --tag-stroke-dark: var(--neutral-200);
-  --tag-text-dark: var(--neutral-200);
-  --button-border-dark: var(--neutral-200);
-  --button-text-dark: var(--neutral-200);
-  --button-shadow-dark: var(--neutral-200);
+    --text-primary-dark: var(--neutral-100);
+    --text-soft-dark: var(--neutral-400);
+    --text-primary-inverted-dark: var(--neutral-800);
+    --text-brand-soft-dark: var(--orange-300);
+    --text-brand-dark: var(--orange-500);
+    --card-stroke-dark: var(--neutral-100);
+    --tag-background-dark: var(--neutral-800);
+    --tag-stroke-dark: var(--neutral-200);
+    --tag-text-dark: var(--neutral-200);
+    --button-border-dark: var(--neutral-200);
+    --button-text-dark: var(--neutral-200);
+    --button-shadow-dark: var(--neutral-200);
 
-  --border-dark: var(--neutral-100);
-  --shadow-color: var(--neutral-900);
-  --corner-dark: color-mix(in hsl, canvasText, transparent 90%);
+    --border-dark: var(--neutral-100);
+    --shadow-color: var(--neutral-900);
+    --corner-dark: color-mix(in hsl, canvasText, transparent 90%);
 
-  /* color schemes */
-  color-scheme: light;
+    /* color schemes */
+    color-scheme: light;
 
-  /* set defaults */
+    /* set defaults */
 
-  --brand-primary: var(--brand-primary-light);
-  --brand-secondary: var(--brand-secondary-light);
-  --brand-primary-soft: var(--brand-primary-soft-light);
+    --brand-primary: var(--brand-primary-light);
+    --brand-secondary: var(--brand-secondary-light);
+    --brand-primary-soft: var(--brand-primary-soft-light);
 
-  --background-primary: var(--background-primary-light);
-  --background-secondary: var(--background-secondary-light);
-  --background-primary-inverted: var(--background-primary-inverted-light);
-  --background-secondary-inverted: var(--background-secondary-inverted-light);
+    --background-primary: var(--background-primary-light);
+    --background-secondary: var(--background-secondary-light);
+    --background-primary-inverted: var(--background-primary-inverted-light);
+    --background-secondary-inverted: var(--background-secondary-inverted-light);
 
-  --text: var(--text-primary-light);
-  --text-primary: var(--text-primary-light);
-  --text-soft: var(--text-soft-light);
-  --text-brand: var(--text-brand-light);
-  --text-primary-inverted: var(--text-primary-inverted-light);
-  --text-brand-soft: var(--text-brand-soft-light);
+    --text: var(--text-primary-light);
+    --text-primary: var(--text-primary-light);
+    --text-soft: var(--text-soft-light);
+    --text-brand: var(--text-brand-light);
+    --text-primary-inverted: var(--text-primary-inverted-light);
+    --text-brand-soft: var(--text-brand-soft-light);
 
-  --card-stroke: var(--card-stroke-light);
-  --tag-background: var(--tag-background-light);
-  --tag-stroke: var(--tag-stroke-light);
-  --tag-text: var(--tag-text-light);
-  --button-border: var(--button-border-light);
-  --button-shadow: var(--button-shadow-light);
+    --card-stroke: var(--card-stroke-light);
+    --tag-background: var(--tag-background-light);
+    --tag-stroke: var(--tag-stroke-light);
+    --tag-text: var(--tag-text-light);
+    --button-border: var(--button-border-light);
+    --button-shadow: var(--button-shadow-light);
 
-  --border: var(--border-light);
-  --corner: var(--corner-light);
+    --border: var(--border-light);
+    --corner: var(--corner-light);
 
-  /*@media (prefers-color-scheme: dark) {
+    /*@media (prefers-color-scheme: dark) {
     --brand-primary: var(--brand-primary-dark);
     --brand-secondary: var(--brand-secondary-dark);
     --brand-primary-soft: var(--brand-primary-soft-dark);
@@ -158,7 +158,7 @@
     --corner: var(--corner-dark);
   }*/
 
-  /*[data-theme="light"] {
+    /*[data-theme="light"] {
     color-scheme: light;
 
     --brand-primary: var(--brand-primary-light);
