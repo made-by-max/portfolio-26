@@ -1,58 +1,59 @@
 .tag {
-  font-size: var(--text-xs);
-  font-family: var(--font-mono);
-  color: var(--text-secondary);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
 
-  text-decoration: none;
-
-  border: 1px solid var(--text-secondary);
-  border-radius: 4px;
-  padding: 0 var(--size-2);
-
-  a,
-  a:hover,
-  a:focus {
     text-decoration: none;
-  }
+
+    border: 1px solid var(--text-secondary);
+    border-radius: 4px;
+    padding: 0 var(--size-2);
+
+    a,
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
 }
 
 .post-heading {
-  margin-block-end: var(--size-2);
+    margin-block-end: var(--size-2);
 }
 
 .post-header {
-  margin-block-end: var(--size-10-fluid);
+    margin-block-end: var(--size-10-fluid);
 }
 
 .post-card {
-  margin-block-start: var(--size-4);
-  margin-block-end: var(--size-10-fluid);
+    margin-block-start: var(--size-4);
+    margin-block-end: var(--size-10-fluid);
 }
 
 .post-date {
-  font-size: var(--text-s);
-  color: var(--text-secondary);
+    font-size: var(--text-s);
+    color: var(--text-secondary);
 }
 
 .post-tags a:hover,
 a:focus {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .post-metadata {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--size-4);
-  margin-block-start: var(--size-1);
-  margin-block-end: var(--size-4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--size-4);
+    margin-block-start: var(--size-1);
+    margin-block-end: var(--size-4);
 }
 
 img {
-  border-radius: 11px;
-  border: 2px solid var(--card-stroke, #111);
-  box-shadow: 4px 4px 0px 0px var(--card-stroke);
-  margin-block: var(--size-12-fluid);
-  background-color: var(--background-primary, #f3f4f2);
+    border-radius: 11px;
+    border: 2px solid var(--card-stroke, #111);
+    box-shadow: 4px 4px 0px 0px var(--card-stroke);
+    margin-block: var(--size-12-fluid);
+    background-color: var(--background-primary, #f3f4f2);
+    height: auto;
 }

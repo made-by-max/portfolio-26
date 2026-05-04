@@ -1,37 +1,45 @@
 h1 {
-  margin-block-end: var(--size-12);
+    margin-block-end: var(--size-12);
 }
 
 h2 {
-  margin-block-start: var(--size-13-fluid);
-  margin-block-end: var(--size-6-fluid);
-  font-weight: 500;
+    margin-block-start: var(--size-13-fluid);
+    margin-block-end: var(--size-6-fluid);
+    font-weight: 500;
 }
 
 h3 {
-  margin-block-start: var(--size-10-fluid);
-  margin-block-end: var(--size-5);
+    margin-block-start: var(--size-10-fluid);
+    margin-block-end: var(--size-5);
 }
 
 p {
-  margin-block-end: var(--size-4);
-  font-size: var(--text-xl);
-  line-height: var(--text-xl-line-height);
+    margin-block-end: var(--size-4);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl-line-height);
 }
 
 li {
-  margin-block-end: var(--size-3);
-  font-size: var(--text-xl);
-  line-height: var(--text-xl-line-height);
+    margin-block-end: var(--size-3);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl-line-height);
 }
 
 ul {
-  margin-block-start: -16px;
-  margin-block-end: 40px;
+    margin-block-start: -16px;
+    margin-block-end: 40px;
 }
 
 video {
-  margin-block: var(--size-12-fluid);
-  /*width: var(--wrapper-medium);*/
-  height: auto;
+    margin-block: var(--size-12-fluid);
+    /*width: var(--wrapper-medium);*/
+    height: auto;
+}
+
+pre {
+    border-radius: 8px; /* Rounded corners */
+    padding: var(--size-5); /* Spacing inside the block */
+    margin-block: var(--size-10-fluid);
+    overflow: auto; /* Enable horizontal scroll if code is too long */
+    line-height: 1.45; /* Improve readability */
 }
