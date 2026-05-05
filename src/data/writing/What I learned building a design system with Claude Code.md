@@ -5,9 +5,9 @@ tags:
   - design-system
 ---
 
-I recently built a small design system for personal use using Claude Code and the Figma Console MCP. Read on to find out how I did it and what I learned in the process.
-
 ![an illustration of a json file with an arrow pointing to the claude code logo and then an arrow pointing to the figma logo](src/assets/blog-posts/design-system/cover.png)
+
+I recently built a small design system for personal use using Claude Code and the Figma Console MCP. Read on to find out how I did it and what I learned in the process.
 
 ## Why I decided to build my own design system
 
