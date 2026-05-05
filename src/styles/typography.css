@@ -116,6 +116,7 @@
         line-height: var(--text-2xl-line-height);
         /*font-weight: var(--font-weight-semibold);*/
         color: var(--text-soft);
+        text-wrap: balance;
     }
 
     li,
