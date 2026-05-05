@@ -111,9 +111,9 @@
     }
 
     .eyebrow {
-        font-family: var(--font-accent);
-        font-size: var(--text-s);
-        text-transform: uppercase;
+        font-family: var(--font-sans);
+        font-size: var(--text-2xl);
+        line-height: var(--text-2xl-line-height);
         /*font-weight: var(--font-weight-semibold);*/
         color: var(--text-soft);
     }

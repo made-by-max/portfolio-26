@@ -18,6 +18,10 @@ const { pageTitle } = Astro.props;
 
         <meta name="viewport" content="width=device-width" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Max Taylor's product design portfolio, code playground, and blog."
+        />
 
         <meta name="generator" content={Astro.generator} />
         <!-- <ThemeManager defaultTheme="auto" /> -->
@@ -32,9 +36,7 @@ const { pageTitle } = Astro.props;
         </main>
 
         <Footer />
-    </body>
-
-    <!-- <style is:global>
+    </body><!-- <style is:global>
         :root[data-theme="light"] {
             --brand-primary: var(--brand-primary-light);
             --brand-secondary: var(--brand-secondary-light);
