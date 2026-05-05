@@ -152,7 +152,7 @@ Once I confirmed that it had successfully set up my variables I prompted it to c
 
 On the whole it did a surprisingly good job creating my components. The autolayout on my toast components was a little wonky and I had to do an additional prompt to get it to create all the different states for my button components, but those were the only real issues it had. It was definitely a lot less painful than trying to import from JSON.
 
-![design system components with squished toast components](src/assets/blog-posts/design-system/wonky-toasts.png)
+
 
 ## Using it
 Once everything was created it was time to put it to the test! I set up npm packages for my [tokens](https://www.npmjs.com/package/@madebymax/design-tokens) and [components](https://www.npmjs.com/package/@madebymax/design-system-components) for Claude Code to use and tested it out with a couple of different workflows.
