@@ -1,0 +1,47 @@
+---
+title: RAG App for My HOA
+featured: true
+img: ../../assets/playground/hoarag.png
+tags:
+  - animations
+---
+
+import TechStack from '../../components/TechStack.astro'
+import Button from '../../components/Button.astro'
+import GithubButton from '../../components/GithubButton.astro'
+import anthropic from '../../assets/logos/Anthropic.svg'
+import openai from '../../assets/logos/openai-icon.svg'
+import pinecone from '../../assets/logos/pinecone.svg'
+import next from '../../assets/logos/nextjs.svg'
+import { Image } from "astro:assets";
+
+
+
+    <div class="leading">
+
+        <div class="media">
+            <video src="https://ik.imagekit.io/uls82veyl/hoa.mp4" controls > Your browser does not support the video tag. </video>
+
+        </div>
+
+
+
+
+    <div class="stack">
+      <TechStack logo={pinecone} tech="Pinecone" />
+      <TechStack logo={openai} tech="Open AI" />
+      <TechStack logo={anthropic} tech="Anthropic" />
+      <TechStack logo={next} tech="NextJS" />
+    </div>
+ </div>
+
+    <div class="trailing">
+    <div class="content">
+        I created a Retrieval-Augmented Generation (RAG) application to perform a semantic search of my HOA's bylaws and local property ordinances so that residents can easily find out what is and is not allowed.
+
+        I used Pinecone as my vector database, OpenAI to create the embeddings, and Anthropic to perform the text generation.
+    </div>
+    <div class="links">
+        <GithubButton url="https://github.com/made-by-max/hoa-rag-app" />
+    </div>
+    </div>

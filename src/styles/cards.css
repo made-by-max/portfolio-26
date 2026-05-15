@@ -1,13 +1,16 @@
 .card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
+    grid-row: span 3;
+
+    display: grid;
+    grid-template-rows: subgrid;
+    gap: var(--size-5);
 }
 
 .card {
+    gap: 1rem;
+
     padding: 32px;
 
-    position: relative;
     /*background-color: #212529;*/
     background:
         linear-gradient(#000, #000) padding-box,
