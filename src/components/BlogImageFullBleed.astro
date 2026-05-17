@@ -1,20 +1,17 @@
 ---
-
 import { Image } from "astro:assets";
 const { src } = Astro.props;
 const { alt } = Astro.props;
 ---
 
 <div>
-
-<Image src={src} alt={alt} />
+    <Image src={src} alt={alt} />
 </div>
-
 
 <style>
     img {
-        width: 100vw
-
+        width: 100vw;
+        height: auto;
     }
 
     div {
@@ -22,4 +19,4 @@ const { alt } = Astro.props;
         padding-block: var(--size-10);
         padding-inline-start: var(--size-2);
     }
-    </style>
+</style>
