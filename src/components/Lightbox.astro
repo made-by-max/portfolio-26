@@ -1,0 +1,222 @@
+---
+// Lightbox overlay — included once in BaseLayout.
+// Any <img> with data-lightbox on the page will open it when clicked.
+---
+
+<div
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image lightbox"
+    hidden
+>
+    <button id="lightbox-close" aria-label="Close lightbox">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+    <div id="lightbox-backdrop"></div>
+    <div id="lightbox-content">
+        <img id="lightbox-img" src="" alt="" />
+        <p id="lightbox-caption"></p>
+    </div>
+</div>
+
+<style>
+    #lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--size-6, 1.5rem);
+    }
+
+    #lightbox[hidden] {
+        display: none;
+    }
+
+    #lightbox-backdrop {
+        position: absolute;
+        inset: 0;
+        background: oklch(0 0 0 / 0.82);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        cursor: zoom-out;
+    }
+
+    #lightbox-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--size-3, 0.75rem);
+        max-width: min(90vw, 1200px);
+        max-height: 90vh;
+        animation: lightbox-in 180ms ease both;
+    }
+
+    #lightbox-img {
+        display: block;
+        max-width: 100%;
+        max-height: calc(90vh - 3rem);
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 11px;
+        background-color: #fff;
+    }
+
+    #lightbox-caption {
+        color: oklch(1 0 0 / 0.85);
+        font-size: var(--text-sm, 0.875rem);
+        text-align: center;
+        margin: 0;
+        max-width: 60ch;
+        line-height: 1.5;
+    }
+
+    #lightbox-caption:empty {
+        display: none;
+    }
+
+    #lightbox-close {
+        position: fixed;
+        top: var(--size-5, 1.25rem);
+        right: var(--size-5, 1.25rem);
+        z-index: 2;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: oklch(1 0 0 / 0.12);
+        border: 1.5px solid oklch(1 0 0 / 0.25);
+        border-radius: 50%;
+        color: oklch(1 0 0 / 0.9);
+        cursor: pointer;
+        transition:
+            background 150ms ease,
+            transform 150ms ease;
+        padding: 0;
+    }
+
+    #lightbox-close:hover {
+        background: oklch(1 0 0 / 0.22);
+        transform: scale(1.08);
+    }
+
+    @keyframes lightbox-in {
+        from {
+            opacity: 0;
+            transform: scale(0.94);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+
+<script>
+    function initLightbox() {
+        // Re-query DOM every time — required after Astro view transitions
+        // because ClientRouter swaps the DOM, making old references stale.
+        const lightbox = document.getElementById(
+            "lightbox",
+        ) as HTMLElement | null;
+        const lightboxImg = document.getElementById(
+            "lightbox-img",
+        ) as HTMLImageElement | null;
+        const lightboxCaption = document.getElementById(
+            "lightbox-caption",
+        ) as HTMLParagraphElement | null;
+        const closeBtn = document.getElementById(
+            "lightbox-close",
+        ) as HTMLButtonElement | null;
+        const backdrop = document.getElementById(
+            "lightbox-backdrop",
+        ) as HTMLDivElement | null;
+
+        if (
+            !lightbox ||
+            !lightboxImg ||
+            !lightboxCaption ||
+            !closeBtn ||
+            !backdrop
+        )
+            return;
+
+        function open(src: string, alt: string) {
+            lightboxImg!.src = src;
+            lightboxImg!.alt = alt;
+            lightboxCaption!.textContent = alt || "";
+            lightbox!.hidden = false;
+            document.body.style.overflow = "hidden";
+            closeBtn!.focus();
+        }
+
+        function close() {
+            lightbox!.hidden = true;
+            lightboxImg!.src = "";
+            document.body.style.overflow = "";
+        }
+
+        // Wire up close controls (safe to add again — old element is gone after swap)
+        closeBtn.addEventListener("click", close);
+        backdrop.addEventListener("click", close);
+
+        // Also tag any plain <img> inside an <article> that isn't already marked
+        document
+            .querySelectorAll<HTMLImageElement>(
+                "article img:not([data-lightbox]):not([data-no-lightbox])",
+            )
+            .forEach((img) => {
+                img.setAttribute("data-lightbox", "");
+            });
+
+        // Attach zoom handler to every lightbox-eligible image
+        document
+            .querySelectorAll<HTMLImageElement>(
+                "img[data-lightbox]:not([data-no-lightbox])",
+            )
+            .forEach((img) => {
+                if (img.dataset.lightboxBound) return;
+                img.dataset.lightboxBound = "1";
+                img.style.cursor = "zoom-in";
+                img.addEventListener("click", () => {
+                    const fullSrc = img.dataset.lightboxSrc || img.src;
+                    open(fullSrc, img.alt);
+                });
+            });
+    }
+
+    // Keyboard close — attached once to document, survives transitions
+    document.addEventListener("keydown", (e) => {
+        if (e.key !== "Escape") return;
+        const lightbox = document.getElementById("lightbox");
+        if (lightbox && !lightbox.hidden) {
+            lightbox.hidden = true;
+            (document.getElementById("lightbox-img") as HTMLImageElement).src =
+                "";
+            document.body.style.overflow = "";
+        }
+    });
+
+    // Run on first load and after every view-transition navigation
+    initLightbox();
+    document.addEventListener("astro:page-load", initLightbox);
+</script>
