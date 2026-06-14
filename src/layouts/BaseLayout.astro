@@ -4,6 +4,7 @@ import { ClientRouter } from "astro:transitions";
 
 import Footer from "../components/Footer.astro";
 import ThemeManager from "../components/ThemeManager.astro";
+import Lightbox from "../components/Lightbox.astro";
 
 import "../styles/global.css";
 // Supports weights 100-900
@@ -36,6 +37,7 @@ const { pageTitle } = Astro.props;
         </main>
 
         <Footer />
+        <Lightbox />
     </body><!-- <style is:global>
         :root[data-theme="light"] {
             --brand-primary: var(--brand-primary-light);
