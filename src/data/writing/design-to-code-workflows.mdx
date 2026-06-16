@@ -1,5 +1,5 @@
 ---
-title: I Tested 5 Design-to-Code Workflows on the Same Design. Here's What Happened
+title: I Tested 5 Design-to-Code Workflows on the Same Design. Here's What I learned.
 date: 2026-06-14
 tags:
   - coding
@@ -18,7 +18,7 @@ I used Claude to create a json file with the information that would be populatin
 Once I had the design and data in place I started testing different design-to-code workflows.
 
 ## Five Workflows, Same Design
-### Figma MCP 
+### Figma MCP
 For this version I used the Figma MCP server and told Claude Code to code the design using the components from Figma, with no access to the coded components. I did not give it access to the json file, leaving it to pull the data from the Figma file.
 
 [View the Figma MCP site ](https://tailsforce-figma.netlify.app/)
@@ -27,14 +27,14 @@ For this version I used the Figma MCP server and told Claude Code to code the de
 
 While it did use the Figma components appropriately, it struggled with the other elements. Instead of the images in my file it used cartoon avatars of humans. It looks like it tried to redraw the icons in the sidebar, the table headers were stacked vertically, and it hallucinated some new pets and changed the status of existing ones.
 
-### Claude Code 
+### Claude Code
 For this version I prompted Claude Code with my design brief and provided the json file with the data for the table and instructed it to code the screen using the token and component libraries. I did not give it access to the Figma file.
 
 [View the Claude Code site ](https://tailsforce-claude.netlify.app/)
 
 ![a screenshot of the site created with Claude Code](src/assets/blog-posts/tailsforce/claude.png)
 
-This one came out really well overall. I told it to use Lucide Icons, but didn't specify which ones and the icons it selected were really close to the ones I used. It used the components faithfully, aside from using the accent color on the checkboxes. 
+This one came out really well overall. I told it to use Lucide Icons, but didn't specify which ones and the icons it selected were really close to the ones I used. It used the components faithfully, aside from using the accent color on the checkboxes.
 
 ### Claude + Figma MCP
 In this version I used the same prompt and json file, but also used the Figma MCP server to allow it to view the Figma design and components. I instructed it to still use the coded token and component libraries and use Figma as a reference.
@@ -43,19 +43,19 @@ In this version I used the same prompt and json file, but also used the Figma MC
 
 ![a screenshot of the site created with Claude and Figma together](src/assets/blog-posts/tailsforce/figmaclaude.png)
 
-Like the Claude only version, this one used the accent color for the checkbox border. It also stacked the search box over the filter and action buttons and for some reason changed the sidebar to dark mode and added icons to the category headers. 
+Like the Claude only version, this one used the accent color for the checkbox border. It also stacked the search box over the filter and action buttons and for some reason changed the sidebar to dark mode and added icons to the category headers.
 
 This one was the most surprising to me. I would have expected that the extra context from the Figma MCP would have led to a more faithful reproduction of my design, but it was actually worse than the Claude only version.
 
 ### Figma Make
 
-You'd think Figma's own code generation tool would at least be able to faithfully reproduce a Figma design. You'd be wrong. 
+You'd think Figma's own code generation tool would at least be able to faithfully reproduce a Figma design. You'd be wrong.
 
 [View the Figma Make site](https://tailsforce-figma-make.netlify.app/)
 
 ![a screenshot of the initial Figma Make site](src/assets/blog-posts/tailsforce/figmamake.png)
 
-I was kind of surprised to find that by default it didn't use the components or variables from my design files. It also replaced the pet images with emojis and kind of went rogue with the sidebar, completely changing some of the icons, centering some of the page names, and removing the settings option. 
+I was kind of surprised to find that by default it didn't use the components or variables from my design files. It also replaced the pet images with emojis and kind of went rogue with the sidebar, completely changing some of the icons, centering some of the page names, and removing the settings option.
 
 ![a screenshot of the updated Figma Make site, which uses the correct components](src/assets/blog-posts/tailsforce/figmamakev2.png)
 
@@ -64,7 +64,7 @@ After a second prompt, instructing it to use my components and variables, it cam
 I've only used Figma Make a handful of times, but it has always been disappointing. This did nothing to improve my opinion of it.
 
 ### Lovable
-Finally, I tried creating the same design in Lovable using just a prompt, with no access to my components, design, or json file. 
+Finally, I tried creating the same design in Lovable using just a prompt, with no access to my components, design, or json file.
 
 [View the Lovable site](https://tailsforce-lovable.netlify.app/)
 
